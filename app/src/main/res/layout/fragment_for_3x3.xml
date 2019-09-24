@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layout_steps_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/step4_to_step1_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#088da5"
+                android:text="@string/step1" />
+
+            <Button
+                android:id="@+id/step4_to_step2_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#088da5"
+                android:text="@string/step2" />
+
+            <Button
+                android:id="@+id/step4_to_step3_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#088da5"
+                android:text="@string/step3" />
+
+            <Button
+                android:id="@+id/step4_to_step4_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#088da5"
+                android:text="@string/step4" />
+
+            <Button
+                android:id="@+id/step4_to_step5_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#088da5"
+                android:text="@string/step5" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

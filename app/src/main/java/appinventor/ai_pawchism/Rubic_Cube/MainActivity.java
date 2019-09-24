@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
         publisherAdView.loadAd(adRequest);
 
-
+/*
         Button step1 = (Button) findViewById(R.id.step4_to_step1_button);
         step1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,Step5.class));
             }
-        });
+        });*/
 
         ImageView settingsImage = (ImageView) findViewById(R.id.step1_settings_imageview);
         settingsImage.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +87,12 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.frame_layout_fragment_one, forHomepage, forHomepage.getTag())
+                .commit();
+
+        ForHomepage2 forHomepage2 = new ForHomepage2();
+        FragmentManager manager2 = getSupportFragmentManager();
+        manager2.beginTransaction()
+                .replace(R.id.frame_layout_fragment_two, forHomepage2, forHomepage2.getTag())
                 .commit();
 
 
