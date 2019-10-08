@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/layout_to_inflate_homepage"
+<LinearLayout android:id="@+id/layout_general_info"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ForHomepage">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/main_page_text_fragment"
@@ -20,8 +16,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/layout_to_inflate_homepage"
-         />
+        app:layout_constraintTop_toTopOf="@+id/layout_to_inflate_homepage"/>
 
     <LinearLayout
         android:id="@+id/layout_explanation_moves"
@@ -79,10 +74,5 @@
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/r_oko"
             android:layout_marginBottom="100dp"/>
-
-
     </LinearLayout>
-
-
-
 </LinearLayout>

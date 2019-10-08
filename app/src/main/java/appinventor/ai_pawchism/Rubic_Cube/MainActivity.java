@@ -7,12 +7,9 @@ import android.content.res.Configuration;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
-import androidx.fragment.app.FragmentManager;
-
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 import java.util.Locale;
@@ -34,67 +31,50 @@ public class MainActivity extends AppCompatActivity {
         PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
         publisherAdView.loadAd(adRequest);
 
-/*
-        Button step1 = (Button) findViewById(R.id.step4_to_step1_button);
-        step1.setOnClickListener(new View.OnClickListener() {
+        LinearLayout layoutToInjectXml = (LinearLayout) findViewById(R.id.frame_up_bar);
+        getLayoutInflater().inflate(R.layout.fragment_up_bar, layoutToInjectXml);
+
+        LinearLayout layoutForInjectionStartXml = (LinearLayout) findViewById(R.id.frame_layout_fragment_two);
+        getLayoutInflater().inflate(R.layout.activity_main_4buttons, layoutForInjectionStartXml);
+
+        LinearLayout layout_3x3 = (LinearLayout) findViewById(R.id.layout_button_3x3);
+        LinearLayout layoutGeninfo = (LinearLayout) findViewById(R.id.layout_button_general_info);
+        LinearLayout layout_2x2 = (LinearLayout) findViewById(R.id.layout_button_2x2);
+        LinearLayout layoutTimer = (LinearLayout) findViewById(R.id.layout_button_timer);
+
+
+        layout_3x3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Step1.class));
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Activity_3x3_Step1.class));
             }
         });
 
-        Button step2 = (Button) findViewById(R.id.step4_to_step2_button);
-        step2.setOnClickListener(new View.OnClickListener() {
+        layout_2x2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Step2.class));
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Activity_2x2.class));
             }
         });
 
-        Button step3 = (Button) findViewById(R.id.step4_to_step3_button);
-        step3.setOnClickListener(new View.OnClickListener() {
+        layoutGeninfo.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Step3.class));
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, GeneralInfo.class));
             }
         });
 
-        Button step4 = (Button) findViewById(R.id.step4_to_step4_button);
-        step4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Step4.class));
-            }
-        });
 
-        Button step5 = (Button) findViewById(R.id.step4_to_step5_button);
-        step5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Step5.class));
-            }
-        });*/
 
-        ImageView settingsImage = (ImageView) findViewById(R.id.step1_settings_imageview);
+
+
+        ImageView settingsImage = (ImageView) findViewById(R.id.settings_imageview);
         settingsImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,Settings.class));
             }
         });
-
-        ForHomepage forHomepage = new ForHomepage();
-        FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction()
-                .replace(R.id.frame_layout_fragment_one, forHomepage, forHomepage.getTag())
-                .commit();
-
-        ForHomepage2 forHomepage2 = new ForHomepage2();
-        FragmentManager manager2 = getSupportFragmentManager();
-        manager2.beginTransaction()
-                .replace(R.id.frame_layout_fragment_two, forHomepage2, forHomepage2.getTag())
-                .commit();
-
 
     }
 

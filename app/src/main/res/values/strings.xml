@@ -2,6 +2,12 @@
     <string name="baner_ID" translatable="false">ca-app-pub-9832953507407797/5858035763</string>
     <string name="app_name">Rubics_cube</string>
 
+    <!-- Start page -->
+    <string name="button_2x2">JAK UŁOŻYĆ KOSTKĘ RUBIKA 2x2x2</string>
+    <string name="button_3x3">JAK UŁOŻYĆ KOSTKĘ RUBIKA 3x3x3</string>
+    <string name="button_general_info">OZNACZENIA I NOTACJA</string>
+    <string name="button_timer">TIMER</string>
+
     <string name="title">JAK UŁOŻYĆ KOSTKĘ RUBIKA 3x3x3</string>
     <string name="exit_situation">SYTUACJA WYJŚCIOWA</string>
     <string name="ok" translatable="false">OK</string>
@@ -20,63 +26,72 @@
 
 
     <string name="step1">Krok 1</string>
-    <string name="step1_text1">Zakładam, że jeśli ktoś chce ułożyć całą kostkę to  powinien sobie poradzić beż żadnej instrukcji z ułożeniem  jednej ścianki z obwódką po bokach.
-        Gdy masz to gotowe przekręć środkową warstwę tak aby środkowe klocki bocznych ścianek znajdowały się pod obwódką z odpowiednim kolorem tworząc literę \"T\"  - jak na rysunku poniżej w \"sytuacji wyjściowej\".
-        To na prawdę nie jest trudne. Wystarczy chwilę pokombinować. Ale jeśli faktycznie sprawia ci to problem w Internecie jest bardzo duża ilość informacji na ten temat.</string>
-    <string name="step1_text2">W Kroku 1 zajmujemy się ułożeniem drugiej warstwy wg. algorytmu poniżej. Algorytm przedstawia sposób przestawienia klocka dokładnie tak jak pokazują to strzałki na obrazku poniżej.
-        W przykładzie z obrazka wstawiamy boczny klocek czerwono-biały na odpowiednie miejsce (oczywiście możesz zacząć od dowolnego klocka! Nie musi to być czerwono-biały :)).
-        W poszukiwaniu klocków do wstawienia, przekręcaj dolną warstwę (ruchem D lub D\').
-        Jeśli nie ma żadnego klocka w odpowiedniej pozycji do wstawienia, a druga warstwa nie jest kompletnie ułożona, znaczy to, że jakiś klocek znajduje się w drugiej warstwie ale w nieodpowienim położeniu.
-        W tym wypadku stosuj ten sam algorytm do \"wyrzucenia\" tego niewłaściwego klocka z drugiej warstwy do warstwy dolnej. Następnie zobacz czy przerzucony do dolnej warstwy klocek jest w odpowiedniej pozycji do zastosowania naszego algorytmu.
-        Operację tą powtarzaj aż do ułożenia całej drugiej warstwy. Następnie możesz przejeść do kroku 2.</string>
-    <string name="step1_text3">Powyższy algorytm \'wkładając\' klocki w prawo jest wystarczający do ułożenia całej drugiej warstwy.
-        Jeśli jednak chcesz zwiększyć szybkość układania kostki, dobrze jest znać również algorytm,którym możemy przestawiać klocki w drugą stronę(czyli w lewo) jak na ilustracji poniżej.</string>
     <string name="step1_effect">EFEKT KROKU 1</string>
 
 
     <string name="step2">Krok 2</string>
     <string name="step2_effect">EFEKT KROKU 2</string>
-    <string name="step2_text1">W kroku drugim będziemy układać krzyż na górnej ściance. W pierwszej kolejności przekręć kostkę tak aby zupełnie nieułożona(dolna) ścianka znalazła się na górze -
-        jak na obrazku powyżej w \'sytuacji wyjściowej\'.  \'Sytuacja wyjściowa\' pokazuje wariant gdy żaden element krzyża nie ułożył się nam na górze.
-        W takim wypadku wykonaj poniższy algorytm jeden lub dwa razy.</string>
-    <string name="step2_text2">W efekcie powinno się otrzymać literę \"L\"  którą należy teraz ustawić jak na obrazku poniżej i wykonać algorytm jeszcze raz uzyskując gotowy krzyż.</string>
-    <string name="step2_text3">Jeśli coś nie jest jasne, popatrz na poniższy rysunek gdzie pokazano co się dzieje na kostce po każdym wykonaniu algorytmu(przedstawiono najgorszą sytuację gdy potrzeba będzie wykonać algorytm 3 razy aby uzyskać końcowy efekt).
-        Pamiętaj aby ustawić odpowiednio kostkę gdy będziesz miał już literę \"L\" jak pokazano na obrazku powyżej!!</string>
 
 
     <string name="step3">Krok 3</string>
     <string name="step3_effect">EFEKT KROKU 3</string>
-    <string name="step3_text1">W kroku 3 dopasowujemy położenie klocków krzyża do bocznych ścianek.</string>
-    <string name="step3_text2">Poniższym algorytmem jesteśmy w stanie zamieniać dwa klocki w sąsiadujących ściankach. W zależności od sytuacji na kostce, być może będzie trzeba wykonać ten algorytm kilka razy.
-        W efekcie powinniśmy otrzymać cały krzyż  z pasującymi ściankami bocznymi.</string>
-    <string name="step3_text3">Jeśli coś nie jest jasne popatrz proszę na poniższy rysunek.
-        Przedstawia on najgorszą sytuację gdy trzeba będzie algorytm wykonać 3 razy aby wszystkie elementy krzyża znalazły się na swoich miejscach. Pamiętaj przy każdym
-        wykonywaniu algorytmu o trzymaniu kostki w odpowiedniej pozycji(jak na rysunku z \'oczkiem\' powyżej).</string>
+    <string name="step3_text1">Zakładam, że jeśli ktoś chce ułożyć całą kostkę to  powinien sobie poradzić beż żadnej instrukcji z ułożeniem  jednej ścianki z obwódką po bokach.
+        Gdy masz to gotowe przekręć środkową warstwę tak aby środkowe klocki bocznych ścianek znajdowały się pod obwódką z odpowiednim kolorem tworząc literę \"T\"  - jak na rysunku poniżej w \"sytuacji wyjściowej\".
+        To na prawdę nie jest trudne. Wystarczy chwilę pokombinować. Ale jeśli faktycznie sprawia ci to problem w Internecie jest bardzo duża ilość informacji na ten temat.</string>
+    <string name="step3_text2">W Kroku 3 zajmujemy się ułożeniem drugiej warstwy wg. algorytmu poniżej. Algorytm przedstawia sposób przestawienia klocka dokładnie tak jak pokazują to strzałki na obrazku poniżej.
+        W przykładzie z obrazka wstawiamy boczny klocek czerwono-biały na odpowiednie miejsce (oczywiście możesz zacząć od dowolnego klocka! Nie musi to być czerwono-biały :)).
+        W poszukiwaniu klocków do wstawienia, przekręcaj dolną warstwę (ruchem D lub D\').
+        Jeśli nie ma żadnego klocka w odpowiedniej pozycji do wstawienia, a druga warstwa nie jest kompletnie ułożona, znaczy to, że jakiś klocek znajduje się w drugiej warstwie ale w nieodpowienim położeniu.
+        W tym wypadku stosuj ten sam algorytm do \"wyrzucenia\" tego niewłaściwego klocka z drugiej warstwy do warstwy dolnej. Następnie zobacz czy przerzucony do dolnej warstwy klocek jest w odpowiedniej pozycji do zastosowania naszego algorytmu.
+        Operację tą powtarzaj aż do ułożenia całej drugiej warstwy. Następnie możesz przejeść do kroku 2.</string>
+    <string name="step3_text3">Powyższy algorytm \'wkładając\' klocki w prawo jest wystarczający do ułożenia całej drugiej warstwy.
+        Jeśli jednak chcesz zwiększyć szybkość układania kostki, dobrze jest znać również algorytm,którym możemy przestawiać klocki w drugą stronę(czyli w lewo) jak na ilustracji poniżej.</string>
+
 
 
     <string name="step4">Krok 4</string>
     <string name="step4_effect">EFEKT KROKU 4</string>
-    <string name="step4_text1">Gratuluję! Dojście do tego kroku oznacza, że jesteś bardzo blisko ułożenia całej kostki. Czwarty, przedostatni algorytm ustawi nam narożniki górnej warstwy w odpowiednich miejscach.
-        Narożniki na razie nie muszą przylegać odpowiednimi kolorami do bocznych ścianek. Ważne aby znalazły się tylko na odpowiednich pozycjach(np. narożny klocek na styku ścianek: czerwonej-żółtej-niebieskiej
-        powinien składać się z kolorów: czerwonego-żółtego-niebieskiego itd.).</string>
-    <string name="step4_text2">Jeśli żaden z narożników nie jest na swoim miejscu, wykonaj raz poniższy algorytm. W efekcie powinieneś otrzymać przynajmniej jeden narożnik na właściwej pozycji.</string>
-    <string name="step4_text3">Zobacz teraz który narożnik ustawił się w prawidłowej pozycji i ustaw kostkę tak aby patrząc na nią od przodu, ustawiony już narożnik znajdował się w lewym-górnym rogu kostki (jak na obrazku poniżej).
-        Następnie w zależności od ustawienia pozostałych narożników, wykonaj algorytm jeden lub dwa razy, a wszystkie narożniki ustawią się w odpowiednich pozycjach.</string>
-    <string name="step4_text4">Jeśli coś nie jest jasne, popatrz na poniższy rysunek gdzie pokazano co się dzieje na kostce po każdym wykonaniu algorytmu(przedstawiono przykładową sytuację gdy potrzeba będzie wykonać algorytm 2 razy aby uzyskać końcowy efekt kroku 4).
-        Pamiętaj, że zawsze ustawiamy kostkę tak aby narożnik, którego nie chcemy przesunąć znajdował się w lewym, górnym rogu!!</string>
-    <string name="step4_text5">Jeśli coś się nie udało, nie zrażaj się i spróbuj jeszcze raz. Ten krok to najtrudniejsza część w układaniu kostki. Za to ostatni, piąty algorytm jest banalnie prosty!</string>
+    <string name="step4_text1">W kroku 4 będziemy układać krzyż na górnej ściance. W pierwszej kolejności przekręć kostkę tak aby zupełnie nieułożona(dolna) ścianka znalazła się na górze -
+        jak na obrazku powyżej w \'sytuacji wyjściowej\'.  \'Sytuacja wyjściowa\' pokazuje wariant gdy żaden element krzyża nie ułożył się nam na górze.
+        W takim wypadku wykonaj poniższy algorytm jeden lub dwa razy.</string>
+    <string name="step4_text2">W efekcie powinno się otrzymać literę \"L\"  którą należy teraz ustawić jak na obrazku poniżej i wykonać algorytm jeszcze raz uzyskując gotowy krzyż.</string>
+    <string name="step4_text3">Jeśli coś nie jest jasne, popatrz na poniższy rysunek gdzie pokazano co się dzieje na kostce po każdym wykonaniu algorytmu(przedstawiono najgorszą sytuację gdy potrzeba będzie wykonać algorytm 3 razy aby uzyskać końcowy efekt).
+        Pamiętaj aby ustawić odpowiednio kostkę gdy będziesz miał już literę \"L\" jak pokazano na obrazku powyżej!!</string>
 
 
     <string name="step5">Krok 5</string>
     <string name="step5_effect">EFEKT KROKU 5</string>
-    <string name="step5_text1">W ostatnim kroku zajmiemy się orientacją narożników. Tzn. przekręcimy narożniki w taki sposób aby zgadzały się kolorami z przylegającymi do nich ściankami (zobacz obrazek poniżej).</string>
-    <string name="step5_text2">Wykonaj zatem prosty algorytm z poniższego obrazka 2 lub 4 razy - aż do ułożenia przestawianego klocka w odpowiedniej pozycji.</string>
-    <string name="step5_text3">Następnie przekręć górną warstwę przeciwnie do ruchu wskazówek zegara(czyli U\' jak na rysunku poniżej) tyle razy aby następny nieułożony narożnik znalazł się w pozycji do wykonania algorytmu(ponownie 2 lub 4 razy).</string>
-    <string name="step5_text4">Powtórz tą operację dla kolejnych nieułożonych narożników. Po ułożeniu danego narożnika zawsze przekręcaj górną warstwę w kierunku U\' aby ustawić kolejny narożnik do wykonania algorytmu.
+    <string name="step5_text1">W kroku 5 dopasowujemy położenie klocków krzyża do bocznych ścianek.</string>
+    <string name="step5_text2">Poniższym algorytmem jesteśmy w stanie zamieniać dwa klocki w sąsiadujących ściankach. W zależności od sytuacji na kostce, być może będzie trzeba wykonać ten algorytm kilka razy.
+        W efekcie powinniśmy otrzymać cały krzyż  z pasującymi ściankami bocznymi.</string>
+    <string name="step5_text3">Jeśli coś nie jest jasne popatrz proszę na poniższy rysunek.
+        Przedstawia on najgorszą sytuację gdy trzeba będzie algorytm wykonać 3 razy aby wszystkie elementy krzyża znalazły się na swoich miejscach. Pamiętaj przy każdym
+        wykonywaniu algorytmu o trzymaniu kostki w odpowiedniej pozycji(jak na rysunku z \'oczkiem\' powyżej).</string>
+
+
+    <string name="step6">Krok 6</string>
+    <string name="step6_effect">EFEKT KROKU 6</string>
+    <string name="step6_text1">Gratuluję! Dojście do tego kroku oznacza, że jesteś bardzo blisko ułożenia całej kostki. Szósty, przedostatni algorytm ustawi nam narożniki górnej warstwy w odpowiednich miejscach.
+        Narożniki na razie nie muszą przylegać odpowiednimi kolorami do bocznych ścianek. Ważne aby znalazły się tylko na odpowiednich pozycjach(np. narożny klocek na styku ścianek: czerwonej-żółtej-niebieskiej
+        powinien składać się z kolorów: czerwonego-żółtego-niebieskiego itd.).</string>
+    <string name="step6_text2">Jeśli żaden z narożników nie jest na swoim miejscu, wykonaj raz poniższy algorytm. W efekcie powinieneś otrzymać przynajmniej jeden narożnik na właściwej pozycji.</string>
+    <string name="step6_text3">Zobacz teraz który narożnik ustawił się w prawidłowej pozycji i ustaw kostkę tak aby patrząc na nią od przodu, ustawiony już narożnik znajdował się w lewym-górnym rogu kostki (jak na obrazku poniżej).
+        Następnie w zależności od ustawienia pozostałych narożników, wykonaj algorytm jeden lub dwa razy, a wszystkie narożniki ustawią się w odpowiednich pozycjach.</string>
+    <string name="step6_text4">Jeśli coś nie jest jasne, popatrz na poniższy rysunek gdzie pokazano co się dzieje na kostce po każdym wykonaniu algorytmu(przedstawiono przykładową sytuację gdy potrzeba będzie wykonać algorytm 2 razy aby uzyskać końcowy efekt kroku 4).
+        Pamiętaj, że zawsze ustawiamy kostkę tak aby narożnik, którego nie chcemy przesunąć znajdował się w lewym, górnym rogu!!</string>
+    <string name="step6_text5">Jeśli coś się nie udało, nie zrażaj się i spróbuj jeszcze raz. Ten krok to najtrudniejsza część w układaniu kostki. Za to ostatni, siódmy algorytm jest banalnie prosty!</string>
+
+
+    <string name="step7">Krok 7</string>
+    <string name="step7_effect">EFEKT KROKU 7</string>
+    <string name="step7_text1">W ostatnim kroku zajmiemy się orientacją narożników. Tzn. przekręcimy narożniki w taki sposób aby zgadzały się kolorami z przylegającymi do nich ściankami (zobacz obrazek poniżej).</string>
+    <string name="step7_text2">Wykonaj zatem prosty algorytm z poniższego obrazka 2 lub 4 razy - aż do ułożenia przestawianego klocka w odpowiedniej pozycji.</string>
+    <string name="step7_text3">Następnie przekręć górną warstwę przeciwnie do ruchu wskazówek zegara(czyli U\' jak na rysunku poniżej) tyle razy aby następny nieułożony narożnik znalazł się w pozycji do wykonania algorytmu(ponownie 2 lub 4 razy).</string>
+    <string name="step7_text4">Powtórz tą operację dla kolejnych nieułożonych narożników. Po ułożeniu danego narożnika zawsze przekręcaj górną warstwę w kierunku U\' aby ustawić kolejny narożnik do wykonania algorytmu.
         Postępuj tak aż do całkowitego ułożenia kostki!</string>
-    <string name="step5_text5">UWAGA!!!</string>
-    <string name="step5_text6">W trakcie wykonywania tych kroków kostka będzie wyglądała tak jakby wszystko się pomieszało. Nie przejmuj się tym - tak ma być! Wszystko wróci na swoje pozycje :)))</string>
-    <string name="step5_text7">Jeśli jednak nie do końca to rozumiesz, zobacz proszę rysunek poniżej. Przedstawiono tam przykładową sytuację gdzie musimy przekręcić wszystkie cztery narożniki. Przez \'OK\' oznaczono narożniki, które się ułożyły po zastosowaniu algorytmu.
+    <string name="step7_text5">UWAGA!!!</string>
+    <string name="step7_text6">W trakcie wykonywania tych kroków kostka będzie wyglądała tak jakby wszystko się pomieszało. Nie przejmuj się tym - tak ma być! Wszystko wróci na swoje pozycje :)))</string>
+    <string name="step7_text7">Jeśli jednak nie do końca to rozumiesz, zobacz proszę rysunek poniżej. Przedstawiono tam przykładową sytuację gdzie musimy przekręcić wszystkie cztery narożniki. Przez \'OK\' oznaczono narożniki, które się ułożyły po zastosowaniu algorytmu.
         Zauważ, że w międzyczasie kostka faktycznie wygląda na pomieszaną!!! Ale ostatecznie wszystko wraca na swoje miejsce!</string>
 
     <string name="settings_title">USTAWIENIA:</string>

@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view_buttons_3x3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/layout_steps_buttons"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
 
             <Button
-                android:id="@+id/step4_to_step1_button"
+                android:id="@+id/button1_3x3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -22,7 +25,7 @@
                 android:text="@string/step1" />
 
             <Button
-                android:id="@+id/step4_to_step2_button"
+                android:id="@+id/button2_3x3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -30,7 +33,7 @@
                 android:text="@string/step2" />
 
             <Button
-                android:id="@+id/step4_to_step3_button"
+                android:id="@+id/button3_3x3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -38,7 +41,7 @@
                 android:text="@string/step3" />
 
             <Button
-                android:id="@+id/step4_to_step4_button"
+                android:id="@+id/button4_3x3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -46,12 +49,26 @@
                 android:text="@string/step4" />
 
             <Button
-                android:id="@+id/step4_to_step5_button"
+                android:id="@+id/button5_3x3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#088da5"
                 android:text="@string/step5" />
+            <Button
+                android:id="@+id/button6_3x3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#088da5"
+                android:text="@string/step6" />
+            <Button
+                android:id="@+id/button7_3x3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#088da5"
+                android:text="@string/step7" />
         </LinearLayout>
     </HorizontalScrollView>
 

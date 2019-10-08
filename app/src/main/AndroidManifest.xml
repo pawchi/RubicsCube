@@ -26,11 +26,17 @@
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Step1"/>
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Step2" />
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Step3" />
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Step4" />
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Step5" />
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.GeneralInfo"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step1"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step2"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step3"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step4"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step5"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step6"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step7"/>
+
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_2x2"/>
+
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Settings" />
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.SelectLanguage"/>
     </application>
