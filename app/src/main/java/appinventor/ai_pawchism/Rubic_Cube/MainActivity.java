@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         startedLanguage = prefs.getString("My_Lang",""); //read the language in which the activity was created
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         PublisherAdView publisherAdView = (PublisherAdView) findViewById(R.id.publisherAdView);
         PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();

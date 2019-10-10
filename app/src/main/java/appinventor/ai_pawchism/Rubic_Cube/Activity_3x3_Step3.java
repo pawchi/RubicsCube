@@ -8,9 +8,7 @@ import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
@@ -52,6 +50,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
         stepButton5.setOnClickListener(this);
         stepButton6.setOnClickListener(this);
         stepButton7.setOnClickListener(this);
+        settingsImage.setOnClickListener(this);
 
         stepButton3.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_active)));
         final HorizontalScrollView hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll_view_buttons_3x3);

@@ -6,8 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/constraint_layout_background"
-    tools:context="appinventor.ai_pawchism.Rubic_Cube.MainActivity">
+    android:background="@color/constraint_layout_background">
+    <!--
+    tools:context="appinventor.ai_pawchism.Rubic_Cube.MainActivity"-->
 
     <LinearLayout
         android:layout_width="match_parent"

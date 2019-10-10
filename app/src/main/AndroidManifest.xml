@@ -19,13 +19,14 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>
         <activity
-            android:name="appinventor.ai_pawchism.Rubic_Cube.MainActivity">
+            android:name="appinventor.ai_pawchism.Rubic_Cube.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.MainActivity"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.GeneralInfo"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step1"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step2"/>

@@ -28,7 +28,6 @@ public class Activity_3x3_Step1 extends AppCompatActivity implements View.OnClic
         publisherAdView.loadAd(adRequest);
 
         final LinearLayout layoutForInjectInto = (LinearLayout) findViewById(R.id.inflate_content_vert_layout);
-        LinearLayout upBar = (LinearLayout) findViewById(R.id.up_bar_for_all);
 
         getLayoutInflater().inflate(R.layout.fragment_up_bar, layoutForInjectInto);
         getLayoutInflater().inflate(R.layout.layout_buttons_for_3x3, layoutForInjectInto);
@@ -50,6 +49,7 @@ public class Activity_3x3_Step1 extends AppCompatActivity implements View.OnClic
         stepButton5.setOnClickListener(this);
         stepButton6.setOnClickListener(this);
         stepButton7.setOnClickListener(this);
+        settingsImage.setOnClickListener(this);
 
         stepButton1.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_active)));
         final HorizontalScrollView hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll_view_buttons_3x3);
