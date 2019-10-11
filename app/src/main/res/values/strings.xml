@@ -27,16 +27,23 @@
 
     <string name="step1">Krok 1</string>
     <string name="step1_effect">EFEKT KROKU 1</string>
+    <string name="step1_text1">Jeśli nie znasz jeszcze notacji stosowanej przy układaniu kostki, wróć do strony startowej i wejdź w zakładkę "Oznaczenia i notacja".
+        Układanie kostki zaczynamy od ułożenia niebieskiego krzyża na górnej ściance. Układamy go tak aby boki krzyża pasowały kolorami do środków bocznych ścianek, jak to pokazuje rysunek poniżej.</string>
+    <string name="step1_text2">Krok ten jest bardzo prosty i intuicyjny. Jedyny problem jaki może się pojawić pokazano wraz z rozwiązaniem na rysunku poniżej.</string>
 
 
     <string name="step2">Krok 2</string>
     <string name="step2_effect">EFEKT KROKU 2</string>
+    <string name="step2_text1">W tym kroku zajmiemy się ułożeniem narożników górnej ścianki, jak pokazano na poniższym rysunku.</string>
+    <string name="step2_text2">W zależności od ułożenia dolnego narożnika, możesz spotkać 3 przypadki:</string>
+    <string name="step2_text3">Przypadek 1</string>
+    <string name="step2_text4">Przypadek 2</string>
+    <string name="step2_text5">Przypadek 3</string>
 
 
     <string name="step3">Krok 3</string>
     <string name="step3_effect">EFEKT KROKU 3</string>
-    <string name="step3_text1">Zakładam, że jeśli ktoś chce ułożyć całą kostkę to  powinien sobie poradzić beż żadnej instrukcji z ułożeniem  jednej ścianki z obwódką po bokach.
-        Gdy masz to gotowe przekręć środkową warstwę tak aby środkowe klocki bocznych ścianek znajdowały się pod obwódką z odpowiednim kolorem tworząc literę \"T\"  - jak na rysunku poniżej w \"sytuacji wyjściowej\".
+    <string name="step3_text1">Gdy masz gotowy poprzedni etap przekręć środkową warstwę tak aby środkowe klocki bocznych ścianek znajdowały się pod obwódką z odpowiednim kolorem tworząc literę \"T\"  - jak na rysunku poniżej w \"sytuacji wyjściowej\".
         To na prawdę nie jest trudne. Wystarczy chwilę pokombinować. Ale jeśli faktycznie sprawia ci to problem w Internecie jest bardzo duża ilość informacji na ten temat.</string>
     <string name="step3_text2">W Kroku 3 zajmujemy się ułożeniem drugiej warstwy wg. algorytmu poniżej. Algorytm przedstawia sposób przestawienia klocka dokładnie tak jak pokazują to strzałki na obrazku poniżej.
         W przykładzie z obrazka wstawiamy boczny klocek czerwono-biały na odpowiednie miejsce (oczywiście możesz zacząć od dowolnego klocka! Nie musi to być czerwono-biały :)).
