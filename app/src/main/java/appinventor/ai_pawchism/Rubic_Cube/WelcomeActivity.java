@@ -15,7 +15,7 @@ import com.daimajia.androidanimations.library.YoYo;
 import java.util.Locale;
 
 public class WelcomeActivity extends AppCompatActivity {
-    private static int WELCOME_SCREEN_TIME_OUT = 4000;
+    private static int WELCOME_SCREEN_TIME_OUT = 1000;
     private TextView animatedText;
     String startedLanguage;
 

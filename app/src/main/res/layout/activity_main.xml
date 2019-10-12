@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/constraint_layout_background">
+    android:background="#0b0220">
     <!--
     tools:context="appinventor.ai_pawchism.Rubic_Cube.MainActivity"-->
 
