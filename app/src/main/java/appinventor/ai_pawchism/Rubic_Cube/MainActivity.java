@@ -42,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layout_3x3 = (LinearLayout) findViewById(R.id.layout_button_3x3);
         LinearLayout layoutGeninfo = (LinearLayout) findViewById(R.id.layout_button_general_info);
         LinearLayout layout_2x2 = (LinearLayout) findViewById(R.id.layout_button_2x2);
+        ImageView backButton = (ImageView) findViewById(R.id.back_button);
         LinearLayout layoutTimer = (LinearLayout) findViewById(R.id.layout_button_timer);
+
+        backButton.setVisibility(View.INVISIBLE);
 
 
         layout_3x3.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, GeneralInfo.class));
+            }
+        });
+
+        layoutTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Activity_timer.class));
             }
         });
 

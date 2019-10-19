@@ -4,9 +4,12 @@
     <color name="colorPrimaryDark">#021486</color>
     <color name="colorAccent">#83022e</color>
 
-    <color name="app_title_background">#FF0099CC</color>
-    <color name="button_menu_pasive">#088da5</color>
-    <color name="button_menu_active">#c6e2ff</color>
+    <color name="app_title_text">#e6e6fa</color>
+    <color name="app_title_background">#021486</color>
+    <color name="button_menu_pasive">#126cd3</color>
+    <color name="button_menu_active">#000080</color>
+    <color name="button_menu_text_active">#e6e6fa</color>
+    <color name="four_buttons_background">#126cd3</color>
     <color name="constraint_layout_background">#FFFFFFFF</color>
     <color name="settings_buttons_background">#FFAAAAAA</color>
     <color name="settings_buttons_text">#FFFFFFFF</color>

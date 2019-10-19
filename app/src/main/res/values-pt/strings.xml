@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rubics_cube</string>
-    <string name="title">COMO SOLUCIONAR O CUBO DE RUBIK 3x3x3</string>
+    <string name="title">COMO SOLUCIONAR O CUBO DE RUBIK</string>
     <string name="exit_situation">SITUAÇÃO INICIAL</string>
     <string name="home">Página principal</string>
     <string name="introduction_main_page">Antes de iniciar o passo 1, por favor, veja a notação do Cubo de Rubik. As fotos abaixo devem deixar tudo claro. A regra com a marcação é: se você olhar no cubo pela frente, gire uma vez 90 graus no sentido horário, é marcado com a letra F. Contra-movimento (sentido anti-horário) marcado com F \'. E a mesma regra se aplica a todas as outras paredes (por exemplo, a parede superior: U / U \'- acima, parede abaixo: D / D\' -down etc.).</string>

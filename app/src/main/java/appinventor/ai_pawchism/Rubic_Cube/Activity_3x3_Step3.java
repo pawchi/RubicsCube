@@ -51,7 +51,9 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
         Button stepButton6 = (Button) findViewById(R.id.button6_3x3);
         Button stepButton7 = (Button) findViewById(R.id.button7_3x3);
         ImageView settingsImage = (ImageView) findViewById(R.id.settings_imageview);
+        ImageView backButton = (ImageView) findViewById(R.id.back_button);
 
+        backButton.setOnClickListener(this);
         stepButton1.setOnClickListener(this);
         stepButton2.setOnClickListener(this);
         stepButton3.setOnClickListener(this);
@@ -62,6 +64,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
         settingsImage.setOnClickListener(this);
 
         stepButton3.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_active)));
+        stepButton3.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_text_active)));
         final HorizontalScrollView hsv = (HorizontalScrollView) findViewById(R.id.horizontal_scroll_view_buttons_3x3);
 
         hsv.post(new Runnable() {
@@ -98,6 +101,9 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.settings_imageview:
                 startActivity(new Intent(getApplicationContext(), Settings.class));
+                break;
+            case R.id.back_button:
+                finish();
                 break;
         }
     }

@@ -46,7 +46,7 @@
     <string name="step7_text5">¡ATENCIÓN!</string>
     <string name="step7_text6">Durante estos pasos, el cubo parece estar mezclado. No te preocupes, ¡debería ser así! Todo vuelve a sus posiciones :)))</string>
     <string name="step7_text7">Pero si esto no está completamente claro para usted, mire la siguiente imagen que muestra un ejemplo donde las cuatro esquinas deben rotar. \"OK\" marca las esquinas que ya se han organizado después de aplicar el algoritmo. Tenga en cuenta que, mientras tanto, el cubo se ve realmente confuso … ¡pero al final todo vuelve a su lugar!</string>
-    <string name="title">CÓMO RESOLVER EL CUBO DE RUBIK 3x3x3</string>
+    <string name="title">CÓMO RESOLVER EL CUBO DE RUBIK</string>
     <string name="chinese">chino</string>
     <string name="hindi">hindi</string>
     <string name="japanese">japonés</string>

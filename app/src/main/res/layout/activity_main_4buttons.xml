@@ -9,11 +9,11 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2.5dp"
         android:layout_weight="1"
         android:layout_gravity="center_horizontal"
         android:gravity="center_vertical">
@@ -21,46 +21,52 @@
         <LinearLayout
             android:id="@+id/layout_button_3x3"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
-            android:background="@drawable/popup_window_border"
-            android:layout_marginEnd="5dp"
+            android:background="@color/four_buttons_background"
+            android:layout_marginEnd="2.5dp"
             android:clickable="true"
             android:focusable="true">
 
             <ImageView
                 android:id="@+id/main_button_3x3"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxHeight="75dp"
+                android:maxWidth="75dp"
                 app:srcCompat="@drawable/main_page_button_3x3x3_transp"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:padding="35dp"/>
+                android:adjustViewBounds="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="5dp"
-                android:text="@string/button_3x3"/>
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/button_3x3"
+                android:textColor="@color/app_title_text"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_button_2x2"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
-            android:background="@drawable/popup_window_border"
-            android:layout_marginStart="5dp"
+            android:background="@color/four_buttons_background"
+            android:layout_marginStart="2.5dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -68,19 +74,26 @@
                 android:id="@+id/main_button_2x2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxHeight="75dp"
+                android:maxWidth="75dp"
                 app:srcCompat="@drawable/main_page_button_3x3x3_transp"
                 android:layout_gravity="center_horizontal"
-                android:padding="35dp"
-                android:layout_weight="1"/>
+                android:adjustViewBounds="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="5dp"
-                android:text="@string/button_2x2"/>
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/button_2x2"
+                android:textAllCaps="false"
+                android:textColor="@color/app_title_text"
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>
@@ -88,79 +101,90 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="5dp"
         android:layout_weight="1"
         android:layout_gravity="center_horizontal"
         android:gravity="center_vertical">
 
         <LinearLayout
             android:id="@+id/layout_button_general_info"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:background="@drawable/popup_window_border"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="2.5dp"
+            android:layout_weight="1"
+            android:background="@color/four_buttons_background"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/main_button_general_info"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/main_page_button_3x3x3_transp"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:padding="35dp"/>
+                android:adjustViewBounds="true"
+                android:maxWidth="75dp"
+                android:maxHeight="75dp"
+                app:srcCompat="@drawable/main_page_button_3x3x3_transp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
                 android:text="@string/button_general_info"
-                />
+                android:textColor="@color/app_title_text"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_button_timer"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
-            android:background="@drawable/popup_window_border"
-            android:layout_marginStart="5dp"
+            android:background="@color/four_buttons_background"
+            android:layout_marginStart="2.5dp"
             android:clickable="true"
             android:focusable="true">
 
             <ImageView
                 android:id="@+id/main_settings"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxHeight="75dp"
+                android:maxWidth="75dp"
                 app:srcCompat="@drawable/main_page_button_3x3x3_transp"
                 android:layout_gravity="center_horizontal"
-                android:padding="35dp"
-                android:layout_weight="1"/>
+                android:adjustViewBounds="true"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="5dp"
-                android:text="@string/button_timer"/>
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/button_timer"
+                android:textColor="@color/app_title_text"
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>

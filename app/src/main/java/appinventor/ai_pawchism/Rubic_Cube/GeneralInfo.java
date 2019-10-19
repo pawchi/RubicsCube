@@ -22,7 +22,6 @@ public class GeneralInfo extends AppCompatActivity {
         final LinearLayout layoutForInjectInto = (LinearLayout) findViewById(R.id.inflate_content_vert_layout);
 
         getLayoutInflater().inflate(R.layout.fragment_up_bar, layoutForInjectInto);
-        getLayoutInflater().inflate(R.layout.layout_buttons_for_3x3, layoutForInjectInto);
         getLayoutInflater().inflate(R.layout.content_general_info, layoutForInjectInto);
 
     }

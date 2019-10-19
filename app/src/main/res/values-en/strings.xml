@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rubics_cube</string>
-    <string name="title">HOW TO SOLVE RUBIK\'S CUBE 3x3x3</string>
+    <string name="title">HOW TO SOLVE RUBIK\'S CUBE</string>
     <string name="exit_situation">START SITUATION</string>
     <string name="home">Main page</string>
     <string name="step3">Step 3</string>

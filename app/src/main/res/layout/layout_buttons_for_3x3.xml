@@ -21,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#088da5"
+                android:backgroundTint="@color/button_menu_pasive"
                 android:text="@string/step1" />
 
             <Button
@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#088da5"
+                android:backgroundTint="@color/button_menu_pasive"
                 android:text="@string/step2" />
 
             <Button
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#088da5"
+                android:backgroundTint="@color/button_menu_pasive"
                 android:text="@string/step3" />
 
             <Button
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#088da5"
+                android:backgroundTint="@color/button_menu_pasive"
                 android:text="@string/step4" />
 
             <Button
@@ -53,21 +53,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#088da5"
+                android:backgroundTint="@color/button_menu_pasive"
                 android:text="@string/step5" />
             <Button
                 android:id="@+id/button6_3x3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#088da5"
+                android:backgroundTint="@color/button_menu_pasive"
                 android:text="@string/step6" />
             <Button
                 android:id="@+id/button7_3x3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#088da5"
+                android:backgroundTint="@color/button_menu_pasive"
                 android:text="@string/step7" />
         </LinearLayout>
     </HorizontalScrollView>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rubics_cube</string>
-    <string name="title">ANLEITUNG FÜR DEN RUBIK’S CUBE 3x3x3</string>
+    <string name="title">ANLEITUNG FÜR DEN RUBIK’S CUBE</string>
     <string name="exit_situation">AUSGANGSITUATION</string>
     <string name="home">STARTSEITE</string>
     <string name="introduction_main_page">Bevor wir Schritt 1 anfangen, siehe bitte Markierungen, die man beim Zauberwürfel verwendet. Untere Bildern sollen alles klar machen. Die Regel bei der Markierung ist:  wenn man von vorne auf Würfel schaut, drehen einmal um 90 Grad im Uhrzeigersinn, ist mit dem Buchstaben F gekennzeichnet(aus dem Englischen: Front). Gegenbewegung (gegen den Uhrzeigersinn) markiert man mit F\'. Und die gleiche Regel ist für alle andere Wände(also z.B. die obere Wand: U/U\' - up, untere Wand: D/D\' -down usw.).</string>

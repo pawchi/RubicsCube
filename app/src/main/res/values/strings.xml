@@ -3,12 +3,12 @@
     <string name="app_name">Rubics_cube</string>
 
     <!-- Start page -->
-    <string name="button_2x2">JAK UŁOŻYĆ KOSTKĘ RUBIKA 2x2x2</string>
-    <string name="button_3x3">JAK UŁOŻYĆ KOSTKĘ RUBIKA 3x3x3</string>
+    <string name="button_2x2">INSTRUKCJA DO  2x2x2</string>
+    <string name="button_3x3">INSTRUKCJA DO  3x3x3</string>
     <string name="button_general_info">OZNACZENIA I NOTACJA</string>
     <string name="button_timer">TIMER</string>
 
-    <string name="title">JAK UŁOŻYĆ KOSTKĘ RUBIKA 3x3x3</string>
+    <string name="title">JAK UŁOŻYĆ KOSTKĘ RUBIKA</string>
     <string name="exit_situation">SYTUACJA WYJŚCIOWA</string>
     <string name="ok" translatable="false">OK</string>
     <string name="cancel" translatable="false">Cancel</string>

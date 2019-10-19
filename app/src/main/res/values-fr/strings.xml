@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rubics_cube</string>
-    <string name="title">COMMENT RÉSOUDRE LE CUBE DE RUBIK 3x3x3</string>
+    <string name="title">COMMENT RÉSOUDRE LE CUBE DE RUBIK</string>
     <string name="exit_situation">COMMENCER LA SITUATION</string>
     <string name="home">Page d\'accueil</string>
     <string name="step3">Étape 3</string>
