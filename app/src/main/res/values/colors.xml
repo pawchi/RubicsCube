@@ -19,4 +19,8 @@
     <color name="button_menu_active_text">#FF021486</color>
     <color name="attention_background">#FFAA66CC</color>
     <color name="xxx">#FFAAAAAA</color>
+
+    <color name="timer_text_praparing">#E91E63</color>
+    <color name="timer_text_ready">#4CAF50</color>
+    <color name="timer_text_ongoing">#242524</color>
 </resources>
