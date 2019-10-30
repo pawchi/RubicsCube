@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView backButton = (ImageView) findViewById(R.id.back_button);
         LinearLayout layoutTimer = (LinearLayout) findViewById(R.id.layout_button_timer);
 
-        backButton.setVisibility(View.INVISIBLE);
+        //backButton.setVisibility(View.INVISIBLE);
 
 
         layout_3x3.setOnClickListener(new View.OnClickListener() {
