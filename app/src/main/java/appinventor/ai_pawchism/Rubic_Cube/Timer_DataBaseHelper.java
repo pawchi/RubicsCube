@@ -15,7 +15,7 @@ public class Timer_DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, SCORE TEXT)";
+        String createTable = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, SCORE TEXT, DATE TEXT, CUBE TEXT)";
         db.execSQL(createTable);
     }
 
@@ -24,10 +24,12 @@ public class Timer_DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     }
 
-    public boolean addData(String score){
+    public boolean addData(String score, String date, String cube){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("SCORE", score);
+        contentValues.put("DATE", date);
+        contentValues.put("CUBE", cube);
 
         if (db.insert(TABLE_NAME, null, contentValues)==-1){
             return false;

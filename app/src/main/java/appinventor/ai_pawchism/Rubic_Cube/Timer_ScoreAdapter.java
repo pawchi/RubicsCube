@@ -19,8 +19,8 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
 
     public Timer_ScoreAdapter(Context context, int resource, ArrayList<Timer_Score> objects) {
         super(context, resource, objects);
-        mContext = mContext;
-        mResource = mResource;
+        mContext = context;
+        mResource = resource;
     }
 
     @NonNull
@@ -28,15 +28,21 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
     public View getView(int position, View convertView, ViewGroup parent){
         String id = getItem(position).getId();
         String score = getItem(position).getScore();
+        String date = getItem(position).getDate();
+        String cube = getItem(position).getCube();
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
         TextView txId = (TextView) convertView.findViewById(R.id.list_scoreId);
         TextView txScore = (TextView) convertView.findViewById(R.id.list_scoreTime);
+        TextView txDate = (TextView) convertView.findViewById(R.id.list_scoreDate);
+        TextView txCube = (TextView) convertView.findViewById(R.id.list_cube);
 
         txId.setText(id);
         txScore.setText(score);
+        txDate.setText(date);
+        txCube.setText(cube);
 
         return convertView;
     }

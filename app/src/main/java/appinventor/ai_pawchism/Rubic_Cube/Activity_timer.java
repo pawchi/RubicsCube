@@ -5,12 +5,14 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +22,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class Activity_timer extends AppCompatActivity {
@@ -38,7 +45,7 @@ public class Activity_timer extends AppCompatActivity {
             int mins = secs/60;
             secs%=60;
             int milliseconds = (int) (timeInMilis%1000);
-            String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d:%03d", mins, secs, milliseconds);
+            String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d:%02d", mins, secs, milliseconds);
             textTimer.setText(timeFormatted);
             customHandler.postDelayed(this, 0);
         }
@@ -100,7 +107,31 @@ public class Activity_timer extends AppCompatActivity {
         PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
         publisherAdView.loadAd(adRequest);
 
+        ListView listView = (ListView) findViewById(R.id.listViewMain);
         final Timer_DataBaseHelper db = new Timer_DataBaseHelper(this);
+        final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
+        final Timer_ScoreAdapter adapter = new Timer_ScoreAdapter(Activity_timer.this, R.layout.layout_adapter_list_timer, timerArrayList);
+
+        Cursor cursor = db.getDataFromDb();
+        if (cursor.getCount()>0){
+            while (cursor.moveToNext()) {
+                String id = (cursor.getString(0) + "\n");
+                String time = ( cursor.getString(1) + "\n");
+                String date = ( cursor.getString(2) + "\n");
+                String cube = ("CUBE: " + cursor.getString(3) + "\n");
+
+                Timer_Score timerItem = new Timer_Score(id, time, date, cube);
+                timerArrayList.add(timerItem);
+            }
+        } else {
+            String id = "1";
+            String time = "0";
+            String date = "DATE: ";
+            String cube = "CUBE: ";
+
+            Timer_Score timerItem = new Timer_Score(id, time, date, cube);
+            timerArrayList.add(timerItem);
+        }
 
         LinearLayout toInflateUpBar = (LinearLayout) findViewById(R.id.frame_up_bar_timer);
         getLayoutInflater().inflate(R.layout.fragment_up_bar, toInflateUpBar);
@@ -123,7 +154,11 @@ public class Activity_timer extends AppCompatActivity {
                         if (timerStatus==2){
                             //customHandler.postDelayed(stopCountingTime, 0);
                             customHandler.removeCallbacks(updateTimerThread);
-                            db.addData(textTimer.getText().toString());
+
+                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                            String strDate = sdf.format(new Date());
+                            db.addData(textTimer.getText().toString(), strDate, "3x3x3");
+                            Toast.makeText(getApplicationContext(),textTimer.getText().toString(), Toast.LENGTH_LONG).show();
                             return false;
                         }
 
@@ -145,7 +180,6 @@ public class Activity_timer extends AppCompatActivity {
             }
         });
 
-
         timerButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -163,48 +197,7 @@ public class Activity_timer extends AppCompatActivity {
             }
         });
 
-        /*
-        timerButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-
-                switch (motionEvent.getAction()){
-                    case MotionEvent.ACTION_DOWN:
-                        if (timerStatus==0) {
-                            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_praparing)));
-                            customHandler.postDelayed(startCountingTime, 500);
-                            return true;
-                        }
-                        if (timerStatus==1){
-                            //customHandler.postDelayed(stopCountingTime, 0);
-                            customHandler.removeCallbacks(updateTimerThread);
-                            return true;
-                        }
-                        if (timerStatus==2){
-                            customHandler.postDelayed(resetTimer, 0);
-                            return true;
-                        }
-
-                    case  MotionEvent.ACTION_MOVE:
-                        return false;
-
-                    case MotionEvent.ACTION_UP:
-                        if (timerStatus==0) {
-                            startTime = SystemClock.uptimeMillis();
-                            customHandler.postDelayed(updateTimerThread, 0);
-                            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_ongoing)));
-                            timerStatus=1;
-                            return true;
-                        }
-                        if (timerStatus==1){
-                            timerStatus=0;
-                            break;
-                        }
-                }
-                return false;
-            }
-        });
-         */
+        listView.setAdapter(adapter);
     }
 
     public void loadLocale(){
