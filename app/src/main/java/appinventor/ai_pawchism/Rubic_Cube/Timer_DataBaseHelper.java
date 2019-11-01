@@ -24,7 +24,7 @@ public class Timer_DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     }
 
-    public boolean addData(String score, String date, String cube){
+    public boolean addData(String score,String date, String cube){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("SCORE", score);

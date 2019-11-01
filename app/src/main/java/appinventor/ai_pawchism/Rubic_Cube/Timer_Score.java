@@ -25,6 +25,7 @@ public class Timer_Score {
         return score;
     }
 
+
     public String getDate() {
         return date;
     }
