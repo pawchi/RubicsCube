@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -16,14 +17,11 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -103,37 +101,13 @@ public class Activity_timer extends AppCompatActivity {
 
 
         //DB****************************************************************
-        ListView listView = (ListView) findViewById(R.id.listViewMain);
+        final ListView listView = (ListView) findViewById(R.id.listViewMain);
         final Timer_DataBaseHelper db = new Timer_DataBaseHelper(this);
         //db.deleteDataFromDB();
         final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
+        final Timer_ScoreAdapter adapter = new Timer_ScoreAdapter(Activity_timer.this, R.layout.layout_adapter_list_timer, timerArrayList);
 
-        Cursor cursor = db.getDataFromDb();
-        if (cursor.getCount()>0){
-            //StringBuffer stringBuffer = new StringBuffer();
-            while (cursor.moveToNext()) {
-                String id = (cursor.getString(0) + "\n");
-                String time = (cursor.getString(1) + "\n");
-                String date = (cursor.getString(2) + "\n");
-                String cube = (cursor.getString(3) + "\n");
-
-                //stringBuffer.append(cursor.getString(0) + "\n");
-                //stringBuffer.append(cursor.getString(1) + "\n");
-                //stringBuffer.append(cursor.getString(2) + "\n");
-                //stringBuffer.append(cursor.getString(3) + "\n");
-
-                Timer_Score timerItem = new Timer_Score(id, time,date,cube);
-                timerArrayList.add(timerItem);
-            }
-        } else {
-            String id = "1";
-            String time = "0";
-            String date = "DATE: ";
-            String cube = "CUBE: ";
-
-            Timer_Score timerItem = new Timer_Score(id, time,date, cube);
-            timerArrayList.add(timerItem);
-        }
+        //showDataFromDB(db, timerArrayList, listView, adapter);
 
         LinearLayout toInflateUpBar = (LinearLayout) findViewById(R.id.frame_up_bar_timer);
         getLayoutInflater().inflate(R.layout.fragment_up_bar, toInflateUpBar);
@@ -141,6 +115,8 @@ public class Activity_timer extends AppCompatActivity {
         final ConstraintLayout timerButton = (ConstraintLayout) findViewById(R.id.constraint_timer_field);
         textTimer = (TextView) findViewById(R.id.text_timer);
         textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
+
+
 
 
         timerButton.setOnTouchListener(new View.OnTouchListener() {
@@ -157,6 +133,11 @@ public class Activity_timer extends AppCompatActivity {
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                             String strDate = sdf.format(new Date());
                             db.addData(textTimer.getText().toString(),strDate, "3x3");
+                            //addLastRowToList(db, timerArrayList);
+                            timerArrayList.clear();
+                            showDataFromDB(db, timerArrayList);
+
+                            adapter.notifyDataSetChanged();
                             return false;
                         }
                     case  MotionEvent.ACTION_MOVE:
@@ -168,6 +149,10 @@ public class Activity_timer extends AppCompatActivity {
                             //textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_ongoing)));
                             timerStatus=2;
                             return true;
+                        }
+                        if (timerStatus==2){
+                            timerStatus=3;
+                            break;
                         }
                 }
                 return false;
@@ -181,15 +166,15 @@ public class Activity_timer extends AppCompatActivity {
                     customHandler.postDelayed(startCountingTime, 0);
                     timerStatus=1;
                 }
-                if (timerStatus==2){
+                if (timerStatus==3){
                     customHandler.postDelayed(resetTimer, 0);
                     timerStatus=1;
                 }
                 return true;
             }
         });
-
-        final Timer_ScoreAdapter adapter = new Timer_ScoreAdapter(Activity_timer.this, R.layout.layout_adapter_list_timer, timerArrayList);
+        showDataFromDB(db, timerArrayList);
+        listView.setDivider(null); //makes horizontal lines invisible
         listView.setAdapter(adapter);
     }
 
@@ -212,5 +197,41 @@ public class Activity_timer extends AppCompatActivity {
             recreate();
             startedLanguage = language;
         }
+    }
+
+    public void showDataFromDB(Timer_DataBaseHelper db, ArrayList<Timer_Score> timerArrayList){
+        Cursor cursor = db.getDataFromDb();
+        if (cursor.getCount()>0){
+            cursor.moveToLast();
+            while (cursor.moveToPrevious()) {
+                String id = (cursor.getString(0) + "\n");
+                String time = (cursor.getString(1) + "\n");
+                String date = (cursor.getString(2) + "\n");
+                String cube = (cursor.getString(3) + "\n");
+
+                Timer_Score timerItem = new Timer_Score(id, time,date,cube);
+                timerArrayList.add(timerItem);
+            }
+        } else {
+            String id = "1";
+            String time = "0";
+            String date = "DATE: ";
+            String cube = "CUBE: ";
+
+            Timer_Score timerItem = new Timer_Score(id, time,date, cube);
+            timerArrayList.add(timerItem);
+        }
+    }
+
+    public void addLastRowToList(Timer_DataBaseHelper db, ArrayList<Timer_Score> timerArrayList){
+        Cursor cursor = db.getFirstRowFromDb();
+            String id = (cursor.getString(0) + "\n");
+            String time = (cursor.getString(1) + "\n");
+            String date = (cursor.getString(2) + "\n");
+            String cube = (cursor.getString(3) + "\n");
+
+            Timer_Score timerItem = new Timer_Score(id, time,date,cube);
+            timerArrayList.add(timerItem);
+
     }
 }

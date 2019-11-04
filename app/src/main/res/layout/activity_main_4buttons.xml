@@ -74,8 +74,8 @@
                 android:id="@+id/main_button_2x2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxHeight="150dp"
-                android:maxWidth="150dp"
+                android:maxHeight="115dp"
+                android:maxWidth="115dp"
                 app:srcCompat="@drawable/icon_2x2"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"/>
@@ -129,9 +129,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"
-                android:maxWidth="150dp"
-                android:maxHeight="150dp"
-                app:srcCompat="@drawable/icon_notacja" />
+                android:maxWidth="125dp"
+                android:maxHeight="125dp"
+                app:srcCompat="@drawable/icon_notacja"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"

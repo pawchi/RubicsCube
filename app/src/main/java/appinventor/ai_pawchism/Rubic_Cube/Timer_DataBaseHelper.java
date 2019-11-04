@@ -53,4 +53,12 @@ public class Timer_DataBaseHelper extends SQLiteOpenHelper {
 
         return true;
     }
+
+    public Cursor getFirstRowFromDb(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME + " ORDER BY ROWID ASC LIMIT 1";
+        Cursor data = db.rawQuery(query, null);
+
+        return data;
+    }
 }
