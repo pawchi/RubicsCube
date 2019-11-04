@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +17,9 @@ import com.daimajia.androidanimations.library.YoYo;
 import java.util.Locale;
 
 public class WelcomeActivity extends AppCompatActivity {
-    private static int WELCOME_SCREEN_TIME_OUT = 1000;
+    private static int WELCOME_SCREEN_TIME_OUT = 3000;
     private TextView animatedText;
+    private ImageView animatedImage;
     String startedLanguage;
 
     @Override
@@ -27,11 +30,18 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        animatedText = (TextView) findViewById(R.id.textView_animated);
-        YoYo.with(Techniques.RubberBand)
-                .duration(1000)
-                .repeat(1)
-                .playOn(animatedText);
+        animatedImage = (ImageView) findViewById(R.id.imageView_animated);
+
+        YoYo.with(Techniques.Tada)
+                .duration(1500)
+                .repeat(2)
+                .playOn(animatedImage);
+        /*
+        YoYo.with(Techniques.Wobble)
+                .duration(1500)
+                .repeat(2)
+                .playOn(animatedImage);
+        */
 
         //'WELCOME SCREEN' for 4s
         new Handler().postDelayed(new Runnable() {

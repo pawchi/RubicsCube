@@ -40,21 +40,20 @@ public class Activity_timer extends AppCompatActivity {
         @Override
         public void run() {
             timeInMilis = SystemClock.uptimeMillis()-startTime;
-            int secs = (int) (timeInMilis/1000);
+            int secs = (int) (timeInMilis/100);
             int mins = secs/60;
             secs%=60;
-            int milliseconds = (int) (timeInMilis%1000);
+            int milliseconds = (int) (timeInMilis%100);
             String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d:%02d", mins, secs, milliseconds);
             textTimer.setText(timeFormatted);
             customHandler.postDelayed(this, 0);
         }
     };
 
-
-    Runnable startCountingTime = new Runnable(){
+    Runnable updateListView = new Runnable(){
         @Override
         public void run(){
-            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_ready)));
+
         }
     };
     Runnable stopCountingTime = new Runnable() {
@@ -75,10 +74,10 @@ public class Activity_timer extends AppCompatActivity {
         @Override
         public void run() {
             timeInMilis = 0L;
-            int secs = (int) (timeInMilis/1000);
+            int secs = (int) (timeInMilis/100);
             int mins = secs/60;
             secs%=60;
-            int milliseconds = (int) (timeInMilis%1000);
+            int milliseconds = (int) (timeInMilis%100);
             String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d:%02d", mins, secs, milliseconds);
             textTimer.setText(timeFormatted);
             textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
@@ -116,9 +115,6 @@ public class Activity_timer extends AppCompatActivity {
         textTimer = (TextView) findViewById(R.id.text_timer);
         textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
 
-
-
-
         timerButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -128,16 +124,17 @@ public class Activity_timer extends AppCompatActivity {
                             return false;
                         }
                         if (timerStatus==2){
-                            customHandler.removeCallbacks(updateTimerThread);
 
+                            customHandler.removeCallbacks(updateTimerThread);
+                            timerArrayList.clear();
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                             String strDate = sdf.format(new Date());
                             db.addData(textTimer.getText().toString(),strDate, "3x3");
-                            //addLastRowToList(db, timerArrayList);
-                            timerArrayList.clear();
                             showDataFromDB(db, timerArrayList);
-
+                            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
                             adapter.notifyDataSetChanged();
+                            listView.invalidateViews();
+                            listView.refreshDrawableState();
                             return false;
                         }
                     case  MotionEvent.ACTION_MOVE:
@@ -163,7 +160,7 @@ public class Activity_timer extends AppCompatActivity {
             @Override
             public boolean onLongClick(View view) {
                 if (timerStatus==0){
-                    customHandler.postDelayed(startCountingTime, 0);
+                    textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_ready)));
                     timerStatus=1;
                 }
                 if (timerStatus==3){
