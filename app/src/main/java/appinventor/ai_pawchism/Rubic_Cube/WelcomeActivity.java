@@ -1,24 +1,21 @@
 package appinventor.ai_pawchism.Rubic_Cube;
 
+import android.animation.Animator;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-
 import java.util.Locale;
 
 public class WelcomeActivity extends AppCompatActivity {
     private static int WELCOME_SCREEN_TIME_OUT = 3000;
-    private TextView animatedText;
     private ImageView animatedImage;
     String startedLanguage;
 
@@ -32,16 +29,31 @@ public class WelcomeActivity extends AppCompatActivity {
 
         animatedImage = (ImageView) findViewById(R.id.imageView_animated);
 
-        YoYo.with(Techniques.Tada)
+        YoYo.with(Techniques.RotateIn)
                 .duration(1500)
-                .repeat(2)
+                .withListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animator) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animator) {
+                        nextAnimation();
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animator) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animator) {
+
+                    }
+                })
                 .playOn(animatedImage);
-        /*
-        YoYo.with(Techniques.Wobble)
-                .duration(1500)
-                .repeat(2)
-                .playOn(animatedImage);
-        */
+
 
         //'WELCOME SCREEN' for 4s
         new Handler().postDelayed(new Runnable() {
@@ -72,6 +84,12 @@ public class WelcomeActivity extends AppCompatActivity {
             recreate();
             startedLanguage = language;
         }
+    }
+
+    public void nextAnimation(){
+        YoYo.with(Techniques.Tada)
+                .duration(1500)
+                .playOn(animatedImage);
     }
 }
 

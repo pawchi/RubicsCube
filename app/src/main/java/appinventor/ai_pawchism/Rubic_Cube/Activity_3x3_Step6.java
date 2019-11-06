@@ -53,6 +53,7 @@ public class Activity_3x3_Step6 extends AppCompatActivity implements View.OnClic
         stepButton6.setOnClickListener(this);
         stepButton7.setOnClickListener(this);
         settingsImage.setOnClickListener(this);
+        backButton.setOnClickListener(this);
 
         stepButton6.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_active)));
         stepButton6.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_text_active)));
@@ -94,7 +95,7 @@ public class Activity_3x3_Step6 extends AppCompatActivity implements View.OnClic
                 startActivity(new Intent(getApplicationContext(), Settings.class));
                 break;
             case R.id.back_button:
-                finish();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 break;
         }
     }

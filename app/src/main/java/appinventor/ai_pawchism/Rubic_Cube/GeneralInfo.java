@@ -1,6 +1,9 @@
 package appinventor.ai_pawchism.Rubic_Cube;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +26,22 @@ public class GeneralInfo extends AppCompatActivity {
 
         getLayoutInflater().inflate(R.layout.fragment_up_bar, layoutForInjectInto);
         getLayoutInflater().inflate(R.layout.content_general_info, layoutForInjectInto);
+
+        ImageView backButton = (ImageView) findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
+        ImageView settings = (ImageView) findViewById(R.id.settings_imageview);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
 
     }
 }
