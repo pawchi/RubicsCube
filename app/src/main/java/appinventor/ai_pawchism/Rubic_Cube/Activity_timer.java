@@ -70,9 +70,6 @@ public class Activity_timer extends AppCompatActivity {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        loadLocale();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-        startedLanguage = prefs.getString("My_Lang",""); //read the language in which the activity was created
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
 
@@ -106,7 +103,8 @@ public class Activity_timer extends AppCompatActivity {
         final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
         final Timer_ScoreAdapter adapter = new Timer_ScoreAdapter(Activity_timer.this, R.layout.layout_adapter_list_timer, timerArrayList);
 
-        final ConstraintLayout timerButton = (ConstraintLayout) findViewById(R.id.constraint_timer_field);
+        //final ConstraintLayout timerButton = (ConstraintLayout) findViewById(R.id.constraint_timer_field);
+        final View timerButton = (View) findViewById(R.id.timer_click_area);
         textTimer = (TextView) findViewById(R.id.text_timer);
         textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
 
@@ -170,26 +168,6 @@ public class Activity_timer extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
-    public void loadLocale(){
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-        String language = prefs.getString("My_Lang","");
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-        Configuration configuration = getBaseContext().getResources().getConfiguration();
-        configuration.setLocale(locale);
-        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-        String language = prefs.getString("My_Lang","");
-        if(!language.equals(startedLanguage)){ //check weather language is changed
-            recreate();
-            startedLanguage = language;
-        }
-    }
 
     public void showDataFromDB(Timer_DataBaseHelper db, ArrayList<Timer_Score> timerArrayList){
         Cursor cursor = db.getDataFromDb();

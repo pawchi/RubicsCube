@@ -18,10 +18,13 @@ public class SelectLanguage extends AppCompatActivity {
     RadioGroup languageRadioGroup;
     RadioButton radioButton;
     String radioButtonResult;
+    String language;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadLocale();
+        SharedPreferences prefs = getSharedPreferences("Settings",Activity.MODE_PRIVATE);
+        language = prefs.getString("My_Lang","");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_language);
 
@@ -48,8 +51,9 @@ public class SelectLanguage extends AppCompatActivity {
             public void onClick(View v) {
                 if (radioButtonResult != (null)) {
                     setLanguageForApp(radioButtonResult);
-                    recreate();
+                    //recreate();
                     finish();
+                    startActivity(getIntent());
                 } else {
                     radioButtonResult = "";
                     finish();
@@ -73,7 +77,8 @@ public class SelectLanguage extends AppCompatActivity {
                 break;
 
             case R.id.language_pl:
-                radioButtonResult = "pl_PL";
+                radioButtonResult = "pl";
+                //radioButtonResult = "pl_PL";
                 break;
 
             case R.id.language_es:
@@ -97,7 +102,7 @@ public class SelectLanguage extends AppCompatActivity {
 
     private void setLanguageForApp(String languageCode) {
         Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
+        //Locale.setDefault(locale);
         Configuration configuration = getBaseContext().getResources().getConfiguration();
         configuration.setLocale(locale);
         getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());

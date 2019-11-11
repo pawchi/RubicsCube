@@ -27,18 +27,18 @@
 
     <string name="step1">Krok 1</string>
     <string name="step1_effect">EFEKT KROKU 1</string>
-    <string name="step1_text1">Jeśli nie znasz jeszcze notacji stosowanej przy układaniu kostki, wróć do strony startowej i wejdź w zakładkę "Oznaczenia i notacja".
+    <string name="step1_text1" translatable="false">Jeśli nie znasz jeszcze notacji stosowanej przy układaniu kostki, wróć do strony startowej i wejdź w zakładkę "Oznaczenia i notacja".
         Układanie kostki zaczynamy od ułożenia niebieskiego krzyża na górnej ściance. Układamy go tak aby boki krzyża pasowały kolorami do środków bocznych ścianek, jak to pokazuje rysunek poniżej.</string>
-    <string name="step1_text2">Krok ten jest bardzo prosty i intuicyjny. Jedyny problem jaki może się pojawić pokazano wraz z rozwiązaniem na rysunku poniżej.</string>
+    <string name="step1_text2" translatable="false">Krok ten jest bardzo prosty i intuicyjny. Jedyny problem jaki może się pojawić pokazano wraz z rozwiązaniem na rysunku poniżej.</string>
 
 
     <string name="step2">Krok 2</string>
     <string name="step2_effect">EFEKT KROKU 2</string>
-    <string name="step2_text1">W tym kroku zajmiemy się ułożeniem narożników górnej ścianki, jak pokazano na poniższym rysunku.</string>
-    <string name="step2_text2">W zależności od ułożenia dolnego narożnika, możesz spotkać 3 przypadki:</string>
-    <string name="step2_text3">Przypadek 1</string>
-    <string name="step2_text4">Przypadek 2</string>
-    <string name="step2_text5">Przypadek 3</string>
+    <string name="step2_text1" translatable="false">W tym kroku zajmiemy się ułożeniem narożników górnej ścianki, jak pokazano na poniższym rysunku.</string>
+    <string name="step2_text2" translatable="false">W zależności od ułożenia dolnego narożnika, możesz spotkać 3 przypadki:</string>
+    <string name="step2_text3" translatable="false">Przypadek 1</string>
+    <string name="step2_text4" translatable="false">Przypadek 2</string>
+    <string name="step2_text5" translatable="false">Przypadek 3</string>
 
 
     <string name="step3">Krok 3</string>

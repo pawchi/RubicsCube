@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void loadLocale(){
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
@@ -110,4 +111,5 @@ public class MainActivity extends AppCompatActivity {
             startedLanguage = language;
         }
     }
+
 }
