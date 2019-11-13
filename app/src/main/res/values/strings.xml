@@ -24,7 +24,7 @@
         F\' oznacz ruch przeciwny - czyli przekręcenie przedniej ścianki przeciwnie do ruchu wskazówek zegara.  Dokładnie ta sama zasada dotyczy wszystkich pozostałych ścianek.
         Czyli np. ruch przeciwny do U(up-góra) to U\'. Ruch przeciwny do L(left-lewy) to L\' itd.</string>
 
-
+    <!-- Cube 3x3x3 -->
     <string name="step1">Krok 1</string>
     <string name="step1_effect">EFEKT KROKU 1</string>
     <string name="step1_text1" translatable="false">Jeśli nie znasz jeszcze notacji stosowanej przy układaniu kostki, wróć do strony startowej i wejdź w zakładkę "Oznaczenia i notacja".
@@ -100,6 +100,38 @@
     <string name="step7_text6">W trakcie wykonywania tych kroków kostka będzie wyglądała tak jakby wszystko się pomieszało. Nie przejmuj się tym - tak ma być! Wszystko wróci na swoje pozycje :)))</string>
     <string name="step7_text7">Jeśli jednak nie do końca to rozumiesz, zobacz proszę rysunek poniżej. Przedstawiono tam przykładową sytuację gdzie musimy przekręcić wszystkie cztery narożniki. Przez \'OK\' oznaczono narożniki, które się ułożyły po zastosowaniu algorytmu.
         Zauważ, że w międzyczasie kostka faktycznie wygląda na pomieszaną!!! Ale ostatecznie wszystko wraca na swoje miejsce!</string>
+
+
+    <!-- Cube 2x2x2 -->
+
+    <string name="dwa_step1">KROK 1</string>
+    <string name="dwa_step1_result">EFEKT KROKU 1</string>
+    <string name="dwa_step1_text1">Jeśli nie znasz notacji stosowanej w instrukcjach do kostek,  zanim rozpoczniesz krok 1, koniecznie zobacz zakładkę "Oznaczenia i notacja".</string>
+    <string name="dwa_step1_text2">Układanie kostki 2x2 rozpoczynamy od ułożenia jednej ścianki (np. zielonej) z przylegającymi do niej kolorami, jak na rysunku powyżej.
+        Etap ten jest prosty i każdy powinien sobie z nim sam poradzić.
+        Jednak w razie problemów, pomocny będzie poniższy algorytm, który przesuwa zielony klocek z dolnej na górną warstwę, pozostawiając 3 klocki górnej warstwy w niezmienionym położeniu.</string>
+    <string name="dwa_step1_text3">Możesz trafić na jeden z 3 przypadków, jak to pokazano poniżej.</string>
+    <string name="dwa_step1_text4">Przypadek 1</string>
+    <string name="dwa_step1_text5">Przypadek 2</string>
+    <string name="dwa_step1_text6">Przypadek 3</string>
+
+    <string name="dwa_step2">KROK 2</string>
+    <string name="dwa_step2_result">EFEKT KROKU 2</string>
+    <string name="dwa_step2_text1">W kroku 2 na początek przekręć kostkę o 180 stopni, tak aby ułożona w pierwszym kroku zielona ścianka znalazła się na dole kostki.</string>
+    <string name="dwa_step2_text2">Teraz będziemy przenosić wszystkie zielone klocki na górną warstwę.
+        Na razie nie obchodzi nas czy ścianki boczne będą pasować czy nie. Dopasowaniem ich zajmiemy się w ostatnim kroku.
+        </string>
+    <string name="dwa_step2_text3">W tym kroku spotkasz się z jednym z 7 przypadków. Każdy został pokazany poniżej wraz z algorytmem, który należy zastosować.
+        Pamiętaj aby właściwie ustawić kostkę bo inaczej algorytm nie zadziała.
+        Sposób ustawienia pokazano poniżej dla przypadku 1. Dla wszystkich innych przypadków ustawiaj kostkę analogicznie.</string>
+
+
+    <string name="dwa_step3">KROK 3</string>
+    <string name="dwa_step3_result">EFEKT KROKU 3</string>
+    <string name="dwa_step3_text1">W kroku 3 ułożymy już całą kostkę jak pokazano na obrazku poniżej  ;)) </string>
+    <string name="dwa_step3_text2">Możemy spotkać tutaj tylko 2 przypadki. Do każdego z przypadków, algorytm pokazano poniżej. Powodzenia!!</string>
+
+
 
     <string name="settings_title">USTAWIENIA:</string>
     <string name="settings_rate_us">Oceń aplikację.</string>

@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,13 +19,16 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>
         <activity
-            android:name="appinventor.ai_pawchism.Rubic_Cube.WelcomeActivity">
+            android:name="appinventor.ai_pawchism.Rubic_Cube.WelcomeActivity"
+            android:screenOrientation = "portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
+
+
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.MainActivity"
             android:screenOrientation = "portrait"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.GeneralInfo"
@@ -46,7 +50,11 @@
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step7"
             android:screenOrientation = "portrait"/>
 
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_2x2"
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_2x2_Step1"
+            android:screenOrientation = "portrait"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_2x2_Step2"
+            android:screenOrientation = "portrait"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_2x2_Step3"
             android:screenOrientation = "portrait"/>
 
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Settings"

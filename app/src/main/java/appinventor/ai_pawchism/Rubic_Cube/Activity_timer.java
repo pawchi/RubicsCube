@@ -91,7 +91,7 @@ public class Activity_timer extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Settings.class));
             }
         });
 
@@ -134,13 +134,14 @@ public class Activity_timer extends AppCompatActivity {
                         if (timerStatus==1) {
                             startTime = SystemClock.uptimeMillis();
                             customHandler.postDelayed(updateTimerThread, 0);
-                            updateDataFromDB(timerArrayList);
-                            listView.invalidateViews();
-                            listView.refreshDrawableState();
+
                             timerStatus=2;
                             return true;
                         }
                         if (timerStatus==2){
+                            updateDataFromDB(timerArrayList);
+                            listView.invalidateViews();
+                            listView.refreshDrawableState();
                             timerStatus=3;
                             break;
                         }
@@ -200,7 +201,7 @@ public class Activity_timer extends AppCompatActivity {
 
         if (cursor.getCount()>0){
             cursor.moveToLast();
-            while (cursor.moveToPrevious()) {
+            do {
                 String id = (cursor.getString(0) + "\n");
                 String time = (cursor.getString(1) + "\n");
                 String date = (cursor.getString(2) + "\n");
@@ -208,7 +209,7 @@ public class Activity_timer extends AppCompatActivity {
 
                 Timer_Score timerItem = new Timer_Score(id, time,date,cube);
                 timerArrayList.add(timerItem);
-            }
+            } while (cursor.moveToPrevious());
         }
     }
 }

@@ -13,7 +13,7 @@
         android:id="@+id/step1_2x2_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/step1_text1"
+        android:text="@string/dwa_step1_text1"
         android:textAlignment="viewStart"
         android:textColor="@color/primary_text"
         android:textSize="16sp"
@@ -60,28 +60,51 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/step1_2x2_exit_effect"
+            android:id="@+id/dwa_step1_exit_effect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/pre_step1_exit_effect"
+            app:srcCompat="@drawable/dwa_step1_initial_result"
             android:layout_marginStart="3dp"/>
 
 
         <TextView
-            android:id="@+id/step1_text2"
+            android:id="@+id/dwa_step1_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/step1_text2"
+            android:text="@string/dwa_step1_text2"
             android:textAlignment="viewStart"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
+        <TextView
+            android:id="@+id/dwa_step1_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dwa_step1_text3"
+            android:textAlignment="viewStart"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+        android:id="@+id/dwa_step1_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dwa_step1_text4"
+        android:textAlignment="viewStart"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"/>
         <ImageView
-            android:id="@+id/step1_alg1"
+            android:id="@+id/dwa_step1_alg1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
@@ -89,14 +112,83 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="5dp"
-            app:srcCompat="@drawable/pre_step1_alg1" />
-
+            app:srcCompat="@drawable/dwa_step1_alg1" />
         <ImageView
-            android:id="@+id/step1_alg1_moves"
+            android:id="@+id/dwa_step1_alg1_moves"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/pre_step1_alg1_moves"
+            app:srcCompat="@drawable/dwa_step1_alg1_gray"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="90dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/dwa_step1_text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dwa_step1_text5"
+            android:textAlignment="viewStart"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:id="@+id/dwa_step1_alg2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="5dp"
+            app:srcCompat="@drawable/dwa_step1_alg1_2" />
+        <ImageView
+            android:id="@+id/dwa_step1_alg2_moves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/dwa_step1_alg1_2_gray"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="90dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/dwa_step1_text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dwa_step1_text6"
+            android:textAlignment="viewStart"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:id="@+id/dwa_step1_alg3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="5dp"
+            app:srcCompat="@drawable/dwa_step1_alg1_3" />
+        <ImageView
+            android:id="@+id/dwa_step1_alg3_moves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/dwa_step1_alg1_3_gray"
             android:scaleType="fitCenter"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="90dp"/>

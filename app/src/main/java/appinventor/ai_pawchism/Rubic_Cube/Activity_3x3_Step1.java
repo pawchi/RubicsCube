@@ -43,7 +43,6 @@ public class Activity_3x3_Step1 extends AppCompatActivity implements View.OnClic
         ImageView settingsImage = (ImageView) findViewById(R.id.settings_imageview);
         ImageView backButton = (ImageView) findViewById(R.id.back_button);
 
-        backButton.setOnClickListener(this);
         stepButton1.setOnClickListener(this);
         stepButton2.setOnClickListener(this);
         stepButton3.setOnClickListener(this);

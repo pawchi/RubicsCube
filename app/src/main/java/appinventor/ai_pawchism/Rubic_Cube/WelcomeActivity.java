@@ -67,12 +67,17 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public void loadLocale(){
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-        String language = prefs.getString("My_Lang","");
-        Locale locale = new Locale(language);
+        String language = prefs.getString("My_Lang", "");
+        setLanguageForApp(language);
+    }
+
+    private void setLanguageForApp(String languageCode) {
+        //Adam's solution
+        Locale locale = new Locale(languageCode);
         Locale.setDefault(locale);
-        Configuration configuration = getBaseContext().getResources().getConfiguration();
+        Configuration configuration = new Configuration();
         configuration.setLocale(locale);
-        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
+        getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
     }
 
     @Override

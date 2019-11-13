@@ -22,9 +22,9 @@ public class SelectLanguage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        loadLocale();
-        SharedPreferences prefs = getSharedPreferences("Settings",Activity.MODE_PRIVATE);
-        language = prefs.getString("My_Lang","");
+        //loadLocale();
+        //SharedPreferences prefs = getSharedPreferences("Settings",Activity.MODE_PRIVATE);
+        //language = prefs.getString("My_Lang","");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_language);
 
@@ -50,10 +50,10 @@ public class SelectLanguage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (radioButtonResult != (null)) {
-                    setLanguageForApp(radioButtonResult);
+                    //setLanguageForApp(radioButtonResult);
+                    saveLocale(radioButtonResult);
                     //recreate();
                     finish();
-                    startActivity(getIntent());
                 } else {
                     radioButtonResult = "";
                     finish();
@@ -77,8 +77,8 @@ public class SelectLanguage extends AppCompatActivity {
                 break;
 
             case R.id.language_pl:
-                radioButtonResult = "pl";
-                //radioButtonResult = "pl_PL";
+                //radioButtonResult = "pl";
+                radioButtonResult = "pl_PL";
                 break;
 
             case R.id.language_es:
@@ -100,14 +100,24 @@ public class SelectLanguage extends AppCompatActivity {
         }
     }
 
+    /*
     private void setLanguageForApp(String languageCode) {
+
         Locale locale = new Locale(languageCode);
-        //Locale.setDefault(locale);
+        Locale.setDefault(locale);
         Configuration configuration = getBaseContext().getResources().getConfiguration();
         configuration.setLocale(locale);
         getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
         saveLocale(languageCode);
+
+        //Adam's solution
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Configuration configuration = new Configuration();
+        configuration.setLocale(locale);
+        getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
     }
+    */
 
     private void saveLocale(String languageCode) {
 
@@ -117,9 +127,11 @@ public class SelectLanguage extends AppCompatActivity {
     }
 
     //load language saved in shared preferences
+    /*
     public void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
         setLanguageForApp(language);
     }
+    */
 }
