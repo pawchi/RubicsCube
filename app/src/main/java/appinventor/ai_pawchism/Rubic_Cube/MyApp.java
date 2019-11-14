@@ -28,6 +28,4 @@ public class MyApp extends Application {
         configuration.setLocale(locale);
         getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
     }
-
-
 }

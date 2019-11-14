@@ -29,7 +29,7 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
 
         getLayoutInflater().inflate(R.layout.fragment_up_bar, layoutForInjectInto);
         getLayoutInflater().inflate(R.layout.layout_buttons_for_2x2, layoutForInjectInto);
-        getLayoutInflater().inflate(R.layout.content_2x2_step1, layoutForInjectInto);
+        getLayoutInflater().inflate(R.layout.content_2x2_step3, layoutForInjectInto);
 
         final Button stepButton1 = (Button) findViewById(R.id.button1_2x2);
         Button stepButton2 = (Button) findViewById(R.id.button2_2x2);

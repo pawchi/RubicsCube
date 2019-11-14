@@ -44,7 +44,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/primary_text"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/step1_2x2_effect_text"
@@ -55,7 +56,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/primary_text"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
@@ -65,9 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/dwa_step1_initial_result"
-            android:layout_marginStart="3dp"/>
-
+            app:srcCompat="@drawable/dwa_step1_initial_result"/>
 
         <TextView
             android:id="@+id/dwa_step1_text2"
@@ -93,16 +93,17 @@
             android:layout_marginTop="10dp"/>
 
         <TextView
-        android:id="@+id/dwa_step1_text4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dwa_step1_text4"
-        android:textAlignment="viewStart"
-        android:textColor="@color/primary_text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"/>
+            android:id="@+id/dwa_step1_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/dwa_step1_text4"
+            android:textAlignment="viewStart"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
         <ImageView
             android:id="@+id/dwa_step1_alg1"
             android:layout_width="match_parent"
@@ -133,6 +134,7 @@
             android:layout_height="wrap_content"
             android:text="@string/dwa_step1_text5"
             android:textAlignment="viewStart"
+            android:textStyle="bold"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -168,6 +170,7 @@
             android:layout_height="wrap_content"
             android:text="@string/dwa_step1_text6"
             android:textAlignment="viewStart"
+            android:textStyle="bold"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -193,9 +196,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="90dp"/>
 
-
     </LinearLayout>
-
-
 
 </LinearLayout>

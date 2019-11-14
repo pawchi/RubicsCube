@@ -104,32 +104,36 @@
 
     <!-- Cube 2x2x2 -->
 
-    <string name="dwa_step1">KROK 1</string>
-    <string name="dwa_step1_result">EFEKT KROKU 1</string>
-    <string name="dwa_step1_text1">Jeśli nie znasz notacji stosowanej w instrukcjach do kostek,  zanim rozpoczniesz krok 1, koniecznie zobacz zakładkę "Oznaczenia i notacja".</string>
-    <string name="dwa_step1_text2">Układanie kostki 2x2 rozpoczynamy od ułożenia jednej ścianki (np. zielonej) z przylegającymi do niej kolorami, jak na rysunku powyżej.
+    <string name="dwa_step1" translatable="false">KROK 1</string>
+    <string name="dwa_step1_result" translatable="false">EFEKT KROKU 1</string>
+    <string name="dwa_step1_text1" translatable="false">Jeśli nie znasz notacji stosowanej w instrukcjach do kostek,  zanim rozpoczniesz krok 1, koniecznie zobacz zakładkę "Oznaczenia i notacja".</string>
+    <string name="dwa_step1_text2" translatable="false">Układanie kostki 2x2 rozpoczynamy od ułożenia jednej ścianki (np. zielonej) z przylegającymi do niej kolorami, jak na rysunku powyżej.
         Etap ten jest prosty i każdy powinien sobie z nim sam poradzić.
         Jednak w razie problemów, pomocny będzie poniższy algorytm, który przesuwa zielony klocek z dolnej na górną warstwę, pozostawiając 3 klocki górnej warstwy w niezmienionym położeniu.</string>
-    <string name="dwa_step1_text3">Możesz trafić na jeden z 3 przypadków, jak to pokazano poniżej.</string>
-    <string name="dwa_step1_text4">Przypadek 1</string>
-    <string name="dwa_step1_text5">Przypadek 2</string>
-    <string name="dwa_step1_text6">Przypadek 3</string>
+    <string name="dwa_step1_text3" translatable="false">Możesz trafić na jeden z 3 przypadków, jak to pokazano poniżej.</string>
+    <string name="dwa_step1_text4" translatable="false">Przypadek 1</string>
+    <string name="dwa_step1_text5" translatable="false">Przypadek 2</string>
+    <string name="dwa_step1_text6" translatable="false">Przypadek 3</string>
 
-    <string name="dwa_step2">KROK 2</string>
-    <string name="dwa_step2_result">EFEKT KROKU 2</string>
-    <string name="dwa_step2_text1">W kroku 2 na początek przekręć kostkę o 180 stopni, tak aby ułożona w pierwszym kroku zielona ścianka znalazła się na dole kostki.</string>
-    <string name="dwa_step2_text2">Teraz będziemy przenosić wszystkie zielone klocki na górną warstwę.
+    <string name="dwa_step2" translatable="false">KROK 2</string>
+    <string name="dwa_step2_result" translatable="false">EFEKT KROKU 2</string>
+    <string name="dwa_step2_text1" translatable="false">Na początek tego etapu przekręć kostkę o 180 stopni, tak aby ułożona w pierwszym kroku zielona ścianka znalazła się na dole kostki.</string>
+    <string name="dwa_step2_text2" translatable="false">Teraz będziemy przenosić wszystkie niebieskie klocki na górną warstwę, jak to pokazano na powyższym obrazku.
         Na razie nie obchodzi nas czy ścianki boczne będą pasować czy nie. Dopasowaniem ich zajmiemy się w ostatnim kroku.
         </string>
-    <string name="dwa_step2_text3">W tym kroku spotkasz się z jednym z 7 przypadków. Każdy został pokazany poniżej wraz z algorytmem, który należy zastosować.
+    <string name="dwa_step2_text3" translatable="false">W tym kroku spotkasz się z jednym z 7 przypadków. Każdy został pokazany poniżej wraz z algorytmem, który należy zastosować.
         Pamiętaj aby właściwie ustawić kostkę bo inaczej algorytm nie zadziała.
         Sposób ustawienia pokazano poniżej dla przypadku 1. Dla wszystkich innych przypadków ustawiaj kostkę analogicznie.</string>
+    <string name="dwa_step2_text4" translatable="false">Przypadek 1</string>
+    <string name="dwa_step2_text5" translatable="false">Przypadki 2-7</string>
 
 
-    <string name="dwa_step3">KROK 3</string>
-    <string name="dwa_step3_result">EFEKT KROKU 3</string>
-    <string name="dwa_step3_text1">W kroku 3 ułożymy już całą kostkę jak pokazano na obrazku poniżej  ;)) </string>
-    <string name="dwa_step3_text2">Możemy spotkać tutaj tylko 2 przypadki. Do każdego z przypadków, algorytm pokazano poniżej. Powodzenia!!</string>
+    <string name="dwa_step3" translatable="false">KROK 3</string>
+    <string name="dwa_step3_result" translatable="false">EFEKT KROKU 3</string>
+    <string name="dwa_step3_text1" translatable="false">To już ostatni krok, w który ułożymy całą kostkę jak pokazano na obrazku poniżej  ;)) </string>
+    <string name="dwa_step3_text2" translatable="false">Etap ten polega na zamianie miejscami narożników. Możemy spotkać tutaj tylko 2 przypadki. Do każdego z przypadków, algorytm pokazano poniżej.</string>
+    <string name="dwa_step3_text3" translatable="false">Przypadek 1 </string>
+    <string name="dwa_step3_text4" translatable="false">Przypadek 2 </string>
 
 
 

@@ -44,7 +44,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/primary_text"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/step1_effect_text"
@@ -55,7 +56,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/primary_text"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
 
