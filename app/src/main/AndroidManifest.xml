@@ -29,9 +29,9 @@
         </activity>
 
 
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.MainActivity"
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_StartPage"
             android:screenOrientation = "portrait"/>
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.GeneralInfo"
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_Notation"
             android:screenOrientation = "portrait"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_timer"
             android:screenOrientation = "portrait"/>
@@ -57,7 +57,7 @@
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_2x2_Step3"
             android:screenOrientation = "portrait"/>
 
-        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Settings"
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_Settings"
             android:screenOrientation = "portrait"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.SelectLanguage"
             android:screenOrientation = "portrait"/>

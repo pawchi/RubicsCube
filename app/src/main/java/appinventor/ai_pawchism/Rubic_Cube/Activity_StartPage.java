@@ -14,7 +14,7 @@ import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class Activity_StartPage extends AppCompatActivity {
 
     String startedLanguage;
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         loadLocale();
-        SharedPreferences prefs = getSharedPreferences("Settings",Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings",Activity.MODE_PRIVATE);
         startedLanguage = prefs.getString("My_Lang",""); //read the language in which the activity was created
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         layout_3x3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Activity_3x3_Step1.class));
+                startActivity(new Intent(Activity_StartPage.this, Activity_3x3_Step1.class));
             }
         });
 
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         layoutGeninfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, GeneralInfo.class));
+                startActivity(new Intent(Activity_StartPage.this, Activity_Notation.class));
             }
         });
 
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         settingsImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Settings.class));
+                startActivity(new Intent(Activity_StartPage.this, Activity_Settings.class));
             }
         });
 
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void loadLocale(){
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
         Locale locale = new Locale(language);
         Locale.setDefault(locale);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
         if(!language.equals(startedLanguage)){ //check weather language is changed
             recreate();

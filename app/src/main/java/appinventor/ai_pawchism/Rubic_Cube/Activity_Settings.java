@@ -13,13 +13,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.Locale;
 
-public class Settings extends AppCompatActivity {
+public class Activity_Settings extends AppCompatActivity {
     String startedLanguage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadLocale();
-        SharedPreferences prefs = getSharedPreferences("Settings",Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings",Activity.MODE_PRIVATE);
         startedLanguage = prefs.getString("My_Lang","");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
@@ -44,13 +44,13 @@ public class Settings extends AppCompatActivity {
         selectLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Settings.this,SelectLanguage.class));
+                startActivity(new Intent(Activity_Settings.this,SelectLanguage.class));
             }
         });
     }
 
     public void loadLocale(){
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
         Locale locale = new Locale(language);
         Locale.setDefault(locale);
@@ -62,7 +62,7 @@ public class Settings extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
         if(!language.equals(startedLanguage)){ //check weather language is changed
             recreate();

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 
-public class GeneralInfo extends AppCompatActivity {
+public class Activity_Notation extends AppCompatActivity {
 
     LayoutInflater inflater;
 
@@ -54,7 +54,7 @@ public class GeneralInfo extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
             }
         });
 
@@ -62,7 +62,7 @@ public class GeneralInfo extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Settings.class));
+                startActivity(new Intent(getApplicationContext(), Activity_Settings.class));
             }
         });
 

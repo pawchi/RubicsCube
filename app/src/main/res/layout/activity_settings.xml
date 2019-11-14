@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/settings_background"
-    tools:context="appinventor.ai_pawchism.Rubic_Cube.Settings">
+    tools:context="appinventor.ai_pawchism.Rubic_Cube.Activity_Settings">
 
     <LinearLayout
         android:id="@+id/main_setup_lin_layout"

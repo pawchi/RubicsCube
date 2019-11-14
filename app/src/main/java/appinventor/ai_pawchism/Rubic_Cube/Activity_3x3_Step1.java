@@ -91,10 +91,10 @@ public class Activity_3x3_Step1 extends AppCompatActivity implements View.OnClic
                 startActivity(new Intent(getApplicationContext(), Activity_3x3_Step7.class));
                 break;
             case R.id.settings_imageview:
-                startActivity(new Intent(getApplicationContext(), Settings.class));
+                startActivity(new Intent(getApplicationContext(), Activity_Settings.class));
                 break;
             case R.id.back_button:
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
                 break;
         }
     }

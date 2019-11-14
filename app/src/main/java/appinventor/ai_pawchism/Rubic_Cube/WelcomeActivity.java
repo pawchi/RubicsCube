@@ -22,7 +22,7 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         loadLocale();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         startedLanguage = prefs.getString("My_Lang",""); //read the language in which the activity was created
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
@@ -59,14 +59,14 @@ public class WelcomeActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
                 finish();
             }
         },WELCOME_SCREEN_TIME_OUT);
     }
 
     public void loadLocale(){
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
         setLanguageForApp(language);
     }
@@ -83,7 +83,7 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
         if(!language.equals(startedLanguage)){ //check weather language is changed
             recreate();

@@ -16,7 +16,7 @@ public class MyApp extends Application {
     }
 
     public void loadLocale() {
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
         setLanguageForApp(language);
     }

@@ -26,7 +26,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadLocale();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         startedLanguage = prefs.getString("My_Lang",""); //read the language in which the activity was created
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empty);
@@ -101,16 +101,16 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                 startActivity(new Intent(getApplicationContext(), Activity_3x3_Step7.class));
                 break;
             case R.id.settings_imageview:
-                startActivity(new Intent(getApplicationContext(), Settings.class));
+                startActivity(new Intent(getApplicationContext(), Activity_Settings.class));
                 break;
             case R.id.back_button:
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
                 break;
         }
     }
 
     public void loadLocale(){
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
         Locale locale = new Locale(language);
         Locale.setDefault(locale);
@@ -122,7 +122,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang","");
         if(!language.equals(startedLanguage)){ //check weather language is changed
             recreate();

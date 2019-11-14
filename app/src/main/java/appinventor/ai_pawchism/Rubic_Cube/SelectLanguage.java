@@ -23,7 +23,7 @@ public class SelectLanguage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //loadLocale();
-        //SharedPreferences prefs = getSharedPreferences("Settings",Activity.MODE_PRIVATE);
+        //SharedPreferences prefs = getSharedPreferences("Activity_Settings",Activity.MODE_PRIVATE);
         //language = prefs.getString("My_Lang","");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_language);
@@ -121,7 +121,7 @@ public class SelectLanguage extends AppCompatActivity {
 
     private void saveLocale(String languageCode) {
 
-        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor = getSharedPreferences("Activity_Settings", MODE_PRIVATE).edit();
         editor.putString("My_Lang", languageCode);
         editor.commit();
     }
@@ -129,7 +129,7 @@ public class SelectLanguage extends AppCompatActivity {
     //load language saved in shared preferences
     /*
     public void loadLocale() {
-        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
         setLanguageForApp(language);
     }
