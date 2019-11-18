@@ -1,41 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="20dp"
-    android:orientation="horizontal"
-    android:gravity="center_vertical">
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/list_scoreId"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="60dp"
         android:textSize="14sp"
-        android:textColor="@color/timer_index"/>
+        android:textColor="@color/timer_index"
+        android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/list_scoreDate"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="60dp"
         android:textSize="14sp"
         android:layout_marginStart="5dp"
-        android:textColor="@color/primary_text"/>
+        android:textColor="@color/primary_text"
+        android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/list_scoreTime"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="60dp"
         android:text="00:05:25"
         android:textColor="@color/timer_score"
-        android:textSize="14sp"
-        android:layout_marginStart="5dp"/>
+        android:textSize="22sp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"/>
+    <ImageView
+        android:id="@+id/timer_delete_item"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_delete"
+        android:gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/list_cube"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="60dp"
         android:textColor="@color/primary_text"
         android:textSize="14sp"
-        android:layout_marginStart="5dp"/>
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"/>
 
 </LinearLayout>

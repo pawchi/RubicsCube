@@ -35,6 +35,9 @@
             android:screenOrientation = "portrait"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_timer"
             android:screenOrientation = "portrait"/>
+        <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_show_timer_list"
+            android:screenOrientation = "portrait"/>
+
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step1"
             android:screenOrientation = "portrait"/>
         <activity android:name="appinventor.ai_pawchism.Rubic_Cube.Activity_3x3_Step2"

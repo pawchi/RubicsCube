@@ -16,6 +16,7 @@
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
 
 
+    <!-- Notation -->
     <string name="home">Strona główna</string>
     <string name="introduction_main_page">Zanim rozpoczniesz Krok 1 zapoznaj się z oznaczeniami używanymi w algorytmach układania kostek.
         Myślę, że poniższe obrazki wyjaśnią wszystko. Zasadą w oznaczaniu ruchów jest, że patrząc na ściankę od przodu,
@@ -23,6 +24,7 @@
         Czyli np. \"F\" oznacza przekręcenie 1 raz przedniej(frontowej) ścianki ( \"F\" od angielskiego \"front\" czyli przód) zgodnie ze wskazówkami zegara.
         F\' oznacz ruch przeciwny - czyli przekręcenie przedniej ścianki przeciwnie do ruchu wskazówek zegara.  Dokładnie ta sama zasada dotyczy wszystkich pozostałych ścianek.
         Czyli np. ruch przeciwny do U(up-góra) to U\'. Ruch przeciwny do L(left-lewy) to L\' itd.</string>
+
 
     <!-- Cube 3x3x3 -->
     <string name="step1">Krok 1</string>
@@ -103,7 +105,6 @@
 
 
     <!-- Cube 2x2x2 -->
-
     <string name="dwa_step1" translatable="false">KROK 1</string>
     <string name="dwa_step1_result" translatable="false">EFEKT KROKU 1</string>
     <string name="dwa_step1_text1" translatable="false">Jeśli nie znasz notacji stosowanej w instrukcjach do kostek,  zanim rozpoczniesz krok 1, koniecznie zobacz zakładkę "Oznaczenia i notacja".</string>
@@ -136,6 +137,12 @@
     <string name="dwa_step3_text4" translatable="false">Przypadek 2 </string>
 
 
+    <!-- Timer -->
+    <string name="timer_show_scores_table" translatable="false">Tabela wyników</string>
+    <string-array name="spinner_choose_cube">
+        <item>3x3x3</item>
+        <item>2x2x2</item>
+    </string-array>
 
     <string name="settings_title">USTAWIENIA:</string>
     <string name="settings_rate_us">Oceń aplikację.</string>
