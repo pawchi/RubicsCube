@@ -106,6 +106,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this, R.array.spinner_choose_cube, android.R.layout.simple_spinner_item);
         adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapterSpinner);
+        spinner.setSelection(0);
         spinner.setOnItemSelectedListener(this);
 
         //DB****************************************************************
