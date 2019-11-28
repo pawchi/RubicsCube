@@ -36,6 +36,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
     long timeInMilis = 0L;
     Handler customHandler = new Handler();
     int timerStatus = 0;
+    String cubeType;
 
     Runnable updateTimerThread = new Runnable() {
         @Override
@@ -110,7 +111,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         spinner.setOnItemSelectedListener(this);
 
         //DB****************************************************************
-        ImageView deleteItem = (ImageView) findViewById(R.id.timer_delete_item);
+        //ImageView deleteItem = (ImageView) findViewById(R.id.timer_delete_item);
         final ListView listView = (ListView) findViewById(R.id.listViewMain);
         final Timer_DataBaseHelper db = new Timer_DataBaseHelper(this);
         final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
@@ -135,7 +136,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
                             customHandler.removeCallbacks(updateTimerThread);
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                             String strDate = sdf.format(new Date());
-                            db.addData(textTimer.getText().toString(),strDate, "3x3");
+                            db.addData(textTimer.getText().toString(),strDate, cubeType);
                             textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
                             return false;
                         }
@@ -177,8 +178,8 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
             }
         });
         showDataFromDB(db, timerArrayList);
-        listView.setDivider(null); //makes horizontal lines invisible
-        listView.setAdapter(adapter);
+        //listView.setDivider(null); //makes horizontal lines invisible
+        //listView.setAdapter(adapter);
     }
 
 
@@ -227,8 +228,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-        String text = adapterView.getItemAtPosition(position).toString();
-        Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_LONG).show();
+        cubeType = adapterView.getItemAtPosition(position).toString();
     }
 
     @Override

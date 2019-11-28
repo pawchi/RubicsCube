@@ -21,8 +21,6 @@ public class Activity_show_timer_list extends AppCompatActivity  {
         final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
         showDataFromDB(db, timerArrayList);
         final Timer_ScoreAdapter adapter = new Timer_ScoreAdapter(Activity_show_timer_list.this, R.layout.layout_adapter_list_timer, timerArrayList);
-
-
         listView.setAdapter(adapter);
 
     }

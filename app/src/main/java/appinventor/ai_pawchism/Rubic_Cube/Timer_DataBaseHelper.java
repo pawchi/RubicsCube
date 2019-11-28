@@ -46,7 +46,7 @@ public class Timer_DataBaseHelper extends SQLiteOpenHelper {
         return data;
     }
 
-    public boolean deleteDataFromDB(){
+    public boolean deleteAllDataFromDB(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NAME, null, null);
         //db.execSQL("delete from " + TABLE_NAME);
@@ -60,5 +60,13 @@ public class Timer_DataBaseHelper extends SQLiteOpenHelper {
         Cursor data = db.rawQuery(query, null);
 
         return data;
+    }
+
+    public boolean deleteDataFromDBbyID(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        if (db.delete(TABLE_NAME, "ID = ?",new String[] {id})>0)
+            return true;
+        else
+            return false;
     }
 }

@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="60dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
     <TextView
         android:id="@+id/list_scoreId"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="60dp"
-        android:textSize="14sp"
-        android:textColor="@color/timer_index"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/timer_score"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/list_scoreDate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:textSize="14sp"
         android:layout_marginStart="5dp"
         android:textColor="@color/primary_text"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:layout_weight="1"/>
 
     <TextView
         android:id="@+id/list_scoreTime"
-        android:layout_width="wrap_content"
+        android:layout_width="90dp"
         android:layout_height="60dp"
-        android:text="00:05:25"
-        android:textColor="@color/timer_score"
-        android:textSize="22sp"
         android:layout_marginStart="5dp"
-        android:gravity="center_vertical"/>
-    <ImageView
-        android:id="@+id/timer_delete_item"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@android:drawable/ic_delete"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:text="00:05:25"
+        android:textAlignment="center"
+        android:textColor="@color/timer_score"
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/list_cube"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="60dp"
         android:textColor="@color/primary_text"
         android:textSize="14sp"
         android:layout_marginStart="5dp"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:textAlignment="center"/>
+
+
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
 
 </LinearLayout>

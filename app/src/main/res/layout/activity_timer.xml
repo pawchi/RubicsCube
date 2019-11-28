@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -34,13 +34,13 @@
                 android:text="@string/timer_show_scores_table"
                 android:background="@color/settings_buttons_background"
                 android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
             <View
                 android:layout_width="5dp"
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="10dp"/>
 
             <Spinner
                 android:id="@+id/timer_spinner"
@@ -50,8 +50,8 @@
                 android:background="@color/settings_buttons_background"
                 android:textAlignment="center"
                 android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -109,6 +109,170 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/best_scores_general_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/publisherAdView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/best_time_text"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/best_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:00"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/worst_time_text"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"/>
+                <TextView
+                    android:id="@+id/worst_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:00"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/average_5_text"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/average5_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:00"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/average_10_text"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"/>
+                <TextView
+                    android:id="@+id/average10_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:00"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/average_20_text"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/average20_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:00"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/average_50_text"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"/>
+                <TextView
+                    android:id="@+id/average50_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5:00"
+                    android:textSize="14dp"
+                    android:textColor="@color/button_menu_text_active"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <com.google.android.gms.ads.doubleclick.PublisherAdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
