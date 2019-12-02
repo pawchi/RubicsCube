@@ -47,10 +47,8 @@
         android:gravity="center_vertical"
         android:textAlignment="center"/>
 
-
-
     <CheckBox
-        android:id="@+id/checkbox"
+        android:id="@+id/list_checkbox"
         android:layout_width="60dp"
         android:layout_height="60dp" />
 

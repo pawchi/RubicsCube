@@ -102,6 +102,14 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
             }
         });
 
+        //Scores displayed in the bottom of screen
+        TextView bestScore = (TextView) findViewById(R.id.best_score);
+        TextView worstScore = (TextView) findViewById(R.id.worst_score);
+        TextView averageFrom5 = (TextView) findViewById(R.id.average5_score);
+        TextView averageFrom10 = (TextView) findViewById(R.id.average10_score);
+        TextView averageFrom20 = (TextView) findViewById(R.id.average20_score);
+        TextView averageFrom50 = (TextView) findViewById(R.id.average50_score);
+
         //Spinner - choose cube type
         Spinner spinner = findViewById(R.id.timer_spinner);
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this, R.array.spinner_choose_cube, android.R.layout.simple_spinner_item);
@@ -178,8 +186,9 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
             }
         });
         showDataFromDB(db, timerArrayList);
-        //listView.setDivider(null); //makes horizontal lines invisible
-        //listView.setAdapter(adapter);
+
+        bestScore.setText(getBestScore(timerArrayList));
+
     }
 
 
@@ -234,5 +243,16 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public String getBestScore(ArrayList<Timer_Score> timerArrayList){
+        String item = timerArrayList.get(0).score;
+
+        int min = Integer.parseInt(item.substring(0,2));
+        int sec = Integer.parseInt(item.substring(3,5));
+        int millis = Integer.parseInt(item.substring(6,8));
+
+        int scoreInt = millis + sec*60 + min*3600;
+        return String.valueOf(scoreInt);
     }
 }

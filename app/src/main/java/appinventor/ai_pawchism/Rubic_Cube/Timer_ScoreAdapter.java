@@ -24,9 +24,47 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
         mResource = resource;
     }
 
+    private class ViewHolder{
+        TextView idHloder;
+        TextView scoreHolder;
+        TextView dateHolder;
+        TextView cubeHolder;
+        CheckBox checkBox;
+    }
+
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
+
+        final ViewHolder holder;
+
+        if(convertView==null){
+            holder = new ViewHolder();
+            LayoutInflater inflater = LayoutInflater.from(mContext);
+            convertView = inflater.inflate(mResource, parent, false);
+
+            holder.idHloder = (TextView) convertView.findViewById(R.id.list_scoreId);
+            holder.scoreHolder = (TextView) convertView.findViewById(R.id.list_scoreTime);
+            holder.dateHolder = (TextView) convertView.findViewById(R.id.list_scoreDate);
+            holder.cubeHolder = (TextView) convertView.findViewById(R.id.list_cube);
+            holder.checkBox = (CheckBox) convertView.findViewById(R.id.list_checkbox);
+
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+            holder.checkBox.setOnCheckedChangeListener(null);
+        }
+
+
+
+        holder.idHloder.setText(getItem(position).getId());
+        holder.scoreHolder.setText(getItem(position).getScore());
+        holder.dateHolder.setText(getItem(position).getDate());
+        holder.cubeHolder.setText(getItem(position).getCube());
+        holder.checkBox.setChecked(true);
+
+        //********************
+        /*
         String id = getItem(position).getId();
         String score = getItem(position).getScore();
         String date = getItem(position).getDate();
@@ -44,6 +82,7 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
         txScore.setText(score);
         txDate.setText(date);
         txCube.setText(cube);
+        */
 
 
 
