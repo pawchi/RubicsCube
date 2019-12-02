@@ -61,7 +61,7 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
         holder.scoreHolder.setText(getItem(position).getScore());
         holder.dateHolder.setText(getItem(position).getDate());
         holder.cubeHolder.setText(getItem(position).getCube());
-        holder.checkBox.setChecked(true);
+        //holder.checkBox.setChecked(true);
 
         //********************
         /*

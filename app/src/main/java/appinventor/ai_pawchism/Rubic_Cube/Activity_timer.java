@@ -37,6 +37,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
     Handler customHandler = new Handler();
     int timerStatus = 0;
     String cubeType;
+    TextView bestScore, worstScore, averageFrom5,averageFrom10, averageFrom20, averageFrom50;
 
     Runnable updateTimerThread = new Runnable() {
         @Override
@@ -103,12 +104,12 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         });
 
         //Scores displayed in the bottom of screen
-        TextView bestScore = (TextView) findViewById(R.id.best_score);
-        TextView worstScore = (TextView) findViewById(R.id.worst_score);
-        TextView averageFrom5 = (TextView) findViewById(R.id.average5_score);
-        TextView averageFrom10 = (TextView) findViewById(R.id.average10_score);
-        TextView averageFrom20 = (TextView) findViewById(R.id.average20_score);
-        TextView averageFrom50 = (TextView) findViewById(R.id.average50_score);
+        bestScore = (TextView) findViewById(R.id.best_score);
+        worstScore = (TextView) findViewById(R.id.worst_score);
+        averageFrom5 = (TextView) findViewById(R.id.average5_score);
+        averageFrom10 = (TextView) findViewById(R.id.average10_score);
+        averageFrom20 = (TextView) findViewById(R.id.average20_score);
+        averageFrom50 = (TextView) findViewById(R.id.average50_score);
 
         //Spinner - choose cube type
         Spinner spinner = findViewById(R.id.timer_spinner);
@@ -166,6 +167,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
                             updateDataFromDB(timerArrayList);
                             listView.invalidateViews();
                             listView.refreshDrawableState();
+                            bestScore.setText(getBestScore(timerArrayList));
                             timerStatus=0;
                             break;
                         }
@@ -186,8 +188,6 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
             }
         });
         showDataFromDB(db, timerArrayList);
-
-        bestScore.setText(getBestScore(timerArrayList));
 
     }
 
