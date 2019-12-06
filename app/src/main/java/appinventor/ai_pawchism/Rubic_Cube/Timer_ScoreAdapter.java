@@ -6,17 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
+public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> implements CompoundButton.OnCheckedChangeListener {
     private static final String TAG = "Timer_ScoreAdapter";
     private Context mContext;
     private int mResource;
+    private Set<Timer_Score> selectedIds = new HashSet<>();
 
     public Timer_ScoreAdapter(Context context, int resource, ArrayList<Timer_Score> objects) {
         super(context, resource, objects);
@@ -24,7 +27,16 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
         mResource = resource;
     }
 
-    private class ViewHolder{
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+    }
+
+    public Set<Timer_Score> getItemsToRemove() {
+        return selectedIds;
+    }
+
+    private class ViewHolder {
         TextView idHloder;
         TextView scoreHolder;
         TextView dateHolder;
@@ -34,11 +46,11 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
 
     @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
 
         final ViewHolder holder;
 
-        if(convertView==null){
+        if (convertView == null) {
             holder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(mContext);
             convertView = inflater.inflate(mResource, parent, false);
@@ -55,13 +67,23 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
             holder.checkBox.setOnCheckedChangeListener(null);
         }
 
+        final Timer_Score score = getItem(position);
 
-
-        holder.idHloder.setText(getItem(position).getId());
-        holder.scoreHolder.setText(getItem(position).getScore());
-        holder.dateHolder.setText(getItem(position).getDate());
-        holder.cubeHolder.setText(getItem(position).getCube());
-        //holder.checkBox.setChecked(true);
+        holder.idHloder.setText(score.getId());
+        holder.scoreHolder.setText(score.getScore());
+        holder.dateHolder.setText(score.getDate());
+        holder.cubeHolder.setText(score.getCube());
+        holder.checkBox.setChecked(selectedIds.contains(score));
+        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    selectedIds.add(score);
+                } else {
+                    selectedIds.remove(score);
+                }
+            }
+        });
 
         //********************
         /*
@@ -83,7 +105,6 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> {
         txDate.setText(date);
         txCube.setText(cube);
         */
-
 
 
         return convertView;

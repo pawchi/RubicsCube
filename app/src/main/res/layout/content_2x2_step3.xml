@@ -49,7 +49,7 @@
 
             <TextView
                 android:id="@+id/step3_2x2_effect_text"
-                android:text="@string/dwa_step3_result"
+                android:text="@string/step3_effect"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
@@ -86,7 +86,7 @@
             android:id="@+id/dwa_step3_text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/dwa_step3_text3"
+            android:text="@string/case1_text"
             android:textAlignment="viewStart"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
@@ -112,7 +112,7 @@
             android:id="@+id/dwa_step3_text4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/dwa_step3_text4"
+            android:text="@string/case2_text"
             android:textAlignment="viewStart"
             android:textColor="@color/primary_text"
             android:textSize="16sp"

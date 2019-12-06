@@ -88,12 +88,13 @@
             android:id="@+id/step2_text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/step2_text3"
+            android:text="@string/case1_text"
             android:textAlignment="viewStart"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/step2_alg1"
@@ -123,12 +124,13 @@
             android:id="@+id/step2_text4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/step2_text4"
+            android:text="@string/case2_text"
             android:textAlignment="viewStart"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/step2_alg2"
@@ -158,12 +160,13 @@
             android:id="@+id/step2_text5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/step2_text5"
+            android:text="@string/case3_text"
             android:textAlignment="viewStart"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/step2_alg3"

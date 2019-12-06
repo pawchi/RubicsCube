@@ -18,10 +18,8 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 import java.text.SimpleDateFormat;
@@ -37,16 +35,16 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
     Handler customHandler = new Handler();
     int timerStatus = 0;
     String cubeType;
-    TextView bestScore, worstScore, averageFrom5,averageFrom10, averageFrom20, averageFrom50;
+    TextView bestScore, worstScore, averageFrom5, averageFrom10, averageFrom20, averageFrom50;
 
     Runnable updateTimerThread = new Runnable() {
         @Override
         public void run() {
-            timeInMilis = SystemClock.uptimeMillis()-startTime;
+            timeInMilis = SystemClock.uptimeMillis() - startTime;
             int mins = (int) timeInMilis / 60000;
             int secs = (int) timeInMilis % 60000 / 1000;
             int milliseconds = (int) timeInMilis % 60000 / 10;
-            String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d:%02d", mins, secs, milliseconds%100);
+            String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d:%02d", mins, secs, milliseconds % 100);
             textTimer.setText(timeFormatted);
             customHandler.postDelayed(this, 0);
         }
@@ -56,10 +54,10 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         @Override
         public void run() {
             timeInMilis = 0L;
-            int secs = (int) (timeInMilis/1000);
-            int mins = secs/60;
-            secs%=60;
-            int milliseconds = (int) (timeInMilis%1000);
+            int secs = (int) (timeInMilis / 1000);
+            int mins = secs / 60;
+            secs %= 60;
+            int milliseconds = (int) (timeInMilis % 1000);
             String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d:%02d", mins, secs, milliseconds);
             textTimer.setText(timeFormatted);
             textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_ready)));
@@ -134,41 +132,49 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         timerButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()){
+                switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        if (timerStatus==0) {
+                        if (timerStatus == 0) {
                             textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_praparing)));
                             return false;
                         }
-                        if (timerStatus==2){
+                        if (timerStatus == 2) {
 
                             customHandler.removeCallbacks(updateTimerThread);
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                             String strDate = sdf.format(new Date());
-                            db.addData(textTimer.getText().toString(),strDate, cubeType);
+                            db.addData(textTimer.getText().toString(), strDate, cubeType);
                             textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
                             return false;
                         }
-                    case  MotionEvent.ACTION_MOVE:
+                    case MotionEvent.ACTION_MOVE:
                         return false;
                     case MotionEvent.ACTION_UP:
-                        if (timerStatus==0){
+                        if (timerStatus == 0) {
                             textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
                             return false;
                         }
-                        if (timerStatus==1){
+                        if (timerStatus == 1) {
                             startTime = SystemClock.uptimeMillis();
                             customHandler.postDelayed(updateTimerThread, 0);
 
-                            timerStatus=2;
+                            timerStatus = 2;
                             return true;
                         }
-                        if (timerStatus==2){
+                        if (timerStatus == 2) {
                             updateDataFromDB(timerArrayList);
                             listView.invalidateViews();
                             listView.refreshDrawableState();
-                            bestScore.setText(getBestScore(timerArrayList));
-                            timerStatus=0;
+
+                            TimerAvarages results = avarages(timerArrayList);
+                            bestScore.setText(results.getMin());
+                            worstScore.setText(results.getMax());
+                            averageFrom5.setText(results.getAvg5());
+                            averageFrom10.setText(results.getAvg10());
+                            averageFrom20.setText(results.getAvg20());
+                            averageFrom50.setText(results.getAvg50());
+
+                            timerStatus = 0;
                             break;
                         }
                 }
@@ -179,22 +185,29 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         timerButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                if (timerStatus==0){
+                if (timerStatus == 0) {
                     customHandler.postDelayed(resetTimer, 0);
                     textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_ready)));
-                    timerStatus=1;
+                    timerStatus = 1;
                 }
                 return true;
             }
         });
         showDataFromDB(db, timerArrayList);
-
+        //Show scores
+        TimerAvarages results = avarages(timerArrayList);
+        bestScore.setText(results.getMin());
+        worstScore.setText(results.getMax());
+        averageFrom5.setText(results.getAvg5());
+        averageFrom10.setText(results.getAvg10());
+        averageFrom20.setText(results.getAvg20());
+        averageFrom50.setText(results.getAvg50());
     }
 
 
-    public void showDataFromDB(Timer_DataBaseHelper db, ArrayList<Timer_Score> timerArrayList){
+    public void showDataFromDB(Timer_DataBaseHelper db, ArrayList<Timer_Score> timerArrayList) {
         Cursor cursor = db.getDataFromDb();
-        if (cursor.getCount()>0){
+        if (cursor.getCount() > 0) {
             cursor.moveToLast();
             do {
                 String id = (cursor.getString(0) + "\n");
@@ -202,7 +215,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
                 String date = (cursor.getString(2) + "\n");
                 String cube = (cursor.getString(3) + "\n");
 
-                Timer_Score timerItem = new Timer_Score(id, time,date,cube);
+                Timer_Score timerItem = new Timer_Score(id, time, date, cube);
                 timerArrayList.add(timerItem);
             } while (cursor.moveToPrevious());
         } else {
@@ -211,17 +224,17 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
             String date = "DATE: ";
             String cube = "CUBE: ";
 
-            Timer_Score timerItem = new Timer_Score(id, time,date, cube);
+            Timer_Score timerItem = new Timer_Score(id, time, date, cube);
             timerArrayList.add(timerItem);
         }
     }
 
-    public void updateDataFromDB(ArrayList<Timer_Score> timerArrayList){
+    public void updateDataFromDB(ArrayList<Timer_Score> timerArrayList) {
         timerArrayList.clear();
         Timer_DataBaseHelper db1 = new Timer_DataBaseHelper(this);
         Cursor cursor = db1.getDataFromDb();
 
-        if (cursor.getCount()>0){
+        if (cursor.getCount() > 0) {
             cursor.moveToLast();
             do {
                 String id = (cursor.getString(0) + "\n");
@@ -229,7 +242,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
                 String date = (cursor.getString(2) + "\n");
                 String cube = (cursor.getString(3) + "\n");
 
-                Timer_Score timerItem = new Timer_Score(id, time,date,cube);
+                Timer_Score timerItem = new Timer_Score(id, time, date, cube);
                 timerArrayList.add(timerItem);
             } while (cursor.moveToPrevious());
         }
@@ -245,14 +258,78 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
 
     }
 
-    public String getBestScore(ArrayList<Timer_Score> timerArrayList){
-        String item = timerArrayList.get(0).score;
+    public TimerAvarages avarages(ArrayList<Timer_Score> timerArrayList){
+        int worstScore = 0;
+        int bestScore = 0;
+        int avg5 = 0;
+        int avg10 = 0;
+        int avg20 = 0;
+        int avg50 = 0;
+        int sum5 = 0;
+        int sum10 = 0;
+        int sum20 = 0;
+        int sum50 = 0;
 
-        int min = Integer.parseInt(item.substring(0,2));
-        int sec = Integer.parseInt(item.substring(3,5));
-        int millis = Integer.parseInt(item.substring(6,8));
+        if (timerArrayList.isEmpty()) {
+            return new TimerAvarages("N/A","N/A","N/A","N/A","N/A","N/A");
+        } else {
+            for (Timer_Score score : timerArrayList) {
+                int time = parseScoreToMillis(score.getScore());
+                if (bestScore == 0) {
+                    bestScore = time;
+                } else if (time < bestScore) {
+                    bestScore = time;
+                }
+                if (time > worstScore) {
+                    worstScore = time;
+                }
+                if (timerArrayList.indexOf(score) <= 4 && timerArrayList.size() >= 5) {
+                    sum5 += time;
+                }
+                if (timerArrayList.indexOf(score) <= 9 && timerArrayList.size() >= 10) {
+                    sum10 += time;
+                }
+                if (timerArrayList.indexOf(score) <= 19 && timerArrayList.size() >= 20) {
+                    sum20 += time;
+                }
+                if (timerArrayList.indexOf(score) <= 49 && timerArrayList.size() >= 50) {
+                    sum50 += time;
+                }
+            }
 
-        int scoreInt = millis + sec*60 + min*3600;
-        return String.valueOf(scoreInt);
+
+            avg5 = sum5/5;
+            avg10 = sum10/10;
+            avg20 = sum20/20;
+            avg50 = sum50/50;
+
+            return new TimerAvarages(parseMillisToString(worstScore), parseMillisToString(bestScore), parseMillisToString(avg5), parseMillisToString(avg10),
+                    parseMillisToString(avg20), parseMillisToString(avg50));
+        }
     }
+
+    public int parseScoreToMillis(String score){
+        if (score.isEmpty() || score.equals("0")){
+            return 0;
+        } else {
+            int millis = Integer.parseInt(score.substring(6, 8));
+            int sec = Integer.parseInt(score.substring(3, 5)) * 100;
+            int hours = Integer.parseInt(score.substring(0, 2)) * 100 * 60;
+            return hours + sec + millis;
+        }
+    }
+
+    public String parseMillisToString(int scoreInMillis){
+        int hoursBack = scoreInMillis/100/60;
+        int secBack = (scoreInMillis-(hoursBack*100*60))/100;
+        int millisBack = scoreInMillis-((hoursBack*100*60)+(secBack*100));
+
+        return String.format(Locale.getDefault(), "%02d:%02d:%02d", hoursBack, secBack, millisBack);
+    }
+    //to test something
+    //public static void main(String[] args){
+
+
+        //System.out.print("");
+    //}
 }

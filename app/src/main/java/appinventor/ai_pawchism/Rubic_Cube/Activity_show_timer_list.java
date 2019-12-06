@@ -2,14 +2,22 @@ package appinventor.ai_pawchism.Rubic_Cube;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
-public class Activity_show_timer_list extends AppCompatActivity  {
+public class Activity_show_timer_list extends AppCompatActivity {
+
+    private final Timer_DataBaseHelper db = new Timer_DataBaseHelper(this);
+    private final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
+    private Timer_ScoreAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,17 +25,37 @@ public class Activity_show_timer_list extends AppCompatActivity  {
         setContentView(R.layout.activity_timer_list);
 
         final ListView listView = (ListView) findViewById(R.id.listViewScores);
-        final Timer_DataBaseHelper db = new Timer_DataBaseHelper(this);
-        final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
         showDataFromDB(db, timerArrayList);
-        final Timer_ScoreAdapter adapter = new Timer_ScoreAdapter(Activity_show_timer_list.this, R.layout.layout_adapter_list_timer, timerArrayList);
+        adapter = new Timer_ScoreAdapter(Activity_show_timer_list.this, R.layout.layout_adapter_list_timer, timerArrayList);
         listView.setAdapter(adapter);
+        Button deleteBtn = findViewById(R.id.button_delete_scores);
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Set<Timer_Score> items = adapter.getItemsToRemove();
+                if (items.size() > 0) {
+                    removeDataFromDB(items);
+                }
+            }
+        });
 
     }
 
-    public void showDataFromDB(Timer_DataBaseHelper db, ArrayList<Timer_Score> timerArrayList){
+    private void removeDataFromDB(Set<Timer_Score> items) {
+        List<String> idsToRemove = new ArrayList<>();
+        for (Timer_Score score : items) {
+            idsToRemove.add(score.id.replace("\n", ""));
+        }
+        boolean removed = db.deleteDataFromDBbyIDs(idsToRemove);
+        if (removed) {
+            timerArrayList.removeAll(items);
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+    public void showDataFromDB(Timer_DataBaseHelper db, ArrayList<Timer_Score> timerArrayList) {
         Cursor cursor = db.getDataFromDb();
-        if (cursor.getCount()>0){
+        if (cursor.getCount() > 0) {
             cursor.moveToLast();
             do {
                 String id = (cursor.getString(0) + "\n");
@@ -35,7 +63,7 @@ public class Activity_show_timer_list extends AppCompatActivity  {
                 String date = (cursor.getString(2) + "\n");
                 String cube = (cursor.getString(3) + "\n");
 
-                Timer_Score timerItem = new Timer_Score(id, time,date,cube);
+                Timer_Score timerItem = new Timer_Score(id, time, date, cube);
                 timerArrayList.add(timerItem);
             } while (cursor.moveToPrevious());
         } else {
@@ -44,8 +72,9 @@ public class Activity_show_timer_list extends AppCompatActivity  {
             String date = "DATE: ";
             String cube = "CUBE: ";
 
-            Timer_Score timerItem = new Timer_Score(id, time,date, cube);
+            Timer_Score timerItem = new Timer_Score(id, time, date, cube);
             timerArrayList.add(timerItem);
         }
     }
 }
+
