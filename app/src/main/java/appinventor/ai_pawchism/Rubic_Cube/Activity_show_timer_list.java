@@ -1,5 +1,7 @@
 package appinventor.ai_pawchism.Rubic_Cube;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -32,10 +34,32 @@ public class Activity_show_timer_list extends AppCompatActivity {
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Set<Timer_Score> items = adapter.getItemsToRemove();
-                if (items.size() > 0) {
-                    removeDataFromDB(items);
-                }
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Activity_show_timer_list.this);
+                alertDialogBuilder.setMessage(R.string.confirm_delete_score);
+                alertDialogBuilder.setCancelable(true);
+                alertDialogBuilder.setPositiveButton(
+                        R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Set<Timer_Score> items = adapter.getItemsToRemove();
+                                if (items.size() > 0) {
+                                    removeDataFromDB(items);
+                                }
+                            }
+                        }
+                );
+
+                alertDialogBuilder.setNegativeButton(
+                        R.string.not, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        }
+                );
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
             }
         });
 

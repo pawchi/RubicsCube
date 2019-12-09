@@ -16,6 +16,8 @@
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
 
     <!-- General for all -->
+    <string name="yes">Tak</string>
+    <string name="not">Nie</string>
     <string name="case1_text">Przypadek 1</string>
     <string name="case2_text">Przypadek 2</string>
     <string name="case3_text">Przypadek 3</string>
@@ -141,6 +143,10 @@
     <string name="average_20_text">Średni czas z 20:</string>
     <string name="average_50_text">Średni czas z 50:</string>
 
+    <!-- Timer list popup confirm -->
+    <string name="confirm_delete_score">Czy na pewno usunąć zaznaczone wyniki?</string>
+
+    <!-- Settings -->
     <string name="settings_title">USTAWIENIA:</string>
     <string name="settings_rate_us">Oceń aplikację.</string>
     <string name="settings_change_language">Wybierz język.</string>
