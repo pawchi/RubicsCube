@@ -33,19 +33,14 @@
     <string name="step5_effect">EFFECT OF STEP 5</string>
     <string name="step4_effect">EFFECT OF STEP 4</string>
     <string name="step3_effect">EFFECT OF STEP 3</string>
-    <string name="step3_text1">I think if you want to set a whole Rubik’s cube, you should be able to complete first wall without any guidance. This is quite intuitive. When done, please turn the middle ring so that you get a \"T\" on cube (as below picture shows in initial situation).</string>
-    <string name="step3_text2">In step 3, we complete second ring with using below shown algorithm. In example from the picture, you put a red-white stone in the right place (of course you can start with every stone, it does not have to be red-white). To find correct stones, please turn lower ring with D / D \' movement. If there is no stone in right position to insert (and the second level is not completed), it means that a stone is somewhere in second ring but in wrong position. In this case, use the same algorithm to throw this wrong stone out from the second ring to the lower ring. Then put the stone in the right position to perform algorithm again. Repeat this process until the entire second ring is completed. Then you can continue with step 2.</string>
-    <string name="step3_text3">Above algorithm inserts stones to the right and so is sufficient to complete this step. But can be easier and quicker if you know algorithm to move blocks in other direction (to the left), as shown in the picture below.</string>
-    <string name="step4_text1">In the fourth step we will put a cross on the top face. First turn the cube so that incomplete (bottom) face is on the top - as in the picture above in \"initial situation\". \"Initial situation\" shows a case when no element of the cross is finished. In this case, we will execute following algorithm once or twice.</string>
     <string name="step4_text2">As a result, you should get \"L\" letter, which should look as in the picture below. Then you execute the algorithm again to get a finished cross.</string>
     <string name="step4_text3">If something is not clear, look at the picture below to see what happens after each execution of the algorithm on the cube (the worst situation is indicated when the algorithm has to be performed three times to get the final effect). Please remember to adjust the cube accordingly if you already have the letter \"L\", as in the picture above!</string>
     <string name="step5_text1">After making cross on the top, you need to put in this step edge pieces on their final places to match colors of side center pieces.</string>
     <string name="step5_text2">The following algorithm can exchange two pieces in neighboring walls. Depending on the situation in the cube, you may need to run this algorithm multiple times. As a result, you should get the entire cross with matching sidewalls.</string>
     <string name="step5_text3">If something is not clear, please look at the picture below. It shows the worst situation when the algorithm has to be executed 3 times, in order to put all cross elements in right places. Please don’t forget to keep cube in right position when doing algorithm (as shown in the picture with \"eye\" above).</string>
-    <string name="step6_text1">Congratulations ! Come here means, you are very close to finish the entire cube. Sixth algorithm places  top-level corners in right positions. For the moment,  corners do not have to match corresponding colors on side walls. It is important that they are only in correct positions (eg cornerstone at the intersection of the walls: red-yellow-blue should consist of colors: red-yellow-blue, etc.).</string>
     <string name="step6_text2">If none of corner pieces are in the right place, run following algorithm. As a result, at least one corner piece should come in the right position.</string>
     <string name="step6_text3">Now find out which corner piece is in correct position and place the cube in such way that when looking from the front,  already set corner piece is in the top left corner of the cube (as in the picture below). Then, depending on the other corners, execute the algorithm again once or twice until all corners are in proper positions.</string>
-    <string name="step6_text4">If something is not clear, please look at the picture below, where shown what happened on the cube after each execution of the algorithm (example shows case when algorithm has to be executed twice to get final effect of step 4). Please remember always set the cube so that the corner piece, you DO NOT want to move, is in the upper left corner of the cube !!</string>
+    <string name="step6_text4">If something is not clear, please look at the picture below, where shown what happened on the cube after each execution of the algorithm (example shows case when algorithm has to be executed twice to get final effect of this step). Please remember always set the cube so that the corner piece, you DO NOT want to move, is in the upper left corner of the cube !!</string>
     <string name="step6_text5">If something does not work, do not give up and try again. This step is the hardest part of setting the cube. But the last, seventh algorithm is very simple!</string>
     <string name="step7_text1">In the last step, you will finally orient corner pieces (that means, turn corner pieces to match wall colors - see picture below).</string>
     <string name="step7_text2">Now please do simple algorithm from the below picture 2 or 4 times - until the transformed corner piece is correctly oriented.</string>
@@ -72,18 +67,25 @@
     <string name="dwa_step2_text1">In this step, first turn the cube 180 degrees so that the green wall laid in the first step is at the bottom of the cube.</string>
     <string name="dwa_step2_text2">Now we will move all the green blocks to the top layer. For now, we don\'t care if the side walls match or not. We\'ll take care of them in the last step.</string>
     <string name="dwa_step2_text3">In this step you will meet with one of 7 cases. Each one is shown below with an algorithm to be used. Remember to set the cube correctly otherwise the algorithm will not work. The method of setting is shown below for case 1. Set the cube in the same way for all other cases.</string>
-    <string name="dwa_step2_text4">Case 1</string>
     <string name="dwa_step2_text5">Cases 2-7</string>
     <string name="dwa_step3_text1">"This is the last step in which we will complete the whole cube as shown in the picture below ;)) "</string>
     <string name="dwa_step3_text2">This stage involves swapping corners. We can meet here only 2 cases. For each case, the algorithm is shown below. Good luck!! And please don\'t forget to rate the application. Thanks!</string>
-    <string name="dwa_step3_text3">Case 1</string>
-    <string name="dwa_step3_text4">Case 2</string>
-    <string name="dwa_step1_text4">Case 1</string>
-    <string name="dwa_step1_text5">Case 2</string>
-    <string name="dwa_step1_text6">Case 3</string>
     <string name="timer_show_scores_table">Scoreboard</string>
     <string name="worst_time_text">Worst score:</string>
-    <string name="step2_text3">Case 1</string>
-    <string name="step2_text4">Case 2</string>
-    <string name="step2_text5">Case 3</string>
+    <string name="case1_text">Case 1</string>
+    <string name="case2_text">Case 2</string>
+    <string name="case3_text">Case 3</string>
+    <string name="not">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm_delete_score">Are you sure you want to delete the selected results?</string>
+    <string name="yes">Yes</string>
+    <string name="step1_text1" translatable="false">If you do not yet know the notation used for arranging the cube, return to the start page and go to the \"Marks and notation\" tab. We start arranging the cube by placing the cross on the top wall. For us it will be a blue cross. We arrange it so that the sides of the cross match the colors of the sides of the sides, as shown in the figure below.</string>
+    <string name="step1_text2">This step is very simple and intuitive. The only problem that may arise is shown together with the solution in the figure below.</string>
+    <string name="step2_text1">In this step, we will arrange the corners of the top wall, as shown in the figure below.</string>
+    <string name="step2_text2" translatable="false">Depending on the arrangement of the lower corner, you can come across 3 cases:</string>
+    <string name="step3_text1">When you have the previous stage ready, twist the middle layer so that the center blocks of the side walls are under the border with the appropriate color forming the letter \"T\" - as showns in the drawing below in the \"starting situation\".</string>
+    <string name="step3_text2">In this step we complete second ring with using below shown algorithm. In example from the picture, you put a red-white stone in the right place (of course you can start with every stone, it does not have to be red-white). To find correct stones, please turn lower ring with D / D \'movement. If there is no stone in  right position to insert (and the second level is not completed), it means that a stone is somewhere in  second ring but in wrong position. In this case, use the same algorithm to \"throw\" this wrong stone out from the second ring to the lower ring. Then put the stone in the right position to perform algorithm again. Repeat this process until the entire second ring is completed. Then you can continue with next step.</string>
+    <string name="step3_text3">Above algorithm inserts stones to the right and so is sufficient to complete this step. But can be easier and quicker if you know algorithm to move blocks in other direction (to the left), as shown in the picture below.</string>
+    <string name="step4_text1">In this step we will put a cross on the top face. First turn the cube so that incomplete (bottom) face is on the top - as in the picture above in \"initial situation\". \"Initial situation\" shows a case when no element of the cross is finished. In this case, we will execute following algorithm once or twice.</string>
+    <string name="step6_text1">Congratulations ! Come here means, you are very close to finish the entire cube. Below algorithm places  top-level corners in right positions. For the moment,  corners do not have to match corresponding colors on side walls. It is important that they are only in correct positions (eg cornerstone at the intersection of the walls: red-yellow-blue should consist of colors: red-yellow-blue, etc.).</string>
 </resources>
