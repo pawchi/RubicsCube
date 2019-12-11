@@ -62,7 +62,7 @@
     <string name="average_5_text">Average of 5:</string>
     <string name="best_time_text">Best score:</string>
     <string name="dwa_step1_text1" translatable="false">If you do not know the notation used for Rubik\'s cubes, before you start step 1, be sure to see the \"Marks and notation\" tab.</string>
-    <string name="dwa_step1_text2" translatable="false">Laying a 2x2 cube begins with laying one wall (e.g. green) with adjacent colors, as in the drawing above. This stage is simple and everyone should deal with it by themselves. However, in case of problems, the following algorithm will help, which moves the green block from the bottom to the top layer, leaving the 3 blocks of the top layer unchanged.</string>
+    <string name="dwa_step1_text2" translatable="false">Solving a 2x2 cube begins with laying one wall (e.g. green) with adjacent colors, as in the drawing above. This stage is simple and everyone should deal with it by themselves. However, in case of problems, the following algorithm will help, which moves the green block from the bottom to the top layer, leaving the 3 blocks of the top layer unchanged.</string>
     <string name="dwa_step1_text3" translatable="false">You can hit one of 3 cases, as shown below.</string>
     <string name="dwa_step2_text1">In this step, first turn the cube 180 degrees so that the green wall laid in the first step is at the bottom of the cube.</string>
     <string name="dwa_step2_text2">Now we will move all the green blocks to the top layer. For now, we don\'t care if the side walls match or not. We\'ll take care of them in the last step.</string>
