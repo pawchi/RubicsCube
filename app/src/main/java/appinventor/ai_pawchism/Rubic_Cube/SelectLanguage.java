@@ -97,6 +97,10 @@ public class SelectLanguage extends AppCompatActivity {
                 radioButtonResult = "ru";
                 break;
 
+            case R.id.language_zh:
+                radioButtonResult = "zh";
+                break;
+
         }
     }
 

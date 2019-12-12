@@ -17,6 +17,7 @@ import java.util.Set;
 
 public class Activity_show_timer_list extends AppCompatActivity {
 
+
     private final Timer_DataBaseHelper db = new Timer_DataBaseHelper(this);
     private final ArrayList<Timer_Score> timerArrayList = new ArrayList<>();
     private Timer_ScoreAdapter adapter;

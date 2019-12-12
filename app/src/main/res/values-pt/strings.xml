@@ -86,4 +86,8 @@
     <string name="average_50_text">Média de 50:</string>
     <string name="average_5_text">Média de 5:</string>
     <string name="best_time_text">Melhor pontuação:</string>
+    <string name="delete_scores">EXCLUIR PONTOS</string>
+    <string name="list_sort_scores">Resultar</string>
+    <string name="list_sort_dates">Data</string>
+    <string name="list_sort_cubes">Cubo</string>
 </resources>

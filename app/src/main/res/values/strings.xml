@@ -1,5 +1,7 @@
 <resources>
     <string name="baner_ID" translatable="false">ca-app-pub-9832953507407797/5858035763</string>
+    <string name="Ad_in_app_content" translatable="false">ca-app-pub-9832953507407797/7622995452</string>
+    <string name="Ad_full_screen" translatable="false">ca-app-pub-9832953507407797/7879023431</string>
     <string name="app_name">Rubics_cube</string>
 
     <!-- Start page -->
@@ -128,9 +130,13 @@
     <string name="average_10_text">Średni czas z 10:</string>
     <string name="average_20_text">Średni czas z 20:</string>
     <string name="average_50_text">Średni czas z 50:</string>
+    <string name="delete_scores">Skasuj wyniki</string>
 
-    <!-- Timer list popup confirm -->
+    <!-- Timer list -->
     <string name="confirm_delete_score">Czy na pewno usunąć zaznaczone wyniki?</string>
+    <string name="list_sort_scores">Wynik</string>
+    <string name="list_sort_dates">Data</string>
+    <string name="list_sort_cubes">Kostka</string>
 
     <!-- Settings -->
     <string name="settings_title">USTAWIENIA:</string>

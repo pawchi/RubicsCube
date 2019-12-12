@@ -86,4 +86,8 @@
     <string name="title">如何解决鲁比克的魔方</string>
     <string name="worst_time_text">最差分数：</string>
     <string name="yes">是</string>
+    <string name="delete_scores">删除分数</string>
+    <string name="list_sort_cubes">魔方</string>
+    <string name="list_sort_dates">日期</string>
+    <string name="list_sort_scores">得分</string>
 </resources>

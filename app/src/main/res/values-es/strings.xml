@@ -86,4 +86,8 @@
     <string name="timer_show_scores_table">Marcador</string>
     <string name="worst_time_text">Peor puntaje:</string>
     <string name="yes">Sí</string>
+    <string name="delete_scores">BORRAR PUNTUACIONES</string>
+    <string name="list_sort_cubes">Cubo</string>
+    <string name="list_sort_dates">Fecha</string>
+    <string name="list_sort_scores">Resultado</string>
 </resources>

@@ -86,4 +86,8 @@
     <string name="timer_show_scores_table">Табло</string>
     <string name="worst_time_text">Худшая оценка:</string>
     <string name="yes">да</string>
+    <string name="delete_scores">УДАЛИТЬ СЧЕТ</string>
+    <string name="list_sort_scores">pезультат</string>
+    <string name="list_sort_dates">дата</string>
+    <string name="list_sort_cubes">куб</string>
 </resources>

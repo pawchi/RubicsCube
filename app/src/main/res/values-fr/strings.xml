@@ -86,4 +86,8 @@
     <string name="dwa_step3_text1">Ceci est la dernière étape au cours de laquelle nous terminerons le cube entier comme indiqué dans l\'image ci-dessous;))</string>
     <string name="dwa_step2_text5">Étapes 2-7</string>
     <string name="dwa_step3_text2">Cette étape implique l\'échange de coins. On ne peut rencontrer ici que 2 cas. Pour chaque cas, l\'algorithme est illustré ci-dessous. Bonne chance!! Et n\'oubliez pas de noter l\'application. Merci!</string>
+    <string name="delete_scores">SUPPRIMER LES SCORES</string>
+    <string name="list_sort_scores">But</string>
+    <string name="list_sort_dates">La date</string>
+    <string name="list_sort_cubes">Cube</string>
 </resources>

@@ -86,5 +86,9 @@
     <string name="dwa_step3_text2">In diesem Schritt werden die Ecken getauscht. Wir können hier nur 2 Fälle treffen. Für jeden Fall ist der Algorithmus unten gezeigt. Viel Glück!! Und bitte vergessen Sie nicht, die Aplikation zu bewerten. Vielen Dank!</string>
     <string name="timer_show_scores_table">Anzeigetafel</string>
     <string name="worst_time_text">Schlechtestes:</string>
-    <string name="yes">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="delete_scores">SCORES LÖSCHEN</string>
+    <string name="list_sort_cubes">Würfel</string>
+    <string name="list_sort_dates">Datum</string>
+    <string name="list_sort_scores">Ergebnis</string>
 </resources>

@@ -88,4 +88,8 @@
     <string name="step3_text3">Above algorithm inserts stones to the right and so is sufficient to complete this step. But can be easier and quicker if you know algorithm to move blocks in other direction (to the left), as shown in the picture below.</string>
     <string name="step4_text1">In this step we will put a cross on the top face. First turn the cube so that incomplete (bottom) face is on the top - as in the picture above in \"initial situation\". \"Initial situation\" shows a case when no element of the cross is finished. In this case, we will execute following algorithm once or twice.</string>
     <string name="step6_text1">Congratulations ! Come here means, you are very close to finish the entire cube. Below algorithm places  top-level corners in right positions. For the moment,  corners do not have to match corresponding colors on side walls. It is important that they are only in correct positions (eg cornerstone at the intersection of the walls: red-yellow-blue should consist of colors: red-yellow-blue, etc.).</string>
+    <string name="delete_scores">DELETE SCORES</string>
+    <string name="list_sort_dates">Date</string>
+    <string name="list_sort_scores">Score</string>
+    <string name="list_sort_cubes">Cube</string>
 </resources>
