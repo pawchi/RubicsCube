@@ -67,8 +67,8 @@
     <string name="dwa_step1_text1">Se você não conhece a notação usada para os cubos de Rubik, antes de iniciar a etapa 1, verifique a guia \"Marcas e notação\".</string>
     <string name="dwa_step1_text2">A solução de um cubo 2x2 começa com a colocação de uma parede (por exemplo, verde) com cores adjacentes, como no desenho acima. Esta etapa é simples e todos devem lidar com isso sozinhos. No entanto, em caso de problemas, o algoritmo a seguir ajudará, que move o bloco verde da parte inferior para a camada superior, mantendo os 3 blocos da camada superior inalterados.</string>
     <string name="dwa_step1_text3">Você pode acertar um dos três casos, como mostrado abaixo.</string>
-    <string name="dwa_step2_text1">Nesta etapa, gire primeiro o cubo 180 graus para que a parede verde colocada na primeira etapa fique na parte inferior do cubo.</string>
-    <string name="dwa_step2_text2">Agora vamos mover todos os blocos verdes para a camada superior. Por enquanto, não nos importamos se as paredes laterais coincidem ou não. Nós cuidaremos deles na última etapa.</string>
+    <string name="dwa_step2_text1">Nesta etapa, gire primeiro o cubo 180 graus para que a parede verde concluída na primeira etapa fique na parte inferior do cubo.</string>
+    <string name="dwa_step2_text2">Agora vamos mover todos os blocos azuis para a camada superior. Por enquanto, não nos importamos se as paredes laterais coincidem ou não. Nós cuidaremos deles na última etapa.</string>
     <string name="dwa_step2_text3">Nesta etapa, você encontrará um dos 7 casos. Cada um é mostrado abaixo com um algoritmo a ser usado. Lembre-se de definir o cubo corretamente, caso contrário, o algoritmo não funcionará. O método de configuração é mostrado abaixo para o caso 1. Defina o cubo da mesma maneira para todos os outros casos.</string>
     <string name="dwa_step3_text1">Esta é a última etapa na qual concluiremos todo o cubo, como mostra a figura abaixo ;))</string>
     <string name="dwa_step2_text5">Casos 2-7</string>

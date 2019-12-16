@@ -9,10 +9,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 
 public class Activity_2x2_Step1 extends AppCompatActivity implements View.OnClickListener {
+    InterstitialAd interstitialAd;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,6 +27,12 @@ public class Activity_2x2_Step1 extends AppCompatActivity implements View.OnClic
         PublisherAdView publisherAdView = (PublisherAdView) findViewById(R.id.publisherAdView);
         PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
         publisherAdView.loadAd(adRequest);
+
+        //Full screen ads
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        AdRequest request = new AdRequest.Builder().build();
+        interstitialAd.loadAd(request);
 
         final LinearLayout layoutForInjectInto = (LinearLayout) findViewById(R.id.inflate_content_vert_layout);
 
@@ -53,10 +64,32 @@ public class Activity_2x2_Step1 extends AppCompatActivity implements View.OnClic
                 startActivity(new Intent(getApplicationContext(), Activity_2x2_Step1.class));
                 break;
             case R.id.button2_2x2:
-                startActivity(new Intent(getApplicationContext(), Activity_2x2_Step2.class));
+                if (interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                    interstitialAd.setAdListener(new AdListener(){
+                        @Override
+                        public void onAdClosed() {
+                            super.onAdClosed();
+                            startActivity(new Intent(getApplicationContext(), Activity_2x2_Step2.class));
+                        }
+                    });
+                } else {
+                    startActivity(new Intent(getApplicationContext(), Activity_2x2_Step2.class));
+                }
                 break;
             case R.id.button3_2x2:
-                startActivity(new Intent(getApplicationContext(), Activity_2x2_Step3.class));
+                if (interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                    interstitialAd.setAdListener(new AdListener(){
+                        @Override
+                        public void onAdClosed() {
+                            super.onAdClosed();
+                            startActivity(new Intent(getApplicationContext(), Activity_2x2_Step3.class));
+                        }
+                    });
+                } else {
+                    startActivity(new Intent(getApplicationContext(), Activity_2x2_Step3.class));
+                }
                 break;
             case R.id.settings_imageview:
                 startActivity(new Intent(getApplicationContext(), Activity_Settings.class));

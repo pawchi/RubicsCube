@@ -34,7 +34,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
     long timeInMilis = 0L;
     Handler customHandler = new Handler();
     int timerStatus = 0;
-    String cubeType;
+    String cubeType = "3x3";
     TextView bestScore, worstScore, averageFrom5, averageFrom10, averageFrom20, averageFrom50;
 
     Runnable updateTimerThread = new Runnable() {
@@ -166,13 +166,7 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
                             listView.invalidateViews();
                             listView.refreshDrawableState();
 
-                            TimerAvarages results = avarages(timerArrayList);
-                            bestScore.setText(results.getMin());
-                            worstScore.setText(results.getMax());
-                            averageFrom5.setText(results.getAvg5());
-                            averageFrom10.setText(results.getAvg10());
-                            averageFrom20.setText(results.getAvg20());
-                            averageFrom50.setText(results.getAvg50());
+                            showScores(timerArrayList);
 
                             timerStatus = 0;
                             break;
@@ -195,6 +189,10 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         });
         showDataFromDB(db, timerArrayList);
         //Show scores
+        showScores(timerArrayList);
+    }
+
+    public void showScores(ArrayList<Timer_Score> timerArrayList){
         TimerAvarages results = avarages(timerArrayList);
         bestScore.setText(results.getMin());
         worstScore.setText(results.getMax());
@@ -269,43 +267,59 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         int sum10 = 0;
         int sum20 = 0;
         int sum50 = 0;
+        int numberOfScores_3x3 = 0;
+        int numberOfScores_2x2 = 0;
+        int itemNumber_3x3 = 0;
+        int itemNumber_2x2 = 0;
 
         if (timerArrayList.isEmpty()) {
             return new TimerAvarages("N/A","N/A","N/A","N/A","N/A","N/A");
         } else {
-            for (Timer_Score score : timerArrayList) {
-                int time = parseScoreToMillis(score.getScore());
-                if (bestScore == 0) {
-                    bestScore = time;
-                } else if (time < bestScore) {
-                    bestScore = time;
+            for (Timer_Score score : timerArrayList){
+                if (score.cube.equals("3x3\n")){
+                    numberOfScores_3x3 += 1;
                 }
-                if (time > worstScore) {
-                    worstScore = time;
-                }
-                if (timerArrayList.indexOf(score) <= 4 && timerArrayList.size() >= 5) {
-                    sum5 += time;
-                }
-                if (timerArrayList.indexOf(score) <= 9 && timerArrayList.size() >= 10) {
-                    sum10 += time;
-                }
-                if (timerArrayList.indexOf(score) <= 19 && timerArrayList.size() >= 20) {
-                    sum20 += time;
-                }
-                if (timerArrayList.indexOf(score) <= 49 && timerArrayList.size() >= 50) {
-                    sum50 += time;
+                if (score.cube.equals("2x2\n")){
+                    numberOfScores_2x2 += 1;
                 }
             }
+            for (Timer_Score score : timerArrayList) {
+
+                if (score.cube.equals(cubeType + "\n")) {
+                    itemNumber_3x3 += 1;
+                    int time = parseScoreToMillis(score.getScore());
+                    if (bestScore == 0) {
+                        bestScore = time;
+                    } else if (time < bestScore) {
+                        bestScore = time;
+                    }
+                    if (time > worstScore) {
+                        worstScore = time;
+                    }
+                    if (numberOfScores_3x3 >= 5 && itemNumber_3x3<=5) {
+                        sum5 += time;
+                    }
+                    if (numberOfScores_3x3 >= 10 && itemNumber_3x3<=10) {
+                        sum10 += time;
+                    }
+                    if (numberOfScores_3x3 >= 20 && itemNumber_3x3<=20) {
+                        sum20 += time;
+                    }
+                    if (numberOfScores_3x3 >= 50 && itemNumber_3x3<=50) {
+                        sum50 += time;
+                    }
+                }
 
 
-            avg5 = sum5/5;
-            avg10 = sum10/10;
-            avg20 = sum20/20;
-            avg50 = sum50/50;
+                avg5 = sum5 / 5;
+                avg10 = sum10 / 10;
+                avg20 = sum20 / 20;
+                avg50 = sum50 / 50;
+            }
 
-            return new TimerAvarages(parseMillisToString(worstScore), parseMillisToString(bestScore), parseMillisToString(avg5), parseMillisToString(avg10),
-                    parseMillisToString(avg20), parseMillisToString(avg50));
-        }
+                return new TimerAvarages(parseMillisToString(worstScore), parseMillisToString(bestScore), parseMillisToString(avg5), parseMillisToString(avg10),
+                        parseMillisToString(avg20), parseMillisToString(avg50));
+            }
     }
 
     public int parseScoreToMillis(String score){

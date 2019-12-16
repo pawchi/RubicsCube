@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 import java.util.Locale;
@@ -17,6 +20,7 @@ import java.util.Locale;
 public class Activity_StartPage extends AppCompatActivity {
 
     String startedLanguage;
+    InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,12 @@ public class Activity_StartPage extends AppCompatActivity {
         PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
         publisherAdView.loadAd(adRequest);
 
+        //Full screen ads
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        AdRequest request = new AdRequest.Builder().build();
+        interstitialAd.loadAd(request);
+
         LinearLayout layoutToInjectXml = (LinearLayout) findViewById(R.id.frame_up_bar);
         getLayoutInflater().inflate(R.layout.fragment_up_bar, layoutToInjectXml);
 
@@ -44,8 +54,6 @@ public class Activity_StartPage extends AppCompatActivity {
         ImageView backButton = (ImageView) findViewById(R.id.back_button);
         LinearLayout layoutTimer = (LinearLayout) findViewById(R.id.layout_button_timer);
 
-        //backButton.setVisibility(View.INVISIBLE);
-
 
         layout_3x3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +65,18 @@ public class Activity_StartPage extends AppCompatActivity {
         layout_2x2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Activity_2x2_Step1.class));
+                if (interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                    interstitialAd.setAdListener(new AdListener(){
+                        @Override
+                        public void onAdClosed() {
+                            super.onAdClosed();
+                            startActivity(new Intent(getApplicationContext(), Activity_2x2_Step1.class));
+                        }
+                    });
+                } else {
+                    startActivity(new Intent(getApplicationContext(), Activity_2x2_Step1.class));
+                }
             }
         });
 

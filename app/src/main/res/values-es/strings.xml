@@ -3,7 +3,7 @@
     <string name="app_name">Cubo de rubik</string>
     <string name="arabic">"Arábica "</string>
     <string name="english">"Inglés "</string>
-    <string name="exit_situation">INICIAR SITUACIÓN</string>
+    <string name="exit_situation">SITUACIÓN INICIAL</string>
     <string name="french">Francés</string>
     <string name="german">Alemán</string>
     <string name="home">PAGINA DE INICIO</string>
@@ -72,8 +72,8 @@
     <string name="dwa_step1_text1">Si no conoce la notación utilizada para los cubos de Rubik, antes de comenzar el paso 1, asegúrese de ver la pestaña Marcas y notación.</string>
     <string name="dwa_step1_text2">La resolución de un cubo de 2x2 comienza con la colocación de una pared (por ejemplo, verde) con colores adyacentes, como en el dibujo de arriba. Esta etapa es simple y todos deben enfrentarla solos. Sin embargo, en caso de problemas, ayudará el siguiente algoritmo, que mueve el bloque verde de la capa inferior a la capa superior, dejando los 3 bloques de la capa superior sin cambios.</string>
     <string name="dwa_step1_text3">Puede golpear uno de los 3 casos, como se muestra a continuación.</string>
-    <string name="dwa_step2_text1">En este paso, primero gire el cubo 180 grados para que la pared verde colocada en el primer paso esté en la parte inferior del cubo.</string>
-    <string name="dwa_step2_text2">Ahora moveremos todos los bloques verdes a la capa superior. Por ahora, no nos importa si las paredes laterales coinciden o no. Nos encargaremos de ellos en el último paso.</string>
+    <string name="dwa_step2_text1">En este paso, primero gire el cubo 180 grados para que la pared verde completada en el primer paso esté en la parte inferior del cubo.</string>
+    <string name="dwa_step2_text2">Ahora vamos a mover todos los bloques azules a la capa superior. Por ahora, no nos importa si las paredes laterales coinciden o no. Nos encargaremos de ellos en el último paso.</string>
     <string name="dwa_step2_text3">En este paso te encontrarás con uno de los 7 casos. Cada uno se muestra a continuación con un algoritmo para ser utilizado. Recuerde configurar el cubo correctamente, de lo contrario el algoritmo no funcionará. El método de configuración se muestra a continuación para el caso 1. Configure el cubo de la misma manera para todos los demás casos.</string>
     <string name="dwa_step2_text5">Casos 2-7</string>
     <string name="dwa_step3_text1">Este es el último paso en el que completaremos todo el cubo como se muestra en la imagen a continuación ;))</string>

@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Rubics_cube</string>
     <string name="title">COMMENT RÉSOUDRE LE CUBE DE RUBIK</string>
-    <string name="exit_situation">COMMENCER LA SITUATION</string>
+    <string name="exit_situation">SITUATION INITIALE</string>
     <string name="home">Page d\'accueil</string>
     <string name="step3">Étape 3</string>
     <string name="step4">Étape 4</string>
@@ -70,7 +70,7 @@
     <string name="case3_text">Cas 3</string>
     <string name="confirm_delete_score">Voulez-vous vraiment supprimer les résultats sélectionnés?</string>
     <string name="not">Non</string>
-    <string name="step1_text1">Si vous ne connaissez pas encore la notation utilisée pour organiser le cube, revenez à la page de démarrage et accédez à l\'onglet \"Marques et notation\". Nous commençons à organiser le cube en plaçant la croix sur le mur supérieur. Pour nous, ce sera une croix bleue. Nous l\'organisons de sorte que les blocs croisés correspondent aux couleurs des blocs latéraux, comme indiqué dans la figure ci-dessous.</string>
+    <string name="step1_text1">Si vous ne connaissez pas encore la notation utilisée pour organiser le cube, retournez à la page de démarrage et accédez à l\'onglet \"Marques et notation\". Nous commençons à organiser le cube en plaçant la croix sur le mur supérieur. Pour nous, ce sera une croix bleue. Nous l\'organisons de sorte que les blocs croisés correspondent aux couleurs des blocs latéraux, comme indiqué dans la figure ci-dessous.</string>
     <string name="step1_text2">Cette étape est très simple et intuitive. Le seul problème qui peut survenir est indiqué avec la solution dans la figure ci-dessous.</string>
     <string name="step2_text1">Dans cette étape, nous allons organiser les coins du mur supérieur, comme indiqué dans la figure ci-dessous.</string>
     <string name="step2_text2">Selon la disposition du coin inférieur, vous pouvez rencontrer 3 cas:</string>
@@ -80,8 +80,8 @@
     <string name="dwa_step1_text1">Si vous ne connaissez pas la notation utilisée pour les cubes de Rubik, avant de commencer l\'étape 1, assurez-vous de voir l\'onglet \"Marques et notation\".</string>
     <string name="dwa_step1_text2">La pose d\'un cube 2x2 commence par la pose d\'un mur (par exemple vert) avec des couleurs adjacentes, comme dans le dessin ci-dessus. Cette étape est simple et chacun devrait y faire face par lui-même. Cependant, en cas de problème, l\'algorithme suivant vous aidera, ce qui déplace le bloc vert du bas vers le calque supérieur, laissant les 3 blocs du calque supérieur inchangés.</string>
     <string name="dwa_step1_text3">Vous pouvez toucher l\'un des 3 cas, comme indiqué ci-dessous.</string>
-    <string name="dwa_step2_text1">Dans cette étape, tournez d\'abord le cube à 180 degrés de sorte que le mur vert posé dans la première étape se trouve au bas du cube.</string>
-    <string name="dwa_step2_text2">Nous allons maintenant déplacer tous les blocs verts vers la couche supérieure. Pour l\'instant, peu importe si les parois latérales correspondent ou non. Nous nous occuperons d\'eux dans la dernière étape.</string>
+    <string name="dwa_step2_text1">Dans cette étape, tournez d\'abord le cube de 180 degrés de sorte que le mur vert terminé à la première étape se trouve au bas du cube.</string>
+    <string name="dwa_step2_text2">Nous allons maintenant déplacer tous les blocs bleus vers la couche supérieure. Pour l\'instant, peu importe si les parois latérales correspondent ou non. Nous nous occuperons d\'eux dans la dernière étape.</string>
     <string name="dwa_step2_text3">Dans cette étape, vous rencontrerez l\'un des 7 cas. Chacun est illustré ci-dessous avec un algorithme à utiliser. N\'oubliez pas de définir correctement le cube, sinon l\'algorithme ne fonctionnera pas. La méthode de configuration est indiquée ci-dessous pour le cas 1. Réglez le cube de la même manière pour tous les autres cas.</string>
     <string name="dwa_step3_text1">Ceci est la dernière étape au cours de laquelle nous terminerons le cube entier comme indiqué dans l\'image ci-dessous;))</string>
     <string name="dwa_step2_text5">Étapes 2-7</string>

@@ -20,14 +20,14 @@
     <string name="dwa_step1_text1">如果您不知道用于Rubik多维数据集的符号，则在开始步骤1之前，请确保查看“标记和符号”选项卡。</string>
     <string name="dwa_step1_text2">如上图所示，求解2x2立方体首先要铺设一面具有相邻颜色的墙（例如绿色）。 这个阶段很简单，每个人都应该自己处理。 但是，在出现问题的情况下，以下算法将有所帮助，该算法将绿色块从底层移到顶层，而顶层的3个块保持不变。</string>
     <string name="dwa_step1_text3">您可以打3种情况之一，如下所示。</string>
-    <string name="dwa_step2_text1">在此步骤中，首先将多维数据集旋转180度，以使第一步中铺设的绿色墙壁位于多维数据集的底部。</string>
-    <string name="dwa_step2_text2">现在，我们将所有绿色块移动到顶层。 现在，我们不在乎侧壁是否匹配。 我们将在最后一步中处理它们。</string>
+    <string name="dwa_step2_text1">在此步骤中，首先将多维数据集旋转180度，以使第一步中完成的绿色墙位于多维数据集的底部。</string>
+    <string name="dwa_step2_text2">现在，我们将所有蓝色块移动到顶层。 现在，我们不在乎侧壁是否匹配。 我们将在最后一步中处理它们。</string>
     <string name="dwa_step2_text3">在此步骤中，您将遇到7种情况之一。 下面显示了每个算法以及要使用的算法。 请记住正确设置多维数据集，否则算法将无法工作。 情况1的设置方法如下所示。对于所有其他情况，以相同的方式设置多维数据集。</string>
     <string name="dwa_step2_text5">案例2-7</string>
     <string name="dwa_step3_text1">这是最后一步，我们将完成整个多维数据集，如下图所示 ；）</string>
     <string name="dwa_step3_text2">这个阶段涉及交换角落。 我们只能在这里遇到2个案例。 对于每种情况，算法如下所示。 祝好运！！ 并且请不要忘记对应用程序进行评分。 谢谢！</string>
     <string name="english">english</string>
-    <string name="exit_situation">开始情况</string>
+    <string name="exit_situation">初始情况</string>
     <string name="french">français</string>
     <string name="german">Deutsch</string>
     <string name="hindi">Hindi</string>
@@ -57,7 +57,7 @@
     <string name="step5_effect">步骤5的效果</string>
     <string name="step6_effect">步骤6的效果</string>
     <string name="step7_effect">步骤7的效果</string>
-    <string name="step1_text1">如果您尚不知道用于排列多维数据集的表示法，请返回到开始页面并转到“标记和表示法”选项卡。 我们通过将十字架放在顶墙上开始安排立方体。 对我们来说，这将是一个蓝色的十字架。 我们对其进行排列，以使十字架的侧面与侧面的颜色匹配，如下图所示。</string>
+    <string name="step1_text1">如果您尚不知道用于排列多维数据集的表示法，请返回到起始页并转到“标记和表示法”选项卡。 我们通过将十字架放在顶墙上开始安排立方体。 对我们来说，这将是一个蓝色的十字架。 我们对其进行排列，以使交叉块与侧块的颜色匹配，如下图所示。</string>
     <string name="step1_text2">此步骤非常简单直观。 下图中显示了可能出现的唯一问题以及解决方案。</string>
     <string name="step2_text1">在这一步中，我们将布置顶壁的角，如下图所示。</string>
     <string name="step2_text2">根据下角的排列，您可能会遇到3种情况：</string>
