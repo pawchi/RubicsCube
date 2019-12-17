@@ -2,6 +2,7 @@ package appinventor.ai_pawchism.Rubic_Cube;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -100,6 +101,12 @@ public class Activity_show_timer_list extends AppCompatActivity {
             Timer_Score timerItem = new Timer_Score(id, time, date, cube);
             timerArrayList.add(timerItem);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, Activity_timer.class));
     }
 }
 

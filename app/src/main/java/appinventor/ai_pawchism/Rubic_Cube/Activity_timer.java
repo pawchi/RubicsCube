@@ -1,7 +1,10 @@
 package appinventor.ai_pawchism.Rubic_Cube;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -27,15 +30,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
-public class Activity_timer extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Activity_timer extends AppCompatActivity {
+    //implements AdapterView.OnItemSelectedListener
     String startedLanguage;
     TextView textTimer;
     long startTime = 0L;
     long timeInMilis = 0L;
     Handler customHandler = new Handler();
     int timerStatus = 0;
-    String cubeType = "3x3";
+    String cubeType = "";
     TextView bestScore, worstScore, averageFrom5, averageFrom10, averageFrom20, averageFrom50;
+    private Boolean isUserAction = false;
 
     Runnable updateTimerThread = new Runnable() {
         @Override
@@ -114,8 +119,31 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this, R.array.spinner_choose_cube, android.R.layout.simple_spinner_item);
         adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapterSpinner);
-        spinner.setSelection(0);
-        spinner.setOnItemSelectedListener(this);
+        spinner.setSelection(getSpinnerPosition());
+        //onTouch only for recognizing user action on spinner
+        spinner.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                isUserAction = true;
+                return false;
+            }
+        });
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                saveSpinnerPosition(i);
+                if (isUserAction){
+                    recreate();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        cubeType = adapterSpinner.getItem(getSpinnerPosition()).toString();
+
 
         //DB****************************************************************
         //ImageView deleteItem = (ImageView) findViewById(R.id.timer_delete_item);
@@ -246,16 +274,6 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         }
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-        cubeType = adapterView.getItemAtPosition(position).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
-
     public TimerAvarages avarages(ArrayList<Timer_Score> timerArrayList){
         int worstScore = 0;
         int bestScore = 0;
@@ -267,26 +285,20 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         int sum10 = 0;
         int sum20 = 0;
         int sum50 = 0;
-        int numberOfScores_3x3 = 0;
-        int numberOfScores_2x2 = 0;
-        int itemNumber_3x3 = 0;
-        int itemNumber_2x2 = 0;
+        int numberOfScores = 0;
+        int itemNumber = 0;
 
         if (timerArrayList.isEmpty()) {
             return new TimerAvarages("N/A","N/A","N/A","N/A","N/A","N/A");
         } else {
             for (Timer_Score score : timerArrayList){
-                if (score.cube.equals("3x3\n")){
-                    numberOfScores_3x3 += 1;
-                }
-                if (score.cube.equals("2x2\n")){
-                    numberOfScores_2x2 += 1;
+                if (score.cube.equals(cubeType + "\n")){
+                    numberOfScores += 1;
                 }
             }
             for (Timer_Score score : timerArrayList) {
-
                 if (score.cube.equals(cubeType + "\n")) {
-                    itemNumber_3x3 += 1;
+                    itemNumber += 1;
                     int time = parseScoreToMillis(score.getScore());
                     if (bestScore == 0) {
                         bestScore = time;
@@ -296,16 +308,16 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
                     if (time > worstScore) {
                         worstScore = time;
                     }
-                    if (numberOfScores_3x3 >= 5 && itemNumber_3x3<=5) {
+                    if (numberOfScores >= 5 && itemNumber<=5) {
                         sum5 += time;
                     }
-                    if (numberOfScores_3x3 >= 10 && itemNumber_3x3<=10) {
+                    if (numberOfScores >= 10 && itemNumber<=10) {
                         sum10 += time;
                     }
-                    if (numberOfScores_3x3 >= 20 && itemNumber_3x3<=20) {
+                    if (numberOfScores >= 20 && itemNumber<=20) {
                         sum20 += time;
                     }
-                    if (numberOfScores_3x3 >= 50 && itemNumber_3x3<=50) {
+                    if (numberOfScores >= 50 && itemNumber<=50) {
                         sum50 += time;
                     }
                 }
@@ -339,6 +351,21 @@ public class Activity_timer extends AppCompatActivity implements AdapterView.OnI
         int millisBack = scoreInMillis-((hoursBack*100*60)+(secBack*100));
 
         return String.format(Locale.getDefault(), "%02d:%02d:%02d", hoursBack, secBack, millisBack);
+    }
+
+    public void saveSpinnerPosition(int spinnerPosition){
+        //int spinnerPos = spinner.getSelectedItemPosition();
+        //SharedPreferences sharedPreferences = getSharedPreferences("SpinPos", Activity.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("SpinPos", spinnerPosition);
+        editor.apply();
+        //recreate();
+    }
+
+    public int getSpinnerPosition(){
+        SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
+        return sharedPreferences.getInt("SpinPos",0);
     }
     //to test something
     //public static void main(String[] args){
