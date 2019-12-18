@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -18,7 +17,6 @@ import com.google.android.gms.ads.doubleclick.PublisherAdView;
 import java.util.Locale;
 
 public class Activity_StartPage extends AppCompatActivity {
-
     String startedLanguage;
     InterstitialAd interstitialAd;
 
@@ -31,14 +29,13 @@ public class Activity_StartPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        PublisherAdView publisherAdView = (PublisherAdView) findViewById(R.id.publisherAdView);
-        PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
-        publisherAdView.loadAd(adRequest);
+        //PublisherAdView publisherAdView = (PublisherAdView) findViewById(R.id.publisherAdView);
+        //PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
+        //publisherAdView.loadAd(adRequest);
 
         //Full screen ads
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        interstitialAd.setAdUnitId("ca-app-pub-9832953507407797/7879023431");
         AdRequest request = new AdRequest.Builder().build();
         interstitialAd.loadAd(request);
 
@@ -54,11 +51,21 @@ public class Activity_StartPage extends AppCompatActivity {
         ImageView backButton = (ImageView) findViewById(R.id.back_button);
         LinearLayout layoutTimer = (LinearLayout) findViewById(R.id.layout_button_timer);
 
-
         layout_3x3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Activity_StartPage.this, Activity_3x3_Step1.class));
+                if (interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                    interstitialAd.setAdListener(new AdListener(){
+                        @Override
+                        public void onAdClosed() {
+                            super.onAdClosed();
+                            startActivity(new Intent(Activity_StartPage.this, Activity_3x3_Step1.class));
+                        }
+                    });
+                } else {
+                    startActivity(new Intent(Activity_StartPage.this, Activity_3x3_Step1.class));
+                }
             }
         });
 
@@ -83,7 +90,18 @@ public class Activity_StartPage extends AppCompatActivity {
         layoutGeninfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Activity_StartPage.this, Activity_Notation.class));
+                if (interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                    interstitialAd.setAdListener(new AdListener(){
+                        @Override
+                        public void onAdClosed() {
+                            super.onAdClosed();
+                            startActivity(new Intent(Activity_StartPage.this, Activity_Notation.class));
+                        }
+                    });
+                } else {
+                    startActivity(new Intent(Activity_StartPage.this, Activity_Notation.class));
+                }
             }
         });
 
@@ -94,10 +112,6 @@ public class Activity_StartPage extends AppCompatActivity {
             }
         });
 
-
-
-
-
         ImageView settingsImage = (ImageView) findViewById(R.id.settings_imageview);
         settingsImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +121,6 @@ public class Activity_StartPage extends AppCompatActivity {
         });
 
     }
-
 
     public void loadLocale(){
         SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
@@ -129,5 +142,4 @@ public class Activity_StartPage extends AppCompatActivity {
             startedLanguage = language;
         }
     }
-
 }

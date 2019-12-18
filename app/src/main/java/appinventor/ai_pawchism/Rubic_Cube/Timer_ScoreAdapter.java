@@ -8,9 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -84,29 +82,6 @@ public class Timer_ScoreAdapter extends ArrayAdapter<Timer_Score> implements Com
                 }
             }
         });
-
-        //********************
-        /*
-        String id = getItem(position).getId();
-        String score = getItem(position).getScore();
-        String date = getItem(position).getDate();
-        String cube = getItem(position).getCube();
-
-        LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView = inflater.inflate(mResource, parent, false);
-
-        TextView txId = (TextView) convertView.findViewById(R.id.list_scoreId);
-        TextView txScore = (TextView) convertView.findViewById(R.id.list_scoreTime);
-        TextView txDate = (TextView) convertView.findViewById(R.id.list_scoreDate);
-        TextView txCube = (TextView) convertView.findViewById(R.id.list_cube);
-
-        txId.setText(id);
-        txScore.setText(score);
-        txDate.setText(date);
-        txCube.setText(cube);
-        */
-
-
         return convertView;
     }
 }
