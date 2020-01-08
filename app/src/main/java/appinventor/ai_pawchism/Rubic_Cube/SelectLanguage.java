@@ -37,7 +37,7 @@ public class SelectLanguage extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
-        getWindow().setLayout((int) (width * .7), (int) (height * .8));
+        getWindow().setLayout((int) (width * .7), (int) (height * .95));
 
         languageCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
