@@ -5,9 +5,7 @@
     <string name="exit_situation">INITIAL SITUATION</string>
     <string name="home">Homepage</string>
     <string name="step3">Step 3</string>
-    <string name="introduction_main_page">Before you start step 1, please see Rubik\'s Cube notation. Below pictures should make everything clear.
-        The rule with the marking is: if you look on cube from the front, turn once by 90 degrees clockwise, is marked with the letter F. Countermovement (counterclockwise) marked with F \'.
-        And the same rule applies to all other walls (e.g. the up wall: U / U \'- up, down wall: D / D\' -down etc.).</string>
+    <string name="introduction_main_page">Before you start step 1, please see Rubik\'s Cube notation. Below pictures should make everything clear. The rule with the marking is: if you look on cube from the front, turn once by 90 degrees clockwise, is marked with the letter F. Countermovement (counterclockwise) marked with F \'. And the same rule applies to all other walls (e.g. the up wall: U / U \'- up, down wall: D / D\' -down etc.).</string>
     <string name="step4">Step 4</string>
     <string name="step5">Step 5</string>
     <string name="step6">Step 6</string>
@@ -79,6 +77,6 @@
     <string name="step1_text1">If you do not yet know the notation used for arranging the cube, return to the start page and go to the Marks and notation tab. We start arranging the cube by placing the cross on the top wall. For us it will be a blue cross. We arrange it so that the cross blocks match the colors of the side blocks, as shown in the figure below.</string>
     <string name="step2_text2">Depending on the arrangement of the lower corner, you can come across 3 cases:</string>
     <string name="dwa_step1_text3">You can hit one of 3 cases, as shown below.</string>
-    <string name="dwa_step1_text1">If you do not know the notation used for Rubik\'s cubes, before you start step 1, be sure to see the \"Marks and notation\" tab.</string>
+    <string name="dwa_step1_text1">If you do not know the notation used for Rubiks cubes, before you start step 1, be sure to see the Marks and notation tab.</string>
     <string name="dwa_step1_text2">Solving a 2x2 cube begins with laying one wall (e.g. green) with adjacent colors, as in the drawing above. This stage is simple and everyone should deal with it by themselves. However, in case of problems, the following algorithm will help, which moves the green block from the bottom to the top layer, leaving the 3 blocks of the top layer unchanged.</string>
 </resources>

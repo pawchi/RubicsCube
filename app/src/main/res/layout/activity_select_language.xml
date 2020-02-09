@@ -4,8 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center_horizontal|center_vertical"
     android:background="@drawable/popup_window_border"
     tools:context="appinventor.ai_pawchism.Rubic_Cube.SelectLanguage">
@@ -36,92 +36,183 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lin_lay_language_radios"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/lin_lay_ok_cancel_language"
-        app:layout_constraintLeft_toLeftOf="@+id/constraint_language"
-        app:layout_constraintRight_toRightOf="@+id/constraint_language"
-        app:layout_constraintTop_toBottomOf="@+id/lin_lay_language_title">
+        app:layout_constraintTop_toBottomOf="@+id/lin_lay_language_title"
+        tools:layout_editor_absoluteX="2dp">
 
-        <RadioGroup
-            android:id="@+id/language_radioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:fadingEdge="none|vertical"
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/popup_text_id">
+            app:layout_constraintTop_toTopOf="parent">
 
 
+            <LinearLayout
+                android:id="@+id/lin_lay_language_radios"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/language_en"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/english" />
-
-
-            <RadioButton
-                android:id="@+id/language_fr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/french" />
-
-            <RadioButton
-                android:id="@+id/language_de"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/german" />
-
-            <RadioButton
-                android:id="@+id/language_pl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/polish" />
-
-            <RadioButton
-                android:id="@+id/language_pt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/portuguese" />
-
-            <RadioButton
-                android:id="@+id/language_ru"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/russian" />
-
-            <RadioButton
-                android:id="@+id/language_es"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/spanish" />
-
-            <RadioButton
-                android:id="@+id/language_zh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbSelLanguageOnClick"
-                android:text="@string/chinese" />
+                <RadioGroup
+                    android:id="@+id/language_radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:fadingEdge="none|vertical">
 
 
-        </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/language_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/english" />
 
-    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/language_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/french" />
+
+                    <RadioButton
+                        android:id="@+id/language_de"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/german" />
+
+                    <RadioButton
+                        android:id="@+id/language_pl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/polish" />
+
+                    <RadioButton
+                        android:id="@+id/language_pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/portuguese" />
+
+                    <RadioButton
+                        android:id="@+id/language_ru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/russian" />
+
+                    <RadioButton
+                        android:id="@+id/language_es"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/spanish" />
+
+                    <RadioButton
+                        android:id="@+id/language_zh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/chinese" />
+
+                    <RadioButton
+                        android:id="@+id/language_vi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/vietnamese" />
+
+                    <RadioButton
+                        android:id="@+id/language_cz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/czech" />
+
+                    <RadioButton
+                        android:id="@+id/language_it"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/italian" />
+
+                    <RadioButton
+                        android:id="@+id/language_tur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/turkish" />
+
+                    <RadioButton
+                        android:id="@+id/language_taj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/tajland" />
+
+                    <RadioButton
+                        android:id="@+id/language_hg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/hungary" />
+
+                    <RadioButton
+                        android:id="@+id/language_rum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/romanian" />
+
+                    <RadioButton
+                        android:id="@+id/language_jap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/japanese" />
+
+                    <RadioButton
+                        android:id="@+id/language_grec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/greek" />
+                    <RadioButton
+                        android:id="@+id/language_hindi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/hindi" />
+                    <RadioButton
+                        android:id="@+id/language_bengal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/bengal" />
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/lin_lay_ok_cancel_language"
@@ -134,7 +225,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_lay_language_radios">
+        android:background="@color/colorAccent">
 
         <Button
             android:id="@+id/button_language_cancel"
