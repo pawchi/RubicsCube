@@ -14,7 +14,6 @@
     <string name="case2_text">Dava 2</string>
     <string name="cancel">İptal etmek</string>
     <string name="case3_text">Dava 3</string>
-    <string name="chinese">Çince</string>
     <string name="confirm_delete_score">Seçilen sonuçları silmek istediğinizden emin misiniz?</string>
     <string name="delete_scores">PUANLARI SİL</string>
     <string name="dwa_step1_text1">Rubik küpleri için kullanılan notasyonu bilmiyorsanız, 1. adıma başlamadan önce, İşaretler ve notasyon sekmesine bakın.</string>
@@ -26,26 +25,17 @@
     <string name="dwa_step2_text5">Olgu 2-7</string>
     <string name="dwa_step3_text1">Bu, aşağıdaki resimde gösterildiği gibi tüm küpü tamamlayacağımız son adımdır ;))</string>
     <string name="dwa_step3_text2">Bu aşama köşeleri değiştirmeyi içerir. Burada sadece 2 vaka ile karşılaşabiliriz. Her durum için, algoritma aşağıda gösterilmiştir. İyi şanslar!! Ve lütfen uygulamayı derecelendirmeyi unutmayın. Teşekkürler!</string>
-    <string name="english">ingilizce</string>
     <string name="exit_situation">BAŞLANGIÇ DURUMU</string>
-    <string name="french">Fransızca</string>
-    <string name="german">Almanca</string>
-    <string name="hindi">Hintçe</string>
     <string name="home">Anasayfa</string>
     <string name="introduction_main_page">1. adıma başlamadan önce lütfen Rubik Küpü notasyonuna bakın. Aşağıdaki resimler her şeyi netleştirmelidir. İşaretli kural şudur: küpün önüne önden bakarsanız, saat yönünde 90 derece döndürün, F harfi ile işaretlenir. Ve aynı kural diğer tüm duvarlar için de geçerlidir (örn. Yukarı duvar: U / U \'- yukarı, aşağı duvar: D / D\' aşağı vb.).</string>
-    <string name="japanese">Japonca</string>
     <string name="language_title">DİL SEÇİN:</string>
     <string name="list_sort_cubes">Küp</string>
     <string name="list_sort_dates">tarih</string>
     <string name="list_sort_scores">Puan</string>
     <string name="not">Hayır</string>
-    <string name="polish">Lehçe</string>
-    <string name="portuguese">Portekizce</string>
-    <string name="russian">Rusça</string>
     <string name="settings_change_language">Dil Seçin.</string>
     <string name="settings_rate_us">Oran uygulaması.</string>
     <string name="settings_title">AYARLAR:</string>
-    <string name="spanish">İspanyol</string>
     <string name="step1">Aşama 1</string>
     <string name="step2">Aşama 2</string>
     <string name="step3">Aşama 3</string>
@@ -89,5 +79,4 @@
     <string name="title">RUBIK\'İN KÜPÜNÜN ÇÖZÜMÜ</string>
     <string name="worst_time_text">En kötü skor:</string>
     <string name="yes">Evet</string>
-    <string name="arabic">Arapça</string>
 </resources>

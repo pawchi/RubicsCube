@@ -5,7 +5,6 @@
     <string name="average_20_text">平均20：</string>
     <string name="average_50_text">平均50：</string>
     <string name="average_5_text">平均5:</string>
-    <string name="arabic">阿拉伯</string>
     <string name="best_time_text">最佳得分：</string>
     <string name="button_2x2">如何解决RUBIK\'S CUBE 2x2x2</string>
     <string name="button_3x3">如何解决RUBIK\'S CUBE 3x3x3</string>
@@ -15,9 +14,7 @@
     <string name="case1_text">情况1</string>
     <string name="case2_text">情况2</string>
     <string name="case3_text">情况3</string>
-    <string name="chinese">中文</string>
     <string name="confirm_delete_score">您确定要删除所选结果吗？</string>
-    <string name="dwa_step1_text1">如果您不知道用于Rubik多维数据集的符号，则在开始步骤1之前，请确保查看“标记和符号”选项卡。</string>
     <string name="dwa_step1_text2">如上图所示，求解2x2立方体首先要铺设一面具有相邻颜色的墙（例如绿色）。 这个阶段很简单，每个人都应该自己处理。 但是，在出现问题的情况下，以下算法将有所帮助，该算法将绿色块从底层移到顶层，而顶层的3个块保持不变。</string>
     <string name="dwa_step1_text3">您可以打3种情况之一，如下所示。</string>
     <string name="dwa_step2_text1">在此步骤中，首先将多维数据集旋转180度，以使第一步中完成的绿色墙位于多维数据集的底部。</string>
@@ -26,23 +23,14 @@
     <string name="dwa_step2_text5">案例2-7</string>
     <string name="dwa_step3_text1">这是最后一步，我们将完成整个多维数据集，如下图所示 ；）</string>
     <string name="dwa_step3_text2">这个阶段涉及交换角落。 我们只能在这里遇到2个案例。 对于每种情况，算法如下所示。 祝好运！！ 并且请不要忘记对应用程序进行评分。 谢谢！</string>
-    <string name="english">english</string>
     <string name="exit_situation">初始情况</string>
-    <string name="french">français</string>
-    <string name="german">Deutsch</string>
-    <string name="hindi">Hindi</string>
     <string name="home">主页</string>
     <string name="introduction_main_page">在开始步骤1之前，请参阅Rubik的多维数据集表示法。 下面的图片应该使所有内容都清楚。 带有标记的规则是：如果从正面看立方体，则顺时针旋转90度，并用字母F(标记:front)。反向运动（逆时针）标记为F\'。 同样的规则也适用于所有其他墙（例如，上墙：U / U\'-up，下墙：D / D\'-down）。</string>
-    <string name="japanese">日本</string>
     <string name="language_title">选择语言：</string>
     <string name="not">不是</string>
-    <string name="polish">Polski</string>
-    <string name="portuguese">Português</string>
-    <string name="russian">русский</string>
     <string name="settings_change_language">选择语言</string>
     <string name="settings_rate_us">评价申请。</string>
     <string name="settings_title">设置：</string>
-    <string name="spanish">"Español "</string>
     <string name="step1">步骤1</string>
     <string name="step2">步骤2</string>
     <string name="step3">步骤3</string>
@@ -90,4 +78,5 @@
     <string name="list_sort_cubes">魔方</string>
     <string name="list_sort_dates">日期</string>
     <string name="list_sort_scores">得分</string>
+    <string name="dwa_step1_text1">如果您不知道用于Rubik多维数据集的符号，则在开始步骤1之前，请确保查看“标记和符号”选项卡。</string>
 </resources>

@@ -40,17 +40,6 @@
     <string name="settings_rate_us">Taxa de aplicação.</string>
     <string name="settings_change_language">Selecione o idioma.</string>
     <string name="language_title">"SELECIONE O IDIOMA: "</string>
-    <string name="arabic">árabe</string>
-    <string name="english">"inglês "</string>
-    <string name="chinese">chinês</string>
-    <string name="french">francês</string>
-    <string name="german">alemão</string>
-    <string name="polish">polonês</string>
-    <string name="portuguese">Português</string>
-    <string name="spanish">espanhol</string>
-    <string name="russian">russo</string>
-    <string name="japanese">japonês</string>
-    <string name="hindi">hindi</string>
     <string name="button_3x3">COMO SOLUCIONAR O CUBO DE RUBIK 3x3x3</string>
     <string name="button_2x2">COMO SOLUCIONAR O CUBO DE RUBIK 2x2x2</string>
     <string name="button_general_info">INFORMAÇÃO GERAL E NOTAÇÃO</string>

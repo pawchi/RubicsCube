@@ -40,17 +40,6 @@
     <string name="settings_rate_us">Оценить приложение.</string>
     <string name="settings_change_language">Выберите язык.</string>
     <string name="language_title">ВЫБЕРИТЕ ЯЗЫК</string>
-    <string name="arabic">арабский</string>
-    <string name="english">английский</string>
-    <string name="chinese">kитайский</string>
-    <string name="french">Французский</string>
-    <string name="german">hемецкий</string>
-    <string name="hindi">хинди</string>
-    <string name="japanese">Японский</string>
-    <string name="polish">Польский</string>
-    <string name="portuguese">португальский</string>
-    <string name="russian">русский</string>
-    <string name="spanish">испанский</string>
     <string name="button_3x3">КАК РЕШАТЬ РУБИКУ CUBE 3x3x3</string>
     <string name="button_2x2">КАК РЕШАТЬ РУБИКУ CUBE 2x2x2</string>
     <string name="button_general_info">ОБЩАЯ ИНФОРМАЦИЯ И ОБОЗНАЧЕНИЯ</string>

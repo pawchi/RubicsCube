@@ -14,17 +14,6 @@
     <string name="settings_rate_us">Bewerte die Applikation</string>
     <string name="settings_change_language">Sprache auswaehlen</string>
     <string name="language_title">SPRACHE AUSWAEHLEN</string>
-    <string name="arabic">Arabisch</string>
-    <string name="english">Englisch</string>
-    <string name="chinese">Chinesisch</string>
-    <string name="french">Franzoesisch</string>
-    <string name="german">Deutsch</string>
-    <string name="hindi">Hindi</string>
-    <string name="japanese">Japanisch</string>
-    <string name="polish">Polnisch</string>
-    <string name="portuguese">Portugiesisch</string>
-    <string name="russian">Russisch</string>
-    <string name="spanish">Spanisch</string>
     <string name="step3_effect">ERGEBNIS SCHRITT 3</string>
     <string name="step4_effect">ERGEBNIS SCHRITT 4</string>
     <string name="step5_effect">ERGEBNIS SCHRITT 5</string>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">khối Rubik</string>
-    <string name="arabic">tiếng Ả Rập</string>
     <string name="average_10_text">Trung bình 10:</string>
     <string name="average_20_text">Trung bình 20:</string>
     <string name="average_5_text">Trung bình 5:</string>
@@ -15,7 +14,6 @@
     <string name="case1_text">Trường hợp 1</string>
     <string name="case2_text">Trường hợp 2</string>
     <string name="case3_text">Trường hợp 3</string>
-    <string name="chinese">người Trung Quốc</string>
     <string name="confirm_delete_score">Bạn có chắc chắn muốn xóa kết quả đã chọn?</string>
     <string name="delete_scores">XÓA SCORES</string>
     <string name="dwa_step1_text1">Nếu bạn không biết ký hiệu được sử dụng cho các khối Rubik, trước khi bạn bắt đầu bước 1, hãy chắc chắn xem tab Dấu và ký hiệu.</string>
@@ -27,26 +25,17 @@
     <string name="dwa_step2_text5">Các trường hợp 2-7</string>
     <string name="dwa_step3_text1">Đây là bước cuối cùng trong đó chúng ta sẽ hoàn thành toàn bộ khối như trong hình bên dưới ;))</string>
     <string name="dwa_step3_text2">Giai đoạn này liên quan đến việc hoán đổi góc. Chúng ta chỉ có thể gặp ở đây 2 trường hợp. Đối với mỗi trường hợp, thuật toán được hiển thị dưới đây. Chúc may mắn!! Và đừng quên đánh giá ứng dụng. Cảm ơn!</string>
-    <string name="english">Tiếng Anh</string>
     <string name="exit_situation">TÌNH THẾ BAN ĐẦU</string>
-    <string name="french">người Pháp</string>
-    <string name="german">tiếng Đức</string>
-    <string name="hindi">Tiếng Hindi</string>
     <string name="home">Trang chủ</string>
     <string name="introduction_main_page">Trước khi bạn bắt đầu bước 1, vui lòng xem ký hiệu Rubik\'s Cube. Dưới đây hình ảnh nên làm cho mọi thứ rõ ràng. Quy tắc với việc đánh dấu là: nếu bạn nhìn vào khối lập phương từ phía trước, hãy quay một lần 90 độ theo chiều kim đồng hồ, được đánh dấu bằng chữ F. Countermovement (ngược chiều kim đồng hồ) được đánh dấu bằng F \'. Và quy tắc tương tự áp dụng cho tất cả các bức tường khác (ví dụ: tường lên: U / U \'- lên, xuống tường: D / D\' -down, v.v.).</string>
-    <string name="japanese">tiếng Nhật</string>
     <string name="language_title">CHỌN NGÔN NGỮ:</string>
     <string name="list_sort_cubes">Khối lập phương</string>
     <string name="list_sort_dates">Ngày</string>
     <string name="list_sort_scores">Ghi bàn</string>
     <string name="not">Không</string>
-    <string name="polish">đánh bóng</string>
-    <string name="portuguese">Bồ Đào Nha</string>
-    <string name="russian">tiếng Nga</string>
     <string name="settings_change_language">Chọn ngôn ngữ.</string>
     <string name="settings_rate_us">Ứng dụng tỷ lệ.</string>
     <string name="settings_title">CÀI ĐẶT:</string>
-    <string name="spanish">người Tây Ban Nha</string>
     <string name="step1">Bước 1</string>
     <string name="step2">Bước 2</string>
     <string name="step3">Bước 3</string>

@@ -14,17 +14,6 @@
     <string name="settings_rate_us">Taux d\'application.</string>
     <string name="settings_change_language">"Choisir la langue. "</string>
     <string name="language_title">"CHOISIR LA LANGUE: "</string>
-    <string name="english">Anglais</string>
-    <string name="chinese">"Chinois "</string>
-    <string name="hindi">Hindi</string>
-    <string name="spanish">"Espanol "</string>
-    <string name="german">allemande</string>
-    <string name="french">français</string>
-    <string name="arabic">arabe</string>
-    <string name="japanese">Japonais</string>
-    <string name="polish">polonais</string>
-    <string name="portuguese">Portugais</string>
-    <string name="russian">russe</string>
     <string name="step7_text5">ATTENTION!!!</string>
     <string name="step7_effect">RÉSULTAT DE L\'ÉTAPE 7</string>
     <string name="step6_effect">RÉSULTAT DE L\'ÉTAPE 6</string>
@@ -79,7 +68,6 @@
     <string name="yes">Oui</string>
     <string name="dwa_step1_text1">Si vous ne connaissez pas la notation utilisée pour les cubes de Rubik, avant de commencer l\'étape 1, assurez-vous de voir l\'onglet \"Marques et notation\".</string>
     <string name="dwa_step1_text2">La pose d\'un cube 2x2 commence par la pose d\'un mur (par exemple vert) avec des couleurs adjacentes, comme dans le dessin ci-dessus. Cette étape est simple et chacun devrait y faire face par lui-même. Cependant, en cas de problème, l\'algorithme suivant vous aidera, ce qui déplace le bloc vert du bas vers le calque supérieur, laissant les 3 blocs du calque supérieur inchangés.</string>
-    <string name="dwa_step1_text3">Vous pouvez toucher l\'un des 3 cas, comme indiqué ci-dessous.</string>
     <string name="dwa_step2_text1">Dans cette étape, tournez d\'abord le cube de 180 degrés de sorte que le mur vert terminé à la première étape se trouve au bas du cube.</string>
     <string name="dwa_step2_text2">Nous allons maintenant déplacer tous les blocs bleus vers la couche supérieure. Pour l\'instant, peu importe si les parois latérales correspondent ou non. Nous nous occuperons d\'eux dans la dernière étape.</string>
     <string name="dwa_step2_text3">Dans cette étape, vous rencontrerez l\'un des 7 cas. Chacun est illustré ci-dessous avec un algorithme à utiliser. N\'oubliez pas de définir correctement le cube, sinon l\'algorithme ne fonctionnera pas. La méthode de configuration est indiquée ci-dessous pour le cas 1. Réglez le cube de la même manière pour tous les autres cas.</string>
@@ -90,4 +78,5 @@
     <string name="list_sort_scores">But</string>
     <string name="list_sort_dates">La date</string>
     <string name="list_sort_cubes">Cube</string>
+    <string name="dwa_step1_text3">Vous pouvez toucher l\'un des 3 cas, comme indiqué ci-dessous.</string>
 </resources>

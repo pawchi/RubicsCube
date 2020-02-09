@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cubo de rubik</string>
-    <string name="arabic">"Arábica "</string>
-    <string name="english">"Inglés "</string>
     <string name="exit_situation">SITUACIÓN INICIAL</string>
-    <string name="french">Francés</string>
-    <string name="german">Alemán</string>
     <string name="home">PAGINA DE INICIO</string>
     <string name="introduction_main_page">Antes de comenzar el paso 1, vea la notación Cubo de Rubik. Las imágenes a continuación deben aclarar todo. La regla con la marca es: si mira el cubo desde el frente, gire una vez 90 grados en sentido horario, está marcado con la letra F. Contramovimiento (en sentido antihorario) marcado con F \'. Y la misma regla se aplica a todas las demás paredes (por ejemplo, la pared superior: U / U \'- arriba, pared inferior: D / D\' - abajo, etc.).</string>
     <string name="settings_change_language">Seleccione el idioma</string>
     <string name="language_title">SELECCIONE EL IDIOMA</string>
-    <string name="polish">Polaco</string>
     <string name="settings_rate_us">Aplicación de tarifas</string>
     <string name="settings_title">AJUSTES</string>
-    <string name="spanish">"Español "</string>
     <string name="step3">Paso 3</string>
     <string name="step3_effect">EFECTO DEL PASO 3</string>
     <string name="step4_effect">EFECTO DEL PASO 4</string>
@@ -46,11 +40,6 @@
     <string name="step7_text6">Durante estos pasos, el cubo parece estar mezclado. No te preocupes, ¡debería ser así! Todo vuelve a sus posiciones :)))</string>
     <string name="step7_text7">Pero si esto no está completamente claro para usted, mire la siguiente imagen que muestra un ejemplo donde las cuatro esquinas deben rotar. \"OK\" marca las esquinas que ya se han organizado después de aplicar el algoritmo. Tenga en cuenta que, mientras tanto, el cubo se ve realmente confuso … ¡pero al final todo vuelve a su lugar!</string>
     <string name="title">CÓMO RESOLVER EL CUBO DE RUBIK</string>
-    <string name="chinese">chino</string>
-    <string name="hindi">hindi</string>
-    <string name="japanese">japonés</string>
-    <string name="portuguese">portugués</string>
-    <string name="russian">ruso</string>
     <string name="button_3x3">CÓMO RESOLVER EL CUBO DE RUBIK 3x3x3</string>
     <string name="button_2x2">CÓMO RESOLVER EL CUBO DE RUBIK 2x2x2</string>
     <string name="button_general_info">INFORMACIÓN GENERAL Y NOTACIÓN</string>
