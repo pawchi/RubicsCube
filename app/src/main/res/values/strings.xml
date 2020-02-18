@@ -148,7 +148,7 @@
     <string name="chinese" translatable="false">中文</string>
     <string name="french" translatable="false">français</string>
     <string name="german" translatable="false">Deutsch</string>
-    <string name="hindi" translatable="false">Hindi</string>
+    <string name="hindi" translatable="false">हिंदी</string>
     <string name="polish" translatable="false">Polski</string>
     <string name="portuguese" translatable="false">Português</string>
     <string name="russian" translatable="false">русский</string>
@@ -160,12 +160,12 @@
     <string name="tajland" translatable="false">ไทย</string>
     <string name="romanian" translatable="false">Română</string>
     <string name="greek" translatable="false">Ελληνικά</string>
-    <string name="japanese" translatable="false">日本</string>
+    <string name="japanese" translatable="false">日本語</string>
     <string name="vietnamese" translatable="false">Tiếng Việt</string>
     <string name="step3_text2">W tym kroku zajmiemy się ułożeniem drugiej warstwy wg. algorytmu poniżej. Algorytm przedstawia sposób przestawienia klocka dokładnie tak jak pokazują to strzałki na obrazku poniżej. W przykładzie z obrazka wstawiamy boczny klocek czerwono-biały na odpowiednie miejsce (oczywiście możesz zacząć od dowolnego klocka! Nie musi to być czerwono-biały :)).   W poszukiwaniu klocków do wstawienia, przekręcaj dolną warstwę (ruchem D lub D\').  Jeśli nie ma żadnego klocka w odpowiedniej pozycji do wstawienia, a druga warstwa nie jest kompletnie ułożona, znaczy to, że jakiś klocek znajduje się w drugiej warstwie ale w nieodpowiednim położeniu. W tym wypadku stosuj ten sam algorytm do \"wyrzucenia\" tego niewłaściwego klocka z drugiej warstwy do warstwy dolnej. Następnie zobacz czy przerzucony do dolnej warstwy klocek jest w odpowiedniej pozycji do zastosowania naszego algorytmu. Operację tą powtarzaj aż do ułożenia całej drugiej warstwy. Następnie możesz przejeść do kolejnego kroku.</string>
     <string name="step4_text1">W tym kroku będziemy układać krzyż na górnej ściance. W pierwszej kolejności przekręć kostkę tak aby zupełnie nieułożona(dolna) ścianka znalazła się na górze -  jak na obrazku powyżej w \'sytuacji wyjściowej\'.  \'Sytuacja wyjściowa\' pokazuje wariant gdy żaden element krzyża nie ułożył się nam na górze. W takim wypadku wykonaj poniższy algorytm jeden lub dwa razy.</string>
     <string name="step5_text1">Teraz będziemy dopasowywać położenie klocków krzyża do bocznych ścianek.</string>
     <string name="step6_text4">Jeśli coś nie jest jasne, popatrz na poniższy rysunek gdzie pokazano co się dzieje na kostce po każdym wykonaniu algorytmu(przedstawiono przykładową sytuację gdy potrzeba będzie wykonać algorytm 2 razy aby uzyskać końcowy efekt tego kroku).  Pamiętaj, że zawsze ustawiamy kostkę tak aby narożnik, którego nie chcemy przesunąć znajdował się w lewym, górnym rogu!!</string>
-    <string name="bengal" translatable="false">বেঙ্গল ভাষা</string>
+    <string name="bengal" translatable="false">বাংলা</string>
 
 </resources>

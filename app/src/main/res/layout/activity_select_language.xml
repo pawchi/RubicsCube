@@ -30,8 +30,10 @@
             android:layout_marginTop="16dp"
             android:text="@string/language_title"
             android:textStyle="bold"
+            android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/button_menu_text_active"/>
 
 
     </LinearLayout>
@@ -44,7 +46,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/lin_lay_ok_cancel_language"
         app:layout_constraintTop_toBottomOf="@+id/lin_lay_language_title"
-        tools:layout_editor_absoluteX="2dp">
+        tools:layout_editor_absoluteX="2dp"
+        android:background="@color/four_buttons_background">
 
 
         <ScrollView
@@ -79,7 +82,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/english" />
+                        android:text="@string/english"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
 
                     <RadioButton
@@ -87,124 +92,160 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/french" />
+                        android:text="@string/french"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_de"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/german" />
+                        android:text="@string/german"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_pl"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/polish" />
+                        android:text="@string/polish"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_pt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/portuguese" />
+                        android:text="@string/portuguese"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_ru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/russian" />
+                        android:text="@string/russian"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_es"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/spanish" />
+                        android:text="@string/spanish"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_zh"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/chinese" />
+                        android:text="@string/chinese"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_vi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/vietnamese" />
+                        android:text="@string/vietnamese"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_cz"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/czech" />
+                        android:text="@string/czech"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_it"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/italian" />
+                        android:text="@string/italian"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_tur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/turkish" />
+                        android:text="@string/turkish"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_taj"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/tajland" />
+                        android:text="@string/tajland"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_hg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/hungary" />
+                        android:text="@string/hungary"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_rum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/romanian" />
+                        android:text="@string/romanian"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_jap"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/japanese" />
+                        android:text="@string/japanese"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
                     <RadioButton
                         android:id="@+id/language_grec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/greek" />
+                        android:text="@string/greek"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
                     <RadioButton
                         android:id="@+id/language_hindi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/hindi" />
+                        android:text="@string/hindi"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
                     <RadioButton
                         android:id="@+id/language_bengal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="rbSelLanguageOnClick"
-                        android:text="@string/bengal" />
+                        android:text="@string/bengal"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
 
                 </RadioGroup>
@@ -224,8 +265,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/colorAccent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/button_language_cancel"
@@ -234,8 +274,9 @@
             android:layout_height="40dp"
             android:layout_marginEnd="5dp"
             android:layout_marginStart="5dp"
-            android:background="@color/select_language_buttons"
+            android:background="@drawable/small_button_border"
             android:text="@string/cancel"
+            android:textColor="@color/button_menu_text_active"
             app:layout_constraintLeft_toLeftOf="@+id/constraint_language" />
 
         <Button
@@ -245,8 +286,9 @@
             android:layout_height="40dp"
             android:layout_marginEnd="5dp"
             android:layout_marginStart="5dp"
-            android:background="@color/select_language_buttons"
+            android:background="@drawable/small_button_border"
             android:text="@string/ok"
+            android:textColor="@color/button_menu_text_active"
             app:layout_constraintRight_toRightOf="@+id/constraint_language" />
 
     </LinearLayout>
