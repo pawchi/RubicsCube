@@ -77,6 +77,6 @@
     <string name="step7_text7">लेकिन अगर यह आपके लिए पूरी तरह से स्पष्ट नहीं है, तो नीचे दी गई तस्वीर को देखें जो एक उदाहरण दिखाता है जहां सभी चार कोनों को घुमाया जाना है। ठीक निशान कोनों जो एल्गोरिथ्म को लागू करने के बाद पहले से ही व्यवस्थित किए गए हैं। ध्यान दें कि इस बीच घन वास्तव में भ्रमित दिखता है ... लेकिन अंत में सब कुछ अपने स्थानों पर लौट आता है!</string>
     <string name="timer_show_scores_table">स्कोरबोर्ड</string>
     <string name="title">कैसे रब्बी के कूबे हल करने के लिए</string>
-    <string name="worst_time_text">सबसे खराब स्कोर:</string>
+    <string name="worst_time_text">सबसे खराब:</string>
     <string name="yes">Yes</string>
 </resources>

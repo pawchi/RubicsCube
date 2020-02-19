@@ -5,7 +5,7 @@
     <string name="average_20_text">Media de 20:</string>
     <string name="average_50_text">Media de 50:</string>
     <string name="average_5_text">Media de 5:</string>
-    <string name="best_time_text">Cel mai bun scor:</string>
+    <string name="best_time_text">Cel mai bun:</string>
     <string name="button_2x2">CUM SĂ SOLUȚI CUBUL RUBIK 2x2x2</string>
     <string name="button_3x3">CUM SĂ SOLUȚI CUBUL RUBIK 3x3x3</string>
     <string name="button_general_info">INFORMAȚII GENERALE ȘI NOTARE</string>
@@ -77,6 +77,6 @@
     <string name="step7_text7">Dar dacă acest lucru nu este complet clar pentru tine, uită-te la imaginea de mai jos care arată un exemplu în care trebuie să se rotească toate cele patru colțuri. OK marchează colțurile care au fost deja aranjate după aplicarea algoritmului. Rețineți că, între timp, cubul pare de fapt confuz ... dar la final totul se întoarce la locurile sale!</string>
     <string name="timer_show_scores_table">Tabloul de bord</string>
     <string name="title">CUM SĂ SOLUVEZI CUBUL RUBIKULUI</string>
-    <string name="worst_time_text">Scorul cel mai rău:</string>
+    <string name="worst_time_text">Cel mai rău:</string>
     <string name="yes">da</string>
 </resources>

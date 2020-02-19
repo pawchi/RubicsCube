@@ -5,7 +5,7 @@
     <string name="average_20_text">Media di 20:</string>
     <string name="average_50_text">Media di 50:</string>
     <string name="average_5_text">Media di 5:</string>
-    <string name="best_time_text">Miglior punteggio:</string>
+    <string name="best_time_text">Migliore:</string>
     <string name="button_2x2">COME RISOLVERE IL CUBO DI RUBIK 2x2x2</string>
     <string name="button_3x3">COME RISOLVERE IL CUBO DI RUBIK 3x3x3</string>
     <string name="button_general_info">INFORMAZIONI GENERALI E NOTA</string>
@@ -77,6 +77,6 @@
     <string name="step7_text7">Ma se questo non è completamente chiaro per te, guarda l\'immagine qui sotto che mostra un esempio in cui tutti e quattro gli angoli devono essere ruotati. \"OK\" indica gli angoli che sono già stati disposti dopo l\'applicazione dell\'algoritmo. Nota che nel frattempo il cubo sembra davvero confuso ... ma alla fine tutto ritorna al suo posto!</string>
     <string name="timer_show_scores_table">Tabellone segnapunti</string>
     <string name="title">COME RISOLVERE IL CUBO DI RUBIK</string>
-    <string name="worst_time_text">Peggior punteggio:</string>
+    <string name="worst_time_text">Peggior:</string>
     <string name="yes">Sì</string>
 </resources>

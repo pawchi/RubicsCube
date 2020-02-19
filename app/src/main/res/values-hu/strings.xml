@@ -5,7 +5,7 @@
     <string name="average_20_text">20 átlag:</string>
     <string name="average_50_text">50 átlag:</string>
     <string name="average_5_text">5 átlag:</string>
-    <string name="best_time_text">Legjobb eredmény:</string>
+    <string name="best_time_text">Legjobb:</string>
     <string name="button_2x2">HOGYAN MEG oldja meg a RUBIK CUBE 2x2x2-ét</string>
     <string name="button_3x3">HOGYAN MEG oldja meg a RUBIK CUBE 3x3x3-ét</string>
     <string name="button_general_info">ÁLTALÁNOS INFORMÁCIÓK ÉS MEGJEGYZÉSEK</string>
@@ -77,6 +77,6 @@
     <string name="step7_text7">De ha ez nem egyértelmű az Ön számára, akkor nézze meg az alábbi képet, amely példát mutat, ahol mind a négy sarkot el kell forgatni. Az OK jelöli azokat a sarkokat, amelyeket az algoritmus alkalmazása után már elrendeztek. Ne feledje, hogy időközben a kocka valójában zavartnak tűnik ... de végül minden visszatér a helyére!</string>
     <string name="timer_show_scores_table">Scoreboard</string>
     <string name="title">HOGYAN MEG oldja meg a RUBIK KOKT?</string>
-    <string name="worst_time_text">Legrosszabb pontszám:</string>
+    <string name="worst_time_text">Legrosszabb:</string>
     <string name="yes">Igen</string>
 </resources>

@@ -5,7 +5,7 @@
     <string name="average_20_text">20の平均：</string>
     <string name="average_50_text">50の平均：</string>
     <string name="average_5_text">5の平均：</string>
-    <string name="best_time_text">最高のスコア：</string>
+    <string name="best_time_text">ベスト：</string>
     <string name="button_2x2">RUBIKのキューブ2x2x2を解決する方法</string>
     <string name="button_3x3">RUBIKのキューブ3x3x3を解決する方法</string>
     <string name="button_general_info">一般情報と表記</string>
@@ -77,6 +77,6 @@
     <string name="step7_text7">しかし、これが完全に明確でない場合は、4つのコーナーすべてを回転させる必要がある例を示す以下の図を見てください。 [OK]は、アルゴリズムの適用後に既に配置されているコーナーをマークします。 その間、キューブは実際には混乱して見えることに注意してください...しかし、最終的にはすべてがその場所に戻ります！</string>
     <string name="timer_show_scores_table">スコアボード</string>
     <string name="title">RUBIKのキューブを解決する方法</string>
-    <string name="worst_time_text">最悪のスコア：</string>
+    <string name="worst_time_text">最悪の結果：</string>
     <string name="yes">はい</string>
 </resources>
