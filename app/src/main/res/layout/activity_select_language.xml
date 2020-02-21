@@ -246,6 +246,14 @@
                         android:text="@string/bengal"
                         android:textColor="@color/button_menu_text_active"
                         android:buttonTint="@color/button_menu_text_active"/>
+                    <RadioButton
+                        android:id="@+id/language_slovak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="rbSelLanguageOnClick"
+                        android:text="@string/slovak"
+                        android:textColor="@color/button_menu_text_active"
+                        android:buttonTint="@color/button_menu_text_active"/>
 
 
                 </RadioGroup>

@@ -5,7 +5,9 @@
     <string name="exit_situation">INITIAL SITUATION</string>
     <string name="home">Homepage</string>
     <string name="step3">Step 3</string>
-    <string name="introduction_main_page">Before you start step 1, please see Rubik\'s Cube notation. Below pictures should make everything clear. The rule with the marking is: if you look on cube from the front, turn once by 90 degrees clockwise, is marked with the letter F. Countermovement (counterclockwise) marked with F \'. And the same rule applies to all other walls (e.g. the up wall: U / U \'- up, down wall: D / D\' -down etc.).</string>
+    <string name="introduction_main_page">Before you start step 1, please see Rubik\'s Cube notation. Below pictures should make everything clear.
+        The rule with the marking is: if you look on cube from the front, turn once by 90 degrees clockwise, is marked with the letter F.
+        Countermovement (counterclockwise) marked with F \'. And the same rule applies to all other walls (e.g. the up wall: U / U \'- up, down wall: D / D\' -down etc.).</string>
     <string name="step4">Step 4</string>
     <string name="step5">Step 5</string>
     <string name="step6">Step 6</string>

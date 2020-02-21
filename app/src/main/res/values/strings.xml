@@ -167,5 +167,6 @@
     <string name="step5_text1">Teraz będziemy dopasowywać położenie klocków krzyża do bocznych ścianek.</string>
     <string name="step6_text4">Jeśli coś nie jest jasne, popatrz na poniższy rysunek gdzie pokazano co się dzieje na kostce po każdym wykonaniu algorytmu(przedstawiono przykładową sytuację gdy potrzeba będzie wykonać algorytm 2 razy aby uzyskać końcowy efekt tego kroku).  Pamiętaj, że zawsze ustawiamy kostkę tak aby narożnik, którego nie chcemy przesunąć znajdował się w lewym, górnym rogu!!</string>
     <string name="bengal" translatable="false">বাংলা</string>
+    <string name="slovak" translatable="false">Slovak</string>
 
 </resources>

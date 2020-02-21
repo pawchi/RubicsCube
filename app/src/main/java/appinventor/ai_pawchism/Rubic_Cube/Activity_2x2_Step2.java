@@ -22,6 +22,8 @@ import java.util.Locale;
 public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClickListener {
     InterstitialAd interstitialAd;
     String startedLanguage;
+    ImageView showImage;
+    ImageView step2Test;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,6 +54,23 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
         Button stepButton3 = (Button) findViewById(R.id.button3_2x2);
         ImageView settingsImage = (ImageView) findViewById(R.id.settings_imageview);
         ImageView backButton = (ImageView) findViewById(R.id.back_button);
+        step2Test = (ImageView) findViewById(R.id.gridView);
+        step2Test.setVisibility(View.GONE);
+        showImage = (ImageView) findViewById(R.id._2x2_case_1_cross_show_moves);
+
+        showImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (step2Test.getVisibility()==View.GONE){
+                    step2Test.setVisibility(View.VISIBLE);
+                    showImage.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+                } else {
+                    step2Test.setVisibility(View.GONE);
+                    showImage.setImageResource(android.R.drawable.ic_menu_add);
+                }
+
+            }
+        });
 
         backButton.setOnClickListener(this);
         stepButton1.setOnClickListener(this);
@@ -115,6 +134,7 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
                     startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
                 }
                 break;
+
         }
     }
 

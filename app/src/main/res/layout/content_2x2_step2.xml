@@ -93,19 +93,32 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="10dp"/>
 
-        <TextView
-            android:id="@+id/dwa_step2_text4"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/case1_text"
-            android:textAlignment="viewStart"
-            android:textColor="@color/primary_text"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/dwa_step2_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/case1_text"
+                android:textAlignment="viewStart"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/_2x2_case_1_cross_show_moves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                app:srcCompat="@android:drawable/ic_menu_add" />
+        </LinearLayout>
+
         <ImageView
             android:id="@+id/dwa_step2_alg1"
             android:layout_width="wrap_content"
@@ -113,6 +126,23 @@
             android:adjustViewBounds="true"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/dwa_step2_alg1_and_viewpoint"/>
+
+        <ImageView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/b_oko"/>
+        <GridView
+            android:id="@+id/gridView_into_inflate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="80dp"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center">
+
+        </GridView>
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"

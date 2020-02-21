@@ -75,7 +75,7 @@
     <string name="step7_text5">POZORNOST!!!</string>
     <string name="step7_text6">Během těchto kroků krychle vypadá, že je vše smíchané. Nebojte se - mělo by to tak být! Všechno se vrací na své pozice :)))</string>
     <string name="step7_text7">Ale pokud to pro vás není úplně jasné, podívejte se na obrázek níže, který ukazuje příklad, kde musí být otočeny všechny čtyři rohy. „OK“ označuje rohy, které již byly uspořádány po použití algoritmu. Všimněte si, že mezitím krychle vypadá zmateně ... ale nakonec se vše vrátí na své místo!</string>
-    <string name="timer_show_scores_table">Scoreboard</string>
+    <string name="timer_show_scores_table">Skóre</string>
     <string name="title">JAK ŘEŠIT RUBIKOVU KUBU</string>
     <string name="worst_time_text">Nejhorší:</string>
     <string name="yes">Ano</string>

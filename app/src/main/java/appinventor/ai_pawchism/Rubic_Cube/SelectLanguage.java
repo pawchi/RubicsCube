@@ -134,7 +134,9 @@ public class SelectLanguage extends AppCompatActivity {
             case R.id.language_bengal:
                 radioButtonResult = "bn";
                 break;
-
+            case R.id.language_slovak:
+                radioButtonResult = "sk";
+                break;
         }
     }
 
