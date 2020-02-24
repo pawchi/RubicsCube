@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
@@ -17,6 +19,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
+
+import java.util.List;
 import java.util.Locale;
 
 public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClickListener {
@@ -24,6 +28,10 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
     String startedLanguage;
     ImageView showImage;
     ImageView step2Test;
+    private static  int[] moves2x2 = {R.drawable._2x2_l,R.drawable._2x2_l_prim,R.drawable._2x2_r,R.drawable._2x2_r_prim,R.drawable._2x2_f,
+            R.drawable._2x2_f_prim,R.drawable._2x2_b,R.drawable._2x2_b_prim,R.drawable._2x2_d,R.drawable._2x2_d_prim,R.drawable._2x2_u,R.drawable._2x2_u_prim};
+    List<Integer> imagesList;
+    GridView gridView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,6 +65,13 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
         step2Test = (ImageView) findViewById(R.id.gridView);
         step2Test.setVisibility(View.GONE);
         showImage = (ImageView) findViewById(R.id._2x2_case_1_cross_show_moves);
+
+        //GridView
+        gridView = (GridView) findViewById(R.id.gridView_into_inflate);
+        GridViewAdapter gridViewAdapter = new GridViewAdapter(moves2x2,this);
+        gridView.setAdapter(gridViewAdapter);
+
+
 
         showImage.setOnClickListener(new View.OnClickListener() {
             @Override

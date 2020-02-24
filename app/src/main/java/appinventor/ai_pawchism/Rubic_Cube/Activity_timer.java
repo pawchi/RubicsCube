@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
@@ -73,6 +74,9 @@ public class Activity_timer extends AppCompatActivity {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        loadLocale();
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings",Activity.MODE_PRIVATE);
+        startedLanguage = prefs.getString("My_Lang","");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
 
@@ -114,9 +118,9 @@ public class Activity_timer extends AppCompatActivity {
         averageFrom20 = (TextView) findViewById(R.id.average20_score);
         averageFrom50 = (TextView) findViewById(R.id.average50_score);
 
-        //Spinner - choose cube type
+        //Spinner - choose cube typebutton_border.xml
         Spinner spinner = findViewById(R.id.timer_spinner);
-        ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this, R.array.spinner_choose_cube, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this, R.array.spinner_choose_cube, R.layout.spinner_text_cube_type);
         adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapterSpinner);
         spinner.setSelection(getSpinnerPosition());
@@ -155,7 +159,7 @@ public class Activity_timer extends AppCompatActivity {
         //final ConstraintLayout timerButton = (ConstraintLayout) findViewById(R.id.constraint_timer_field);
         final View timerButton = (View) findViewById(R.id.timer_click_area);
         textTimer = (TextView) findViewById(R.id.text_timer);
-        textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
+        textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_text_active)));
 
         timerButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -172,14 +176,14 @@ public class Activity_timer extends AppCompatActivity {
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                             String strDate = sdf.format(new Date());
                             db.addData(textTimer.getText().toString(), strDate, cubeType);
-                            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
+                            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_text_active)));
                             return false;
                         }
                     case MotionEvent.ACTION_MOVE:
                         return false;
                     case MotionEvent.ACTION_UP:
                         if (timerStatus == 0) {
-                            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.timer_text_stop)));
+                            textTimer.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_text_active)));
                             return false;
                         }
                         if (timerStatus == 1) {
@@ -367,10 +371,25 @@ public class Activity_timer extends AppCompatActivity {
         SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
         return sharedPreferences.getInt("SpinPos",0);
     }
-    //to test something
-    //public static void main(String[] args){
 
+    public void loadLocale(){
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
+        String language = prefs.getString("My_Lang","");
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration configuration = getBaseContext().getResources().getConfiguration();
+        configuration.setLocale(locale);
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
+    }
 
-        //System.out.print("");
-    //}
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences prefs = getSharedPreferences("Activity_Settings", Activity.MODE_PRIVATE);
+        String language = prefs.getString("My_Lang","");
+        if(!language.equals(startedLanguage)){ //check weather language is changed
+            recreate();
+            startedLanguage = language;
+        }
+    }
 }
