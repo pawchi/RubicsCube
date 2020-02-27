@@ -85,13 +85,13 @@
             android:id="@+id/dwa_step2_text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/dwa_step2_text3"
             android:textAlignment="viewStart"
             android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -123,26 +123,22 @@
             android:id="@+id/dwa_step2_alg1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/dwa_step2_alg1_and_viewpoint"/>
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/dwa_step2_alg1_and_viewpoint" />
 
         <ImageView
             android:id="@+id/gridView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/b_oko"/>
-        <GridView
-            android:id="@+id/gridView_into_inflate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnWidth="80dp"
-            android:verticalSpacing="5dp"
-            android:horizontalSpacing="5dp"
-            android:stretchMode="columnWidth"
-            android:gravity="center">
 
-        </GridView>
+        <LinearLayout
+            android:id="@+id/linear_layout_to_add_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"

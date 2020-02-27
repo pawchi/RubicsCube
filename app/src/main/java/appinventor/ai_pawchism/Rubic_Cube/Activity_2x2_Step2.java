@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
@@ -20,7 +18,6 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 
-import java.util.List;
 import java.util.Locale;
 
 public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClickListener {
@@ -30,8 +27,7 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
     ImageView step2Test;
     private static  int[] moves2x2 = {R.drawable._2x2_l,R.drawable._2x2_l_prim,R.drawable._2x2_r,R.drawable._2x2_r_prim,R.drawable._2x2_f,
             R.drawable._2x2_f_prim,R.drawable._2x2_b,R.drawable._2x2_b_prim,R.drawable._2x2_d,R.drawable._2x2_d_prim,R.drawable._2x2_u,R.drawable._2x2_u_prim};
-    List<Integer> imagesList;
-    GridView gridView;
+    LinearLayout layoutToInflate;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,12 +62,68 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
         step2Test.setVisibility(View.GONE);
         showImage = (ImageView) findViewById(R.id._2x2_case_1_cross_show_moves);
 
-        //GridView
-        gridView = (GridView) findViewById(R.id.gridView_into_inflate);
-        GridViewAdapter gridViewAdapter = new GridViewAdapter(moves2x2,this);
-        gridView.setAdapter(gridViewAdapter);
+        //Moves to show or hide
+        //*********************************************
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        params.setMarginEnd(10);
+        params.setMarginStart(10);
+        params.gravity = 11; // 11="center"
 
 
+        ImageView l = new ImageView(this);
+        l.setImageResource(moves2x2[0]);
+        ImageView l_prim = new ImageView(this);
+        l_prim.setImageResource(moves2x2[1]);
+        ImageView r = new ImageView(this);
+        r.setImageResource(moves2x2[2]);
+        ImageView r_prim = new ImageView(this);
+        r_prim.setImageResource(moves2x2[3]);
+        ImageView f = new ImageView(this);
+        f.setImageResource(moves2x2[4]);
+        ImageView f_prim = new ImageView(this);
+        f_prim.setImageResource(moves2x2[5]);
+
+
+
+        LinearLayout childLayout_1 = new LinearLayout(this);
+        childLayout_1.setLayoutParams(params);
+        LinearLayout childLayout_2 = new LinearLayout(this);
+        childLayout_2.setLayoutParams(params);
+
+
+
+
+        childLayout_1.setOrientation(LinearLayout.HORIZONTAL);
+        childLayout_1.setGravity(View.TEXT_ALIGNMENT_CENTER);
+        childLayout_2.setOrientation(LinearLayout.HORIZONTAL);
+        childLayout_2.setGravity(View.TEXT_ALIGNMENT_CENTER);
+
+        childLayout_1.addView(l);
+        childLayout_1.addView(l_prim);
+        childLayout_1.addView(r);
+
+        childLayout_2.addView(r_prim);
+        childLayout_2.addView(f);
+        childLayout_2.addView(f_prim);
+
+        LinearLayout parentLayout = (LinearLayout) findViewById(R.id.linear_layout_to_add_images);
+        parentLayout.addView(childLayout_1);
+        parentLayout.addView(childLayout_2);
+
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.weight = 1;
+
+        l.setLayoutParams(layoutParams);
+        l_prim.setLayoutParams(layoutParams);
+        r.setLayoutParams(layoutParams);
+        r_prim.setLayoutParams(layoutParams);
+        f.setLayoutParams(layoutParams);
+        f_prim.setLayoutParams(layoutParams);
+
+
+
+        //*********************************************
 
         showImage.setOnClickListener(new View.OnClickListener() {
             @Override
