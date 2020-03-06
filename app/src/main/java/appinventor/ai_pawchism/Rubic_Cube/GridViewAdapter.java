@@ -5,9 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-
-import java.util.List;
 
 public class GridViewAdapter extends BaseAdapter {
 
@@ -41,9 +38,9 @@ public class GridViewAdapter extends BaseAdapter {
         layoutInflater = (LayoutInflater) mContex.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView==null){
             view = new View(mContex);
-            view = layoutInflater.inflate(R.layout.item_grid_view,null);
-            ImageView imageView = (ImageView) view.findViewById(R.id.imageView_for_gridView);
-            imageView.setImageResource(imageList[position]);
+            view = layoutInflater.inflate(R.layout.layout_with_moves,null);
+            //ImageView imageView = (ImageView) view.findViewById(R.id.imageView_for_gridView);
+            //imageView.setImageResource(imageList[position]);
 
         }
         return view;
