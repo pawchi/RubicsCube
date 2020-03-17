@@ -23,11 +23,11 @@ import java.util.Locale;
 public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClickListener {
     InterstitialAd interstitialAd;
     String startedLanguage;
-    ImageView showImage;
-    ImageView step2Test;
+    ImageView showImage, showImageCase2, showImageCase3, showImageCase4, showImageCase5, showImageCase6;
     private static  int[] moves2x2 = {R.drawable._2x2_l,R.drawable._2x2_l_prim,R.drawable._2x2_r,R.drawable._2x2_r_prim,R.drawable._2x2_f,
             R.drawable._2x2_f_prim,R.drawable._2x2_b,R.drawable._2x2_b_prim,R.drawable._2x2_d,R.drawable._2x2_d_prim,R.drawable._2x2_u,R.drawable._2x2_u_prim};
-    LinearLayout layoutToInflate;
+    private static int[] restCases_2x2 = {R.drawable.dwa_step2_case2, R.drawable.dwa_step2_case3, R.drawable.dwa_step2_case4, R.drawable.dwa_step2_case5, R.drawable.dwa_step2_case6, R.drawable.dwa_step2_case7};
+    LinearLayout.LayoutParams params, layoutParams;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,86 +58,15 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
         Button stepButton3 = (Button) findViewById(R.id.button3_2x2);
         ImageView settingsImage = (ImageView) findViewById(R.id.settings_imageview);
         ImageView backButton = (ImageView) findViewById(R.id.back_button);
-        step2Test = (ImageView) findViewById(R.id.gridView);
-        step2Test.setVisibility(View.GONE);
         showImage = (ImageView) findViewById(R.id._2x2_case_1_cross_show_moves);
 
+        setParamsForMove();
+
+        case_2();
+
         //Moves to show or hide
-        //*********************************************
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        params.setMarginEnd(10);
-        params.setMarginStart(10);
-        params.gravity = 11; // 11="center"
-
-
-        ImageView l = new ImageView(this);
-        l.setImageResource(moves2x2[0]);
-        ImageView l_prim = new ImageView(this);
-        l_prim.setImageResource(moves2x2[1]);
-        ImageView r = new ImageView(this);
-        r.setImageResource(moves2x2[2]);
-        ImageView r_prim = new ImageView(this);
-        r_prim.setImageResource(moves2x2[3]);
-        ImageView f = new ImageView(this);
-        f.setImageResource(moves2x2[4]);
-        ImageView f_prim = new ImageView(this);
-        f_prim.setImageResource(moves2x2[5]);
-
-
-
-        LinearLayout childLayout_1 = new LinearLayout(this);
-        childLayout_1.setLayoutParams(params);
-        LinearLayout childLayout_2 = new LinearLayout(this);
-        childLayout_2.setLayoutParams(params);
-
-
-
-
-        childLayout_1.setOrientation(LinearLayout.HORIZONTAL);
-        childLayout_1.setGravity(View.TEXT_ALIGNMENT_CENTER);
-        childLayout_2.setOrientation(LinearLayout.HORIZONTAL);
-        childLayout_2.setGravity(View.TEXT_ALIGNMENT_CENTER);
-
-        childLayout_1.addView(l);
-        childLayout_1.addView(l_prim);
-        childLayout_1.addView(r);
-
-        childLayout_2.addView(r_prim);
-        childLayout_2.addView(f);
-        childLayout_2.addView(f_prim);
-
-        LinearLayout parentLayout = (LinearLayout) findViewById(R.id.linear_layout_to_add_images);
-        parentLayout.addView(childLayout_1);
-        parentLayout.addView(childLayout_2);
-
-
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT);
-        layoutParams.weight = 1;
-
-        l.setLayoutParams(layoutParams);
-        l_prim.setLayoutParams(layoutParams);
-        r.setLayoutParams(layoutParams);
-        r_prim.setLayoutParams(layoutParams);
-        f.setLayoutParams(layoutParams);
-        f_prim.setLayoutParams(layoutParams);
-
-
-
-        //*********************************************
-
-        showImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (step2Test.getVisibility()==View.GONE){
-                    step2Test.setVisibility(View.VISIBLE);
-                    showImage.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
-                } else {
-                    step2Test.setVisibility(View.GONE);
-                    showImage.setImageResource(android.R.drawable.ic_menu_add);
-                }
-
-            }
-        });
+         //initialize all Images
+        case_1();
 
         backButton.setOnClickListener(this);
         stepButton1.setOnClickListener(this);
@@ -148,6 +77,140 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
         stepButton2.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryDark)));
         stepButton2.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_text_active)));
 
+    }
+
+    public void setParamsForMove(){
+
+        params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        params.setMargins(10,20,10,20);
+        layoutParams = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.weight = 1;
+
+    }
+
+    public ImageView getNewSingleMove(String move){
+        int mv=0;
+        switch (move){
+            case "l": mv=0; break;
+            case "l'": mv=1; break;
+            case "r": mv=2; break;
+            case "r'": mv=3; break;
+            case "f": mv=4; break;
+            case "f'": mv=5; break;
+            case "b": mv=6; break;
+            case "b'": mv=7; break;
+            case "d": mv=8; break;
+            case "d'": mv=9; break;
+            case "u": mv=10; break;
+            case "u'": mv=11; break;
+        }
+
+        ImageView newMove = new ImageView(this);
+        newMove.setImageResource(moves2x2[mv]);
+        newMove.setAdjustViewBounds(true);
+        newMove.setLayoutParams(params);
+        newMove.setLayoutParams(layoutParams);
+        return newMove;
+    }
+
+    public void case_1(){
+        LinearLayout childLayout_1 = new LinearLayout(this);
+        childLayout_1.setLayoutParams(params);
+        LinearLayout childLayout_2 = new LinearLayout(this);
+        childLayout_2.setLayoutParams(params);
+        LinearLayout childLayout_3 = new LinearLayout(this);
+        childLayout_3.setLayoutParams(params);
+
+        childLayout_1.addView(getNewSingleMove("r"));
+        childLayout_1.addView(getNewSingleMove("u"));
+        childLayout_1.addView(getNewSingleMove("r'"));
+
+        childLayout_2.addView(getNewSingleMove("u"));
+        childLayout_2.addView(getNewSingleMove("r"));
+        childLayout_2.addView(getNewSingleMove("u"));
+
+        childLayout_3.addView(getNewSingleMove("u"));
+        childLayout_3.addView(getNewSingleMove("r'"));
+        ImageView invisibleView = getNewSingleMove("l");
+        invisibleView.setVisibility(View.INVISIBLE);
+        childLayout_3.addView(invisibleView); //view needed for occupying space for evenly layout (is invisible)
+
+        final LinearLayout parentLayout = (LinearLayout) findViewById(R.id.linear_layout_to_add_images);
+        parentLayout.setVisibility(View.GONE);
+        parentLayout.addView(childLayout_1);
+        parentLayout.addView(childLayout_2);
+        parentLayout.addView(childLayout_3);
+
+
+        showImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (parentLayout.getVisibility()==View.GONE){
+                    parentLayout.setVisibility(View.VISIBLE);
+                    showImage.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+                } else {
+                    parentLayout.setVisibility(View.GONE);
+                    showImage.setImageResource(android.R.drawable.ic_menu_add);
+                }
+            }
+        });
+    }
+
+    public void case_2(){
+        LinearLayout case_2_child_image = new LinearLayout(this);
+        case_2_child_image.setLayoutParams(params);
+        ImageView case_1 = new ImageView(this);
+        case_1.setImageResource(restCases_2x2[0]);
+        case_2_child_image.addView(case_1);
+
+        showImageCase2 = new ImageView(this);
+        showImageCase2.setImageResource(android.R.drawable.ic_menu_add);
+        case_2_child_image.addView(showImageCase2);
+
+        LinearLayout case_2_child_moves_1 = new LinearLayout(this);
+        case_2_child_moves_1.setLayoutParams(params);
+        LinearLayout case_2_child_moves_2 = new LinearLayout(this);
+        case_2_child_moves_2.setLayoutParams(params);
+        LinearLayout case_2_child_moves_3 = new LinearLayout(this);
+        case_2_child_moves_3.setLayoutParams(params);
+
+        case_2_child_moves_1.addView(getNewSingleMove("r"));
+        case_2_child_moves_1.addView(getNewSingleMove("u"));
+        case_2_child_moves_1.addView(getNewSingleMove("u"));
+
+        case_2_child_moves_2.addView(getNewSingleMove("r'"));
+        case_2_child_moves_2.addView(getNewSingleMove("u'"));
+        case_2_child_moves_2.addView(getNewSingleMove("r"));
+
+        case_2_child_moves_3.addView(getNewSingleMove("u'"));
+        case_2_child_moves_3.addView(getNewSingleMove("r'"));
+        ImageView invisibleView = getNewSingleMove("l"); //view needed for occupying space for evenly layout (is invisible)
+        invisibleView.setVisibility(View.INVISIBLE);
+        case_2_child_moves_3.addView(invisibleView);
+
+        final LinearLayout parentLayoutMoves = new LinearLayout(this);
+        parentLayoutMoves.setOrientation(LinearLayout.VERTICAL);
+        parentLayoutMoves.setVisibility(View.GONE);
+        parentLayoutMoves.addView(case_2_child_moves_1);
+        parentLayoutMoves.addView(case_2_child_moves_2);
+        parentLayoutMoves.addView(case_2_child_moves_3);
+
+        final LinearLayout parentLayoutRestCases = (LinearLayout) findViewById(R.id.dwa_step2_rest_cases_layout);
+        parentLayoutRestCases.addView(case_2_child_image);
+        parentLayoutRestCases.addView(parentLayoutMoves);
+
+        showImageCase2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (parentLayoutMoves.getVisibility()==View.GONE){
+                    parentLayoutMoves.setVisibility(View.VISIBLE);
+                    showImageCase2.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+                } else {
+                    parentLayoutMoves.setVisibility(View.GONE);
+                    showImageCase2.setImageResource(android.R.drawable.ic_menu_add);
+                }
+            }
+        });
     }
 
     @Override

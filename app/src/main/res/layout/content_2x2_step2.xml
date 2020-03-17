@@ -127,17 +127,12 @@
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/dwa_step2_alg1_and_viewpoint" />
 
-        <ImageView
-            android:id="@+id/gridView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/b_oko"/>
-
         <LinearLayout
             android:id="@+id/linear_layout_to_add_images"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:orientation="vertical"
+            android:adjustViewBounds="true"/>
 
         <View
             android:layout_width="match_parent"
@@ -158,6 +153,16 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/dwa_step2_rest_cases_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
         <ImageView
             android:id="@+id/dwa_step2_alg_2-7"
             android:layout_width="match_parent"
