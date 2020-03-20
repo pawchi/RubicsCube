@@ -5,13 +5,20 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -23,7 +30,7 @@ import java.util.Locale;
 public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClickListener {
     InterstitialAd interstitialAd;
     String startedLanguage;
-    ImageView showImage, showImageCase2, showImageCase3, showImageCase4, showImageCase5, showImageCase6;
+    ImageView showImage, showImageCase2, showImageCase3, showImageCase4, showImageCase5, showImageAllCases;
     private static  int[] moves2x2 = {R.drawable._2x2_l,R.drawable._2x2_l_prim,R.drawable._2x2_r,R.drawable._2x2_r_prim,R.drawable._2x2_f,
             R.drawable._2x2_f_prim,R.drawable._2x2_b,R.drawable._2x2_b_prim,R.drawable._2x2_d,R.drawable._2x2_d_prim,R.drawable._2x2_u,R.drawable._2x2_u_prim};
     private static int[] restCases_2x2 = {R.drawable.dwa_step2_case2, R.drawable.dwa_step2_case3, R.drawable.dwa_step2_case4, R.drawable.dwa_step2_case5, R.drawable.dwa_step2_case6, R.drawable.dwa_step2_case7};
@@ -62,7 +69,12 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
 
         setParamsForMove();
 
-        case_2();
+        movesAllCases(0,"r","u","u","r'","u'","r","u'","r'","v");
+        movesAllCases(1,"l'","u'","l","u","r","u'","l'","u","v");
+        movesAllCases(2,"r","r","u","u","r","u","u","r","r");
+        movesAllCases(3,"f","r","u'","r'","u'","r","u","r'","f'");
+        movesAllCases(4,"r","u","u",  "r","r","u'",  "r","r","u'",   "r","r","u",   "u","r", "v");
+        movesAllCases(5,"r","r","d",  "r'","u","u",  "r","d'","r'",  "u","u","r'");
 
         //Moves to show or hide
          //initialize all Images
@@ -103,13 +115,23 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
             case "d'": mv=9; break;
             case "u": mv=10; break;
             case "u'": mv=11; break;
+            case "v": mv=12; break;
         }
 
         ImageView newMove = new ImageView(this);
-        newMove.setImageResource(moves2x2[mv]);
-        newMove.setAdjustViewBounds(true);
-        newMove.setLayoutParams(params);
-        newMove.setLayoutParams(layoutParams);
+        if (mv==12){
+            newMove.setImageResource(moves2x2[0]);
+            newMove.setAdjustViewBounds(true);
+            newMove.setLayoutParams(params);
+            newMove.setLayoutParams(layoutParams);
+            newMove.setVisibility(View.INVISIBLE);
+        } else {
+            newMove.setImageResource(moves2x2[mv]);
+            newMove.setAdjustViewBounds(true);
+            newMove.setLayoutParams(params);
+            newMove.setLayoutParams(layoutParams);
+        }
+
         return newMove;
     }
 
@@ -156,58 +178,89 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
         });
     }
 
-    public void case_2(){
-        LinearLayout case_2_child_image = new LinearLayout(this);
-        case_2_child_image.setLayoutParams(params);
+    public void movesAllCases(int caseImage, String...moves){
+
+        final LinearLayout case_child_image = new LinearLayout(this);
+        case_child_image.setLayoutParams(params);
+        case_child_image.setGravity(Gravity.CENTER_HORIZONTAL);
         ImageView case_1 = new ImageView(this);
-        case_1.setImageResource(restCases_2x2[0]);
-        case_2_child_image.addView(case_1);
+        case_1.setImageResource(restCases_2x2[caseImage]);
+        case_child_image.addView(case_1);
 
-        showImageCase2 = new ImageView(this);
-        showImageCase2.setImageResource(android.R.drawable.ic_menu_add);
-        case_2_child_image.addView(showImageCase2);
 
-        LinearLayout case_2_child_moves_1 = new LinearLayout(this);
-        case_2_child_moves_1.setLayoutParams(params);
-        LinearLayout case_2_child_moves_2 = new LinearLayout(this);
-        case_2_child_moves_2.setLayoutParams(params);
-        LinearLayout case_2_child_moves_3 = new LinearLayout(this);
-        case_2_child_moves_3.setLayoutParams(params);
+        final ImageView showImageCase = new ImageView(this);
+        showImageCase.setImageResource(android.R.drawable.ic_menu_add);
+        case_child_image.addView(showImageCase);
 
-        case_2_child_moves_1.addView(getNewSingleMove("r"));
-        case_2_child_moves_1.addView(getNewSingleMove("u"));
-        case_2_child_moves_1.addView(getNewSingleMove("u"));
+        LinearLayout case_child_moves_1 = new LinearLayout(this);
+        case_child_moves_1.setLayoutParams(params);
+        LinearLayout case_child_moves_2 = new LinearLayout(this);
+        case_child_moves_2.setLayoutParams(params);
+        LinearLayout case_child_moves_3 = new LinearLayout(this);
+        case_child_moves_3.setLayoutParams(params);
+        LinearLayout case_child_moves_4 = new LinearLayout(this);
+        case_child_moves_4.setLayoutParams(params);
+        LinearLayout case_child_moves_5 = new LinearLayout(this);
+        case_child_moves_5.setLayoutParams(params);
 
-        case_2_child_moves_2.addView(getNewSingleMove("r'"));
-        case_2_child_moves_2.addView(getNewSingleMove("u'"));
-        case_2_child_moves_2.addView(getNewSingleMove("r"));
+        case_child_moves_1.addView(getNewSingleMove(moves[0]));
+        case_child_moves_1.addView(getNewSingleMove(moves[1]));
+        case_child_moves_1.addView(getNewSingleMove(moves[2]));
 
-        case_2_child_moves_3.addView(getNewSingleMove("u'"));
-        case_2_child_moves_3.addView(getNewSingleMove("r'"));
-        ImageView invisibleView = getNewSingleMove("l"); //view needed for occupying space for evenly layout (is invisible)
-        invisibleView.setVisibility(View.INVISIBLE);
-        case_2_child_moves_3.addView(invisibleView);
+        case_child_moves_2.addView(getNewSingleMove(moves[3]));
+        case_child_moves_2.addView(getNewSingleMove(moves[4]));
+        case_child_moves_2.addView(getNewSingleMove(moves[5]));
+
+        case_child_moves_3.addView(getNewSingleMove(moves[6]));
+        case_child_moves_3.addView(getNewSingleMove(moves[7]));
+        case_child_moves_3.addView(getNewSingleMove(moves[8]));
+
+
 
         final LinearLayout parentLayoutMoves = new LinearLayout(this);
         parentLayoutMoves.setOrientation(LinearLayout.VERTICAL);
         parentLayoutMoves.setVisibility(View.GONE);
-        parentLayoutMoves.addView(case_2_child_moves_1);
-        parentLayoutMoves.addView(case_2_child_moves_2);
-        parentLayoutMoves.addView(case_2_child_moves_3);
+        parentLayoutMoves.addView(case_child_moves_1);
+        parentLayoutMoves.addView(case_child_moves_2);
+        parentLayoutMoves.addView(case_child_moves_3);
+
+        if (moves.length>9){
+            case_child_moves_4.addView(getNewSingleMove(moves[9]));
+            case_child_moves_4.addView(getNewSingleMove(moves[10]));
+            case_child_moves_4.addView(getNewSingleMove(moves[11]));
+            parentLayoutMoves.addView(case_child_moves_4);
+        }
+
+        if (moves.length>12){
+            case_child_moves_5.addView(getNewSingleMove(moves[12]));
+            case_child_moves_5.addView(getNewSingleMove(moves[13]));
+            case_child_moves_5.addView(getNewSingleMove(moves[14]));
+            parentLayoutMoves.addView(case_child_moves_5);
+        }
+
+        //**** Divider - black line
+        View line = new View(this);
+        ViewGroup.LayoutParams lineParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        lineParams.height = 4;
+        line.setLayoutParams(lineParams);
+        line.setBackgroundColor(Color.BLACK);
+        //****
 
         final LinearLayout parentLayoutRestCases = (LinearLayout) findViewById(R.id.dwa_step2_rest_cases_layout);
-        parentLayoutRestCases.addView(case_2_child_image);
+        parentLayoutRestCases.addView(case_child_image);
         parentLayoutRestCases.addView(parentLayoutMoves);
+        parentLayoutRestCases.addView(line);
 
-        showImageCase2.setOnClickListener(new View.OnClickListener() {
+
+        showImageCase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (parentLayoutMoves.getVisibility()==View.GONE){
                     parentLayoutMoves.setVisibility(View.VISIBLE);
-                    showImageCase2.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+                    showImageCase.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
                 } else {
                     parentLayoutMoves.setVisibility(View.GONE);
-                    showImageCase2.setImageResource(android.R.drawable.ic_menu_add);
+                    showImageCase.setImageResource(android.R.drawable.ic_menu_add);
                 }
             }
         });

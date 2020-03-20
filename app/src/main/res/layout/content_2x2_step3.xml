@@ -103,6 +103,14 @@
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/dwa_step3_alg_1"/>
 
+        <LinearLayout
+            android:id="@+id/dwa_step3_case1_moves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -128,6 +136,14 @@
             android:adjustViewBounds="true"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/dwa_step3_alg_2"/>
+
+        <LinearLayout
+            android:id="@+id/dwa_step3_case2_moves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+        </LinearLayout>
 
 
     </LinearLayout>

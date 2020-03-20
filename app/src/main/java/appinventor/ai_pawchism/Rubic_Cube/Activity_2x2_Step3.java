@@ -62,6 +62,15 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
         stepButton3.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimaryDark)));
         stepButton3.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.button_menu_text_active)));
 
+        LinearLayout case_1_moves_layout = (LinearLayout) findViewById(R.id.dwa_step3_case1_moves);
+        LinearLayout case_2_moves_layout = (LinearLayout) findViewById(R.id.dwa_step3_case2_moves);
+
+        ShowMoves_2x2 showMoves_2x2 = new ShowMoves_2x2();
+        LinearLayout case1 = showMoves_2x2.movesAllCases(this,"r","u","u",  "r'","u'","r",  "u","u","l'");
+
+        case_1_moves_layout.addView(case1);
+        case1.setVisibility(View.VISIBLE);
+
     }
 
     @Override
