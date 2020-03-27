@@ -134,17 +134,17 @@
         android:gravity="center"
         android:background="@color/colorPrimary">
 
-    <Button
-        android:id="@+id/button_delete_scores"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/delete_scores"
-        android:background="@drawable/small_button_border"
-        android:textColor="@color/button_menu_text_active"
-        android:textStyle="bold"/>
+        <Button
+            android:id="@+id/button_delete_scores"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/small_button_border"
+            android:gravity="center"
+            android:text="@string/delete_scores"
+            android:textColor="@color/button_menu_text_active"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

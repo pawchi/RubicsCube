@@ -7,7 +7,8 @@
     android:layout_height="wrap_content"
     android:paddingLeft="2dp"
     android:paddingRight="2dp"
-    android:layout_marginStart="3dp">
+    android:layout_marginStart="3dp"
+    android:layout_marginBottom="60dp">
 
     <TextView
         android:id="@+id/step3_2x2_text1"
@@ -103,6 +104,13 @@
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/dwa_step3_alg_1"/>
 
+        <ImageView
+            android:id="@+id/dwa_step3_case_1_cross_show_moves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
         <LinearLayout
             android:id="@+id/dwa_step3_case1_moves"
             android:layout_width="match_parent"
@@ -136,6 +144,13 @@
             android:adjustViewBounds="true"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/dwa_step3_alg_2"/>
+
+        <ImageView
+            android:id="@+id/dwa_step3_case_2_cross_show_moves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            app:srcCompat="@android:drawable/ic_menu_add" />
 
         <LinearLayout
             android:id="@+id/dwa_step3_case2_moves"

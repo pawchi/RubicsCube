@@ -22,6 +22,7 @@ import java.util.Locale;
 public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClickListener {
     InterstitialAd interstitialAd;
     String startedLanguage;
+    ImageView showMovesCrossCase1, showMovesCrossCase2;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,6 +53,8 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
         Button stepButton3 = (Button) findViewById(R.id.button3_2x2);
         ImageView settingsImage = (ImageView) findViewById(R.id.settings_imageview);
         ImageView backButton = (ImageView) findViewById(R.id.back_button);
+        showMovesCrossCase1 = (ImageView) findViewById(R.id.dwa_step3_case_1_cross_show_moves);
+        showMovesCrossCase2 = (ImageView) findViewById(R.id.dwa_step3_case_2_cross_show_moves);
 
         backButton.setOnClickListener(this);
         stepButton1.setOnClickListener(this);
@@ -66,10 +69,39 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
         LinearLayout case_2_moves_layout = (LinearLayout) findViewById(R.id.dwa_step3_case2_moves);
 
         ShowMoves_2x2 showMoves_2x2 = new ShowMoves_2x2();
-        LinearLayout case1 = showMoves_2x2.movesAllCases(this,"r","u","u",  "r'","u'","r",  "u","u","l'");
+        final LinearLayout case1 = showMoves_2x2.movesAllCases(this,"r","u","u","r'",  "u'","r","u","u",  "l'","u","r'","u'",  "l","v","v","v");
+        final LinearLayout case2 = showMoves_2x2.movesAllCases(this,"r","u'","r'","u'",  "f","f","u'","r",  "u","r'","u","f",  "f","v","v","v");
 
         case_1_moves_layout.addView(case1);
-        case1.setVisibility(View.VISIBLE);
+        case_2_moves_layout.addView(case2);
+        case1.setVisibility(View.GONE);
+        case2.setVisibility(View.GONE);
+
+        showMovesCrossCase1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (case1.getVisibility()==View.GONE){
+                    case1.setVisibility(View.VISIBLE);
+                    showMovesCrossCase1.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+                } else {
+                    case1.setVisibility(View.GONE);
+                    showMovesCrossCase1.setImageResource(android.R.drawable.ic_menu_add);
+                }
+            }
+        });
+
+        showMovesCrossCase2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (case2.getVisibility()==View.GONE){
+                    case2.setVisibility(View.VISIBLE);
+                    showMovesCrossCase2.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+                } else {
+                    case2.setVisibility(View.GONE);
+                    showMovesCrossCase2.setImageResource(android.R.drawable.ic_menu_add);
+                }
+            }
+        });
 
     }
 

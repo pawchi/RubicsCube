@@ -1,10 +1,7 @@
 package appinventor.ai_pawchism.Rubic_Cube;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -68,21 +65,26 @@ public class ShowMoves_2x2 {
         case_child_moves_3.setLayoutParams(params);
         LinearLayout case_child_moves_4 = new LinearLayout(context);
         case_child_moves_4.setLayoutParams(params);
-        LinearLayout case_child_moves_5 = new LinearLayout(context);
-        case_child_moves_5.setLayoutParams(params);
 
         case_child_moves_1.addView(getNewSingleMove(moves[0], context));
         case_child_moves_1.addView(getNewSingleMove(moves[1], context));
         case_child_moves_1.addView(getNewSingleMove(moves[2], context));
+        case_child_moves_1.addView(getNewSingleMove(moves[3], context));
 
-        case_child_moves_2.addView(getNewSingleMove(moves[3], context));
         case_child_moves_2.addView(getNewSingleMove(moves[4], context));
         case_child_moves_2.addView(getNewSingleMove(moves[5], context));
+        case_child_moves_2.addView(getNewSingleMove(moves[6], context));
+        case_child_moves_2.addView(getNewSingleMove(moves[7], context));
 
-        case_child_moves_3.addView(getNewSingleMove(moves[6], context));
-        case_child_moves_3.addView(getNewSingleMove(moves[7], context));
         case_child_moves_3.addView(getNewSingleMove(moves[8], context));
+        case_child_moves_3.addView(getNewSingleMove(moves[9], context));
+        case_child_moves_3.addView(getNewSingleMove(moves[10], context));
+        case_child_moves_3.addView(getNewSingleMove(moves[11], context));
 
+        case_child_moves_4.addView(getNewSingleMove(moves[12], context));
+        case_child_moves_4.addView(getNewSingleMove(moves[13], context));
+        case_child_moves_4.addView(getNewSingleMove(moves[14], context));
+        case_child_moves_4.addView(getNewSingleMove(moves[15], context));
 
 
         final LinearLayout parentLayoutMoves = new LinearLayout(context);
@@ -91,36 +93,8 @@ public class ShowMoves_2x2 {
         parentLayoutMoves.addView(case_child_moves_1);
         parentLayoutMoves.addView(case_child_moves_2);
         parentLayoutMoves.addView(case_child_moves_3);
-
-        if (moves.length>9){
-            case_child_moves_4.addView(getNewSingleMove(moves[9], context));
-            case_child_moves_4.addView(getNewSingleMove(moves[10], context));
-            case_child_moves_4.addView(getNewSingleMove(moves[11], context));
-            parentLayoutMoves.addView(case_child_moves_4);
-        }
-
-        if (moves.length>12){
-            case_child_moves_5.addView(getNewSingleMove(moves[12], context));
-            case_child_moves_5.addView(getNewSingleMove(moves[13], context));
-            case_child_moves_5.addView(getNewSingleMove(moves[14], context));
-            parentLayoutMoves.addView(case_child_moves_5);
-        }
-
-        //**** Divider - black line
-        /*
-        View line = new View(context);
-        ViewGroup.LayoutParams lineParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        lineParams.height = 4;
-        line.setLayoutParams(lineParams);
-        line.setBackgroundColor(Color.BLACK);
-        */
-        //****
-
-        //linearLayout.addView(parentLayoutMoves);
-        //linearLayout.addView(line);
+        parentLayoutMoves.addView(case_child_moves_4);
 
         return parentLayoutMoves;
-
-
     }
 }
