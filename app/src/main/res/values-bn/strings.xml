@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">গড় 10:</string>
     <string name="average_20_text">গড় 20:</string>
     <string name="average_50_text">গড় 50:</string>

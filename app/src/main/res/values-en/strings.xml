@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
-    <string name="title">HOW TO SOLVE RUBIK\'S CUBE</string>
+    <string name="app_name">3D_cube</string>
+    <string name="title">HOW TO SOLVE 3D\'S CUBE</string>
     <string name="exit_situation">INITIAL SITUATION</string>
     <string name="home">Homepage</string>
     <string name="step3">Step 3</string>
-    <string name="introduction_main_page">Before you start step 1, please see Rubik\'s Cube notation. Below pictures should make everything clear.
+    <string name="introduction_main_page">Before you start step 1, please see 3D\'s Cube notation. Below pictures should make everything clear.
         The rule with the marking is: if you look on cube from the front, turn once by 90 degrees clockwise, is marked with the letter F.
         Countermovement (counterclockwise) marked with F \'. And the same rule applies to all other walls (e.g. the up wall: U / U \'- up, down wall: D / D\' -down etc.).</string>
     <string name="step4">Step 4</string>
@@ -37,8 +37,8 @@
     <string name="step7_text4">Repeat this process for improperly oriented corner pieces until the cube is completed!</string>
     <string name="step7_text6">During these steps, the cube looks like it\'s all mixed up. Do not worry - it should be like this! Everything comes back to its positions :)))</string>
     <string name="step7_text7">But if this is not completely clear for you, look at the picture below which shows an example where all four corners have to be rotate. \"OK\" marks corners which have already been arranged after applying the algorithm. Note that in the meantime the cube actually looks confused ... but in the end everything returns to its places!</string>
-    <string name="button_3x3">HOW TO SOLVE RUBIK\'S CUBE 3x3x3</string>
-    <string name="button_2x2">HOW TO SOLVE RUBIK\'S CUBE 2x2x2</string>
+    <string name="button_3x3">HOW TO SOLVE 3D\'S CUBE 3x3x3</string>
+    <string name="button_2x2">HOW TO SOLVE 3D\'S CUBE 2x2x2</string>
     <string name="button_general_info">GENERAL INFO AND NOTATION</string>
     <string name="button_timer">TIMER</string>
     <string name="step1">Step 1</string>
@@ -79,6 +79,6 @@
     <string name="step1_text1">If you do not yet know the notation used for arranging the cube, return to the start page and go to the Marks and notation tab. We start arranging the cube by placing the cross on the top wall. For us it will be a blue cross. We arrange it so that the cross blocks match the colors of the side blocks, as shown in the figure below.</string>
     <string name="step2_text2">Depending on the arrangement of the lower corner, you can come across 3 cases:</string>
     <string name="dwa_step1_text3">You can hit one of 3 cases, as shown below.</string>
-    <string name="dwa_step1_text1">If you do not know the notation used for Rubiks cubes, before you start step 1, be sure to see the Marks and notation tab.</string>
+    <string name="dwa_step1_text1">If you do not know the notation used for 3Ds cubes, before you start step 1, be sure to see the Marks and notation tab.</string>
     <string name="dwa_step1_text2">Solving a 2x2 cube begins with laying one wall (e.g. green) with adjacent colors, as in the drawing above. This stage is simple and everyone should deal with it by themselves. However, in case of problems, the following algorithm will help, which moves the green block from the bottom to the top layer, leaving the 3 blocks of the top layer unchanged.</string>
 </resources>

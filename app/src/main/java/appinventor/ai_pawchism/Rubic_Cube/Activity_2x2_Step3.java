@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,6 +24,15 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
     InterstitialAd interstitialAd;
     String startedLanguage;
     ImageView showMovesCrossCase1, showMovesCrossCase2;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+            startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -120,6 +130,7 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_2x2_Step1.class));
+                    finish();
                 }
                 break;
             case R.id.button2_2x2:
@@ -134,10 +145,12 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_2x2_Step2.class));
+                    finish();
                 }
                 break;
             case R.id.button3_2x2:
                 startActivity(new Intent(getApplicationContext(), Activity_2x2_Step3.class));
+                finish();
                 break;
             case R.id.settings_imageview:
                 startActivity(new Intent(getApplicationContext(), Activity_Settings.class));
@@ -154,6 +167,7 @@ public class Activity_2x2_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+                    finish();
                 }
                 break;
         }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
-    <string name="title">ANLEITUNG FÜR DEN RUBIK’S CUBE</string>
+    <string name="app_name">3D_cube</string>
+    <string name="title">ANLEITUNG FÜR DEN 3D’S CUBE</string>
     <string name="exit_situation">AUSGANGSITUATION</string>
     <string name="home">STARTSEITE</string>
-    <string name="introduction_main_page">Bevor wir mit Schritt 1 anfangen, schau bitte auf die Rubik\'s Cube-Notation. Die unteren Bilder sollten alles klar machen. Die Regel mit der Markierung lautet: Wenn man von vorn auf den Würfel schaut, wird das Drehen um 90 Grad im Uhrzeigersinn mit dem Buchstaben F gekennzeichntet(aus english - Front). Gegenbewegung (gegen den Uhrzeigersinn) markiert man mit F \'. Die gleiche Regel gilt für alle anderen Wände (z. B. die obere Wand: U / U \'oben(aus english - Up, die untere Wand: D / D\' unten(Down) usw.).</string>
+    <string name="introduction_main_page">Bevor wir mit Schritt 1 anfangen, schau bitte auf die 3D\'s Cube-Notation. Die unteren Bilder sollten alles klar machen. Die Regel mit der Markierung lautet: Wenn man von vorn auf den Würfel schaut, wird das Drehen um 90 Grad im Uhrzeigersinn mit dem Buchstaben F gekennzeichntet(aus english - Front). Gegenbewegung (gegen den Uhrzeigersinn) markiert man mit F \'. Die gleiche Regel gilt für alle anderen Wände (z. B. die obere Wand: U / U \'oben(aus english - Up, die untere Wand: D / D\' unten(Down) usw.).</string>
     <string name="step3">Schr 3</string>
     <string name="step4">Schr 4</string>
     <string name="step5">Schr 5</string>
@@ -41,8 +41,8 @@
     <string name="step7_text6">Während dieser Schritte sieht der Würfel so aus, als wäre alles durcheinander. Mach dir keine Sorgen - es sollte so sein! Alles kommt auf seine Positionen zurück :)))</string>
     <string name="step7_text7">Wenn dies jedoch nicht komplett klar ist, sehe das Bild unten an. Da gibt es ein Beispiel wo wir alle vier Ecken drehen müssen.
         \"OK\" markiert die Ecken, die nach der Anwendung des Algorithmus angeordnet wurden. Beachte, dass der Würfel in der Zwischenzeit tatsächlich verwirrt aussieht … aber alles kehrt an seinen Platz zurück!</string>
-    <string name="button_3x3">ANLEITUNG FÜR DEN RUBIK’S CUBE 3x3x3</string>
-    <string name="button_2x2">ANLEITUNG FÜR DEN RUBIK’S CUBE 2x2x2</string>
+    <string name="button_3x3">ANLEITUNG FÜR DEN 3D’S CUBE 3x3x3</string>
+    <string name="button_2x2">ANLEITUNG FÜR DEN 3D’S CUBE 2x2x2</string>
     <string name="button_general_info">ALLGEMEINE INFORMATIONEN UND NOTATION</string>
     <string name="button_timer">TIMER</string>
     <string name="step1_effect">ERGEBNIS SCHRITT 1</string>
@@ -64,7 +64,7 @@
     <string name="case2_text">Fall 2</string>
     <string name="case3_text">Fall 3</string>
     <string name="confirm_delete_score">Möchten Sie die ausgewählten Ergebnisse wirklich löschen?</string>
-    <string name="dwa_step1_text1">Wenn Sie die für Rubik\'s Cubes verwendete Notation noch nicht kennen, bevor dem Start von Schritt , schauen Sie zur Registerkarte \"Markierungen und Notation\".</string>
+    <string name="dwa_step1_text1">Wenn Sie die für 3D\'s Cubes verwendete Notation noch nicht kennen, bevor dem Start von Schritt , schauen Sie zur Registerkarte \"Markierungen und Notation\".</string>
     <string name="dwa_step1_text2">Das Lösen eines 2x2-Würfels beginnt mit der Kompletierung einer Wand (z. B. Grün) mit angrenzenden Farben, wie in der obigen Zeichnung dargestellt. Diese Phase ist einfach und jeder sollte ohne Anleitung schaffen. Bei Problemen hilft jedoch der folgende Algorithmus, der den grünen Block von der unteren zur oberen Ebene verschiebt und die drei Blöcke der oberen Ebene unverändert lässt.</string>
     <string name="dwa_step1_text3">Sie können einen von 3 Fällen treffen, wie unten gezeigt.</string>
     <string name="dwa_step2_text1">Drehen Sie in diesem Schritt zuerst den Würfel um 180 Grad, sodass sich die im ersten Schritt fertiggestellte grüne Wand am Boden des Würfels befindet.</string>

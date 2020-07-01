@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">10 átlag:</string>
     <string name="average_20_text">20 átlag:</string>
     <string name="average_50_text">50 átlag:</string>
     <string name="average_5_text">5 átlag:</string>
     <string name="best_time_text">Legjobb:</string>
-    <string name="button_2x2">HOGYAN MEG oldja meg a RUBIK CUBE 2x2x2-ét</string>
-    <string name="button_3x3">HOGYAN MEG oldja meg a RUBIK CUBE 3x3x3-ét</string>
+    <string name="button_2x2">HOGYAN MEG oldja meg a 3D CUBE 2x2x2-ét</string>
+    <string name="button_3x3">HOGYAN MEG oldja meg a 3D CUBE 3x3x3-ét</string>
     <string name="button_general_info">ÁLTALÁNOS INFORMÁCIÓK ÉS MEGJEGYZÉSEK</string>
     <string name="button_timer">IDŐZÍTŐ</string>
     <string name="cancel">Megszünteti</string>
@@ -16,7 +16,7 @@
     <string name="case3_text">3. eset</string>
     <string name="confirm_delete_score">Biztosan törli a kiválasztott eredményeket?</string>
     <string name="delete_scores">Pontok törlése</string>
-    <string name="dwa_step1_text1">Ha nem ismeri a Rubik kockáira használt jelölést, az 1. lépés megkezdése előtt feltétlenül olvassa el a Jelölések és jelölések fület.</string>
+    <string name="dwa_step1_text1">Ha nem ismeri a 3D kockáira használt jelölést, az 1. lépés megkezdése előtt feltétlenül olvassa el a Jelölések és jelölések fület.</string>
     <string name="dwa_step1_text2">A 2x2-es kocka megoldása azzal kezdődik, hogy az egyik falat (például zöld) a szomszédos színekkel borítják, amint az a fenti ábrán látható. Ez a szakasz egyszerű, és mindenkinek magának kell megbirkóznia vele. Probléma esetén azonban a következő algoritmus segít, amely a zöld blokkot alulról a felső rétegre mozgatja, és a felső réteg 3 blokkja változatlan marad.</string>
     <string name="dwa_step1_text3">Megtalálhatja a 3 eset egyikét, az alább látható módon.</string>
     <string name="dwa_step2_text1">Ebben a lépésben először fordítsa el a kockát 180 fokkal úgy, hogy az első lépésben kitöltött zöld fal a kocka alján legyen.</string>
@@ -27,7 +27,7 @@
     <string name="dwa_step3_text2">Ez a szakasz magában foglalja a sarkok cseréjét. Itt csak 2 esettel találkozhatunk. Mindegyik esetben az algoritmust az alábbiakban mutatjuk be. Sok szerencsét!! És kérjük, ne felejtse el értékelni az alkalmazást. Kösz!</string>
     <string name="exit_situation">KEZDEMÉNYES HELYZET</string>
     <string name="home">Homepage</string>
-    <string name="introduction_main_page">Az 1. lépés megkezdése előtt olvassa el a Rubik-kocka jelölést. A képek alatt mindennek világossá kell válnia. A jelöléssel kapcsolatos szabály: ha előre néz a kocka, akkor forduljon el 90 fokkal az óramutató járásával megegyezően, és F betűvel van jelölve. Az óramutató járásával ellentétes irányban F \'jelöléssel. Ugyanez a szabály vonatkozik az összes többi falra (például a felsõ falra: U / U \'- felfelé, lefelé falra: D / D\' -felfelé stb.).</string>
+    <string name="introduction_main_page">Az 1. lépés megkezdése előtt olvassa el a 3D-kocka jelölést. A képek alatt mindennek világossá kell válnia. A jelöléssel kapcsolatos szabály: ha előre néz a kocka, akkor forduljon el 90 fokkal az óramutató járásával megegyezően, és F betűvel van jelölve. Az óramutató járásával ellentétes irányban F \'jelöléssel. Ugyanez a szabály vonatkozik az összes többi falra (például a felsõ falra: U / U \'- felfelé, lefelé falra: D / D\' -felfelé stb.).</string>
     <string name="language_title">VÁLASSZON NYELVET:</string>
     <string name="list_sort_cubes">Kocka</string>
     <string name="list_sort_dates">Dátum</string>
@@ -76,7 +76,7 @@
     <string name="step7_text6">Ezen lépések során a kocka úgy néz ki, mintha minden összekeveredne. Ne aggódjon - így kell lennie! Minden visszatér a helyzetére :)))</string>
     <string name="step7_text7">De ha ez nem egyértelmű az Ön számára, akkor nézze meg az alábbi képet, amely példát mutat, ahol mind a négy sarkot el kell forgatni. Az OK jelöli azokat a sarkokat, amelyeket az algoritmus alkalmazása után már elrendeztek. Ne feledje, hogy időközben a kocka valójában zavartnak tűnik ... de végül minden visszatér a helyére!</string>
     <string name="timer_show_scores_table">Scoreboard</string>
-    <string name="title">HOGYAN MEG oldja meg a RUBIK KOKT?</string>
+    <string name="title">HOGYAN MEG oldja meg a 3D KOKT?</string>
     <string name="worst_time_text">Legrosszabb:</string>
     <string name="yes">Igen</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
-    <string name="title">COMMENT RÉSOUDRE LE CUBE DE RUBIK</string>
+    <string name="app_name">3D_cube</string>
+    <string name="title">COMMENT RÉSOUDRE LE CUBE DE 3D</string>
     <string name="exit_situation">SITUATION INITIALE</string>
     <string name="home">Page d\'accueil</string>
     <string name="step3">Étape 3</string>
@@ -9,7 +9,7 @@
     <string name="step5">Étape 5</string>
     <string name="step6">Étape 6</string>
     <string name="step7">Étape 7</string>
-    <string name="introduction_main_page">Avant de commencer l’étape 1, veuillez consulter la notation Rubik\'s Cube. Les images ci-dessous devraient rendre tout clair. La règle avec le marquage est la suivante: si vous regardez sur le cube depuis l’avant, tournez une fois de 90 degrés dans le sens des aiguilles d’une montre, et marquez la lettre F. Contre-mouvement (sens antihoraire) marqué par F \'. Et la même règle s’applique à tous les autres murs (par exemple, le mur haut: U / U \'- haut, bas: D / D\', etc.).</string>
+    <string name="introduction_main_page">Avant de commencer l’étape 1, veuillez consulter la notation 3D\'s Cube. Les images ci-dessous devraient rendre tout clair. La règle avec le marquage est la suivante: si vous regardez sur le cube depuis l’avant, tournez une fois de 90 degrés dans le sens des aiguilles d’une montre, et marquez la lettre F. Contre-mouvement (sens antihoraire) marqué par F \'. Et la même règle s’applique à tous les autres murs (par exemple, le mur haut: U / U \'- haut, bas: D / D\', etc.).</string>
     <string name="settings_title">PARAMÈTRES:</string>
     <string name="settings_rate_us">Taux d\'application.</string>
     <string name="settings_change_language">"Choisir la langue. "</string>
@@ -40,8 +40,8 @@
     <string name="step7_text4">Répétez ce processus pour les pièces de coin mal orientées jusqu\'à ce que le cube soit terminé!</string>
     <string name="step7_text6">Au cours de ces étapes, le cube semble tout mélangé. Ne vous inquiétez pas - ça devrait être comme ça! Tout revient à ses positions :)))</string>
     <string name="step7_text7">Mais si ce n\'est pas tout à fait clair pour vous, regardez l\'image ci-dessous qui montre un exemple où les quatre coins doivent être pivotés. \"OK\" marque les coins déjà disposés après l\'application de l\'algorithme. Notez qu\'entre-temps le cube a l\'air confus ... mais au final tout revient à sa place!</string>
-    <string name="button_3x3">COMMENT RÉSOUDRE LE CUBE DE RUBIK 3x3x3</string>
-    <string name="button_2x2">COMMENT RÉSOUDRE LE CUBE DE RUBIK 2x2x2</string>
+    <string name="button_3x3">COMMENT RÉSOUDRE LE CUBE DE 3D 3x3x3</string>
+    <string name="button_2x2">COMMENT RÉSOUDRE LE CUBE DE 3D 2x2x2</string>
     <string name="button_general_info">INFORMATIONS GÉNÉRALES ET NOTATION</string>
     <string name="button_timer">MINUTEUR</string>
     <string name="step1">Étape 1</string>
@@ -66,7 +66,7 @@
     <string name="timer_show_scores_table">Tableau d\'affichage</string>
     <string name="worst_time_text">Pire score:</string>
     <string name="yes">Oui</string>
-    <string name="dwa_step1_text1">Si vous ne connaissez pas la notation utilisée pour les cubes de Rubik, avant de commencer l\'étape 1, assurez-vous de voir l\'onglet \"Marques et notation\".</string>
+    <string name="dwa_step1_text1">Si vous ne connaissez pas la notation utilisée pour les cubes de 3D, avant de commencer l\'étape 1, assurez-vous de voir l\'onglet \"Marques et notation\".</string>
     <string name="dwa_step1_text2">La pose d\'un cube 2x2 commence par la pose d\'un mur (par exemple vert) avec des couleurs adjacentes, comme dans le dessin ci-dessus. Cette étape est simple et chacun devrait y faire face par lui-même. Cependant, en cas de problème, l\'algorithme suivant vous aidera, ce qui déplace le bloc vert du bas vers le calque supérieur, laissant les 3 blocs du calque supérieur inchangés.</string>
     <string name="dwa_step2_text1">Dans cette étape, tournez d\'abord le cube de 180 degrés de sorte que le mur vert terminé à la première étape se trouve au bas du cube.</string>
     <string name="dwa_step2_text2">Nous allons maintenant déplacer tous les blocs bleus vers la couche supérieure. Pour l\'instant, peu importe si les parois latérales correspondent ou non. Nous nous occuperons d\'eux dans la dernière étape.</string>

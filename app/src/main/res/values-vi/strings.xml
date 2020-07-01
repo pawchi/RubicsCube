@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">khối Rubik</string>
+    <string name="app_name">khối 3D</string>
     <string name="average_10_text">Trung bình 10:</string>
     <string name="average_20_text">Trung bình 20:</string>
     <string name="average_5_text">Trung bình 5:</string>
     <string name="average_50_text">Trung bình 50:</string>
     <string name="best_time_text">Điểm cao nhất:</string>
-    <string name="button_2x2">CÁCH GIẢI QUYẾT CUBE của RUBIK 2x2x2</string>
-    <string name="button_3x3">CÁCH GIẢI QUYẾT CUBE RUBIK 3x3x3</string>
+    <string name="button_2x2">CÁCH GIẢI QUYẾT CUBE của 3D 2x2x2</string>
+    <string name="button_3x3">CÁCH GIẢI QUYẾT CUBE 3D 3x3x3</string>
     <string name="button_general_info">THÔNG TIN CHUNG VÀ THÔNG BÁO</string>
     <string name="button_timer">THỜI GIAN</string>
     <string name="cancel">Hủy bỏ</string>
@@ -16,7 +16,7 @@
     <string name="case3_text">Trường hợp 3</string>
     <string name="confirm_delete_score">Bạn có chắc chắn muốn xóa kết quả đã chọn?</string>
     <string name="delete_scores">XÓA SCORES</string>
-    <string name="dwa_step1_text1">Nếu bạn không biết ký hiệu được sử dụng cho các khối Rubik, trước khi bạn bắt đầu bước 1, hãy chắc chắn xem tab Dấu và ký hiệu.</string>
+    <string name="dwa_step1_text1">Nếu bạn không biết ký hiệu được sử dụng cho các khối 3D, trước khi bạn bắt đầu bước 1, hãy chắc chắn xem tab Dấu và ký hiệu.</string>
     <string name="dwa_step1_text2">Việc giải một khối 2x2 bắt đầu bằng cách đặt một bức tường (ví dụ: màu xanh lá cây) với các màu liền kề, như trong bản vẽ trên. Giai đoạn này là đơn giản và mọi người nên tự giải quyết nó. Tuy nhiên, trong trường hợp có vấn đề, thuật toán sau sẽ giúp, di chuyển khối màu xanh lá cây từ dưới lên trên cùng, khiến 3 khối của lớp trên cùng không thay đổi.</string>
     <string name="dwa_step1_text3">Bạn có thể nhấn một trong 3 trường hợp, như hình dưới đây.</string>
     <string name="dwa_step2_text1">Trong bước này, đầu tiên xoay khối 180 độ để bức tường màu xanh lá cây hoàn thành trong bước đầu tiên nằm ở dưới cùng của khối.</string>
@@ -27,7 +27,7 @@
     <string name="dwa_step3_text2">Giai đoạn này liên quan đến việc hoán đổi góc. Chúng ta chỉ có thể gặp ở đây 2 trường hợp. Đối với mỗi trường hợp, thuật toán được hiển thị dưới đây. Chúc may mắn!! Và đừng quên đánh giá ứng dụng. Cảm ơn!</string>
     <string name="exit_situation">TÌNH THẾ BAN ĐẦU</string>
     <string name="home">Trang chủ</string>
-    <string name="introduction_main_page">Trước khi bạn bắt đầu bước 1, vui lòng xem ký hiệu Rubik\'s Cube. Dưới đây hình ảnh nên làm cho mọi thứ rõ ràng. Quy tắc với việc đánh dấu là: nếu bạn nhìn vào khối lập phương từ phía trước, hãy quay một lần 90 độ theo chiều kim đồng hồ, được đánh dấu bằng chữ F. Countermovement (ngược chiều kim đồng hồ) được đánh dấu bằng F \'. Và quy tắc tương tự áp dụng cho tất cả các bức tường khác (ví dụ: tường lên: U / U \'- lên, xuống tường: D / D\' -down, v.v.).</string>
+    <string name="introduction_main_page">Trước khi bạn bắt đầu bước 1, vui lòng xem ký hiệu 3D\'s Cube. Dưới đây hình ảnh nên làm cho mọi thứ rõ ràng. Quy tắc với việc đánh dấu là: nếu bạn nhìn vào khối lập phương từ phía trước, hãy quay một lần 90 độ theo chiều kim đồng hồ, được đánh dấu bằng chữ F. Countermovement (ngược chiều kim đồng hồ) được đánh dấu bằng F \'. Và quy tắc tương tự áp dụng cho tất cả các bức tường khác (ví dụ: tường lên: U / U \'- lên, xuống tường: D / D\' -down, v.v.).</string>
     <string name="language_title">CHỌN NGÔN NGỮ:</string>
     <string name="list_sort_cubes">Khối lập phương</string>
     <string name="list_sort_dates">Ngày</string>
@@ -76,7 +76,7 @@
     <string name="step7_text6">Trong các bước này, khối lập phương trông như bị trộn lẫn. Đừng lo lắng - nó nên như thế này! Mọi thứ trở lại vị trí của nó :)))</string>
     <string name="step7_text7">Nhưng nếu điều này không hoàn toàn rõ ràng đối với bạn, hãy nhìn vào bức tranh dưới đây cho thấy một ví dụ mà tất cả bốn góc phải được xoay. OK đánh dấu các góc đã được sắp xếp sau khi áp dụng thuật toán. Lưu ý rằng trong khi đó, khối lập phương thực sự có vẻ bối rối ... nhưng cuối cùng mọi thứ trở về đúng vị trí của nó!</string>
     <string name="timer_show_scores_table">Bảng điểm</string>
-    <string name="title">CÁCH GIẢI QUYẾT CUBE RUBIK</string>
+    <string name="title">CÁCH GIẢI QUYẾT CUBE 3D</string>
     <string name="worst_time_text">Điểm kém nhất:</string>
     <string name="yes">Đúng</string>
 </resources>

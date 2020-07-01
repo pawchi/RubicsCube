@@ -333,9 +333,9 @@ public class Activity_timer extends AppCompatActivity {
                 avg50 = sum50 / 50;
             }
 
-                return new TimerAvarages(parseMillisToString(worstScore), parseMillisToString(bestScore), parseMillisToString(avg5), parseMillisToString(avg10),
-                        parseMillisToString(avg20), parseMillisToString(avg50));
-            }
+            return new TimerAvarages(parseMillisToString(worstScore), parseMillisToString(bestScore), parseMillisToString(avg5), parseMillisToString(avg10),
+                    parseMillisToString(avg20), parseMillisToString(avg50));
+        }
     }
 
     public int parseScoreToMillis(String score){

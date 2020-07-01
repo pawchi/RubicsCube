@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">ค่าเฉลี่ย 10:</string>
     <string name="average_20_text">ค่าเฉลี่ย 20:</string>
     <string name="average_50_text">ค่าเฉลี่ย 50:</string>
@@ -27,7 +27,7 @@
     <string name="dwa_step3_text2">ขั้นตอนนี้เกี่ยวข้องกับการแลกเปลี่ยนมุม เราสามารถพบกันที่นี่เพียง 2 กรณี สำหรับแต่ละกรณีอัลกอริทึมจะแสดงด้านล่าง โชคดี!! และโปรดอย่าลืมให้คะแนนแอปพลิเคชันด้วย ขอบคุณ!</string>
     <string name="exit_situation">สถานการณ์เริ่มต้น</string>
     <string name="home">โฮมเพจ</string>
-    <string name="introduction_main_page">ก่อนที่คุณจะเริ่มขั้นตอนที่ 1 โปรดดูสัญกรณ์ลูกบาศก์ของ Rubik รูปภาพด้านล่างควรทำให้ทุกอย่างชัดเจน กฎที่มีการทำเครื่องหมายคือ: หากคุณมองหาลูกบาศก์จากด้านหน้าหันหนึ่งครั้งตามเข็มนาฬิกา 90 องศาจะถูกทำเครื่องหมายด้วยตัวอักษร F Countermovement (ทวนเข็มนาฬิกา) ทำเครื่องหมายด้วย F \' และกฎเดียวกันนี้จะใช้กับกำแพงอื่น ๆ ทั้งหมด (เช่นกำแพงสูง: U / U \'- ขึ้น, ผนังต่ำ: D / D\' -down ฯลฯ )</string>
+    <string name="introduction_main_page">ก่อนที่คุณจะเริ่มขั้นตอนที่ 1 โปรดดูสัญกรณ์ลูกบาศก์ของ 3D รูปภาพด้านล่างควรทำให้ทุกอย่างชัดเจน กฎที่มีการทำเครื่องหมายคือ: หากคุณมองหาลูกบาศก์จากด้านหน้าหันหนึ่งครั้งตามเข็มนาฬิกา 90 องศาจะถูกทำเครื่องหมายด้วยตัวอักษร F Countermovement (ทวนเข็มนาฬิกา) ทำเครื่องหมายด้วย F \' และกฎเดียวกันนี้จะใช้กับกำแพงอื่น ๆ ทั้งหมด (เช่นกำแพงสูง: U / U \'- ขึ้น, ผนังต่ำ: D / D\' -down ฯลฯ )</string>
     <string name="language_title">เลือกภาษา:</string>
     <string name="list_sort_cubes">ลูกบาศก์</string>
     <string name="list_sort_dates">วันที่</string>

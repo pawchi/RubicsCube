@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">Media di 10:</string>
     <string name="average_20_text">Media di 20:</string>
     <string name="average_50_text">Media di 50:</string>
     <string name="average_5_text">Media di 5:</string>
     <string name="best_time_text">Migliore:</string>
-    <string name="button_2x2">COME RISOLVERE IL CUBO DI RUBIK 2x2x2</string>
-    <string name="button_3x3">COME RISOLVERE IL CUBO DI RUBIK 3x3x3</string>
+    <string name="button_2x2">COME RISOLVERE IL CUBO DI 3D 2x2x2</string>
+    <string name="button_3x3">COME RISOLVERE IL CUBO DI 3D 3x3x3</string>
     <string name="button_general_info">INFORMAZIONI GENERALI E NOTA</string>
     <string name="button_timer">TIMER</string>
     <string name="cancel">Annulla</string>
@@ -31,7 +31,7 @@
     <string name="step7_effect">EFFETTO DEL PASSO 7</string>
     <string name="confirm_delete_score">Sei sicuro di voler eliminare i risultati selezionati?</string>
     <string name="delete_scores">ELIMINA PUNTEGGI</string>
-    <string name="dwa_step1_text1" translatable="false">Se non conosci la notazione usata per i cubi di Rubik, prima di iniziare il passaggio 1, assicurati di vedere la scheda \"Segni e notazione\".</string>
+    <string name="dwa_step1_text1" translatable="false">Se non conosci la notazione usata per i cubi di 3D, prima di iniziare il passaggio 1, assicurati di vedere la scheda \"Segni e notazione\".</string>
     <string name="dwa_step1_text2" translatable="false">La risoluzione di un cubo 2x2 inizia con la posa di una parete (ad esempio verde) con colori adiacenti, come nel disegno sopra. Questa fase è semplice e tutti dovrebbero affrontarla da soli. Tuttavia, in caso di problemi, sarà utile il seguente algoritmo, che sposta il blocco verde dal livello inferiore al livello superiore, lasciando invariati i 3 blocchi del livello superiore.</string>
     <string name="dwa_step1_text3" translatable="false">Puoi colpire uno dei 3 casi, come mostrato di seguito.</string>
     <string name="dwa_step2_text1">In questo passaggio, ruotare innanzitutto il cubo di 180 gradi in modo che la parete verde completata nel primo passaggio si trovi nella parte inferiore del cubo.</string>
@@ -41,7 +41,7 @@
     <string name="dwa_step3_text2">Questa fase prevede lo scambio di angoli. Possiamo vederci qui solo 2 casi. Per ogni caso, l\'algoritmo è mostrato di seguito. In bocca al lupo!! E per favore non dimenticare di votare l\'applicazione. Grazie!</string>
     <string name="exit_situation">SITUAZIONE INIZIALE</string>
     <string name="home">Homepage</string>
-    <string name="introduction_main_page">Prima di iniziare il passaggio 1, vedere la notazione del cubo di Rubik. Di seguito le immagini dovrebbero chiarire tutto. La regola con la marcatura è: se guardi il cubo dalla parte anteriore, gira una volta di 90 gradi in senso orario, è contrassegnato dalla lettera F. Contromovimento (in senso antiorario) contrassegnato con F \'. E la stessa regola si applica a tutte le altre pareti (ad esempio la parete alta: U / U \'- su, giù parete: D / D\' -down ecc.).</string>
+    <string name="introduction_main_page">Prima di iniziare il passaggio 1, vedere la notazione del cubo di 3D. Di seguito le immagini dovrebbero chiarire tutto. La regola con la marcatura è: se guardi il cubo dalla parte anteriore, gira una volta di 90 gradi in senso orario, è contrassegnato dalla lettera F. Contromovimento (in senso antiorario) contrassegnato con F \'. E la stessa regola si applica a tutte le altre pareti (ad esempio la parete alta: U / U \'- su, giù parete: D / D\' -down ecc.).</string>
     <string name="language_title">SELEZIONA LA LINGUA:</string>
     <string name="list_sort_cubes">Cubo</string>
     <string name="list_sort_dates">Data</string>
@@ -76,7 +76,7 @@
     <string name="step7_text6">Durante questi passaggi, il cubo sembra essere tutto confuso. Non ti preoccupare, dovrebbe essere così! Tutto torna alle sue posizioni :)))</string>
     <string name="step7_text7">Ma se questo non è completamente chiaro per te, guarda l\'immagine qui sotto che mostra un esempio in cui tutti e quattro gli angoli devono essere ruotati. \"OK\" indica gli angoli che sono già stati disposti dopo l\'applicazione dell\'algoritmo. Nota che nel frattempo il cubo sembra davvero confuso ... ma alla fine tutto ritorna al suo posto!</string>
     <string name="timer_show_scores_table">Tabellone segnapunti</string>
-    <string name="title">COME RISOLVERE IL CUBO DI RUBIK</string>
+    <string name="title">COME RISOLVERE IL CUBO DI 3D</string>
     <string name="worst_time_text">Peggior:</string>
     <string name="yes">Sì</string>
 </resources>

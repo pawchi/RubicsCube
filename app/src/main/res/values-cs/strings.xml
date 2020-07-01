@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">Průměr 10:</string>
     <string name="average_20_text">Průměr 20:</string>
     <string name="average_50_text">Průměr 50:</string>
     <string name="average_5_text">Průměr 5:</string>
     <string name="best_time_text">Nejlepší skóre:</string>
-    <string name="button_2x2">JAK ŘEŠIT RUBIKOVU KUBU 2x2x2</string>
-    <string name="button_3x3">JAK ŘEŠIT RUBIKOVU KUBU 3x3x3</string>
+    <string name="button_2x2">JAK ŘEŠIT 3D KUBU 2x2x2</string>
+    <string name="button_3x3">JAK ŘEŠIT 3D KUBU 3x3x3</string>
     <string name="button_general_info">OBECNÉ INFORMACE A OZNÁMENÍ</string>
     <string name="button_timer">ČASOVAČ</string>
     <string name="cancel">zrušení</string>
@@ -16,7 +16,7 @@
     <string name="case3_text">Případ 3</string>
     <string name="confirm_delete_score">Opravdu chcete vybrané výsledky smazat?</string>
     <string name="delete_scores">ODSTRANIT SCÉNY</string>
-    <string name="dwa_step1_text1">Pokud neznáte zápis používaný pro Rubikovy kostky, před zahájením kroku 1 se podívejte na kartu Značky a notace.</string>
+    <string name="dwa_step1_text1">Pokud neznáte zápis používaný pro 3D kostky, před zahájením kroku 1 se podívejte na kartu Značky a notace.</string>
     <string name="dwa_step1_text2">Řešení kostky 2x2 začíná položením jedné stěny (např. Zelené) sousedními barvami, jako na obrázku výše. Tato fáze je jednoduchá a každý by s ní měl jednat sám. V případě problémů však pomůže následující algoritmus, který přesune zelený blok ze spodní na horní vrstvu a ponechá 3 bloky horní vrstvy nezměněné.</string>
     <string name="dwa_step1_text3">Můžete zasáhnout jeden ze 3 případů, jak je ukázáno níže.</string>
     <string name="dwa_step2_text1">V tomto kroku nejprve otočte krychli o 180 stupňů tak, aby zelená zeď dokončená v prvním kroku byla na dně krychle.</string>
@@ -27,7 +27,7 @@
     <string name="dwa_step3_text2">Tato fáze zahrnuje zaměňování rohů. Můžeme se zde setkat pouze 2 případy. Pro každý případ je algoritmus uveden níže. Hodně štěstí!! A nezapomeňte ohodnotit aplikaci. Dík!</string>
     <string name="exit_situation">PRVNÍ SITUACE</string>
     <string name="home">Domovská stránka</string>
-    <string name="introduction_main_page">Než začnete krok 1, přečtěte si prosím Rubikovu kostkovou notaci. Níže uvedené obrázky by měly objasnit vše. Pravidlo se značkou je: pokud se podíváte na kostku zepředu, otočte ji jednou o 90 stupňů ve směru hodinových ručiček, je označeno písmenem F. Protihyb (proti směru hodinových ručiček) označený F \'. A stejné pravidlo platí pro všechny ostatní stěny (např. Horní stěna: U / U \'- nahoru, dolů: D / D\' - dolů atd.).</string>
+    <string name="introduction_main_page">Než začnete krok 1, přečtěte si prosím 3D kostkovou notaci. Níže uvedené obrázky by měly objasnit vše. Pravidlo se značkou je: pokud se podíváte na kostku zepředu, otočte ji jednou o 90 stupňů ve směru hodinových ručiček, je označeno písmenem F. Protihyb (proti směru hodinových ručiček) označený F \'. A stejné pravidlo platí pro všechny ostatní stěny (např. Horní stěna: U / U \'- nahoru, dolů: D / D\' - dolů atd.).</string>
     <string name="language_title">ZVOLTE JAZYK:</string>
     <string name="list_sort_cubes">Kostka</string>
     <string name="list_sort_dates">Datum</string>
@@ -76,7 +76,7 @@
     <string name="step7_text6">Během těchto kroků krychle vypadá, že je vše smíchané. Nebojte se - mělo by to tak být! Všechno se vrací na své pozice :)))</string>
     <string name="step7_text7">Ale pokud to pro vás není úplně jasné, podívejte se na obrázek níže, který ukazuje příklad, kde musí být otočeny všechny čtyři rohy. „OK“ označuje rohy, které již byly uspořádány po použití algoritmu. Všimněte si, že mezitím krychle vypadá zmateně ... ale nakonec se vše vrátí na své místo!</string>
     <string name="timer_show_scores_table">Skóre</string>
-    <string name="title">JAK ŘEŠIT RUBIKOVU KUBU</string>
+    <string name="title">JAK ŘEŠIT 3D KUBU</string>
     <string name="worst_time_text">Nejhorší:</string>
     <string name="yes">Ano</string>
 </resources>

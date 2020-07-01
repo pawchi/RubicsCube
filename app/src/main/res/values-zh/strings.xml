@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">平均10：</string>
     <string name="average_20_text">平均20：</string>
     <string name="average_50_text">平均50：</string>
     <string name="average_5_text">平均5:</string>
     <string name="best_time_text">最佳得分：</string>
-    <string name="button_2x2">如何解决RUBIK\'S CUBE 2x2x2</string>
-    <string name="button_3x3">如何解决RUBIK\'S CUBE 3x3x3</string>
+    <string name="button_2x2">如何解决3D\'S CUBE 2x2x2</string>
+    <string name="button_3x3">如何解决3D\'S CUBE 3x3x3</string>
     <string name="button_general_info">一般信息和符号</string>
     <string name="button_timer">计时器</string>
     <string name="cancel">取消</string>
@@ -25,7 +25,7 @@
     <string name="dwa_step3_text2">这个阶段涉及交换角落。 我们只能在这里遇到2个案例。 对于每种情况，算法如下所示。 祝好运！！ 并且请不要忘记对应用程序进行评分。 谢谢！</string>
     <string name="exit_situation">初始情况</string>
     <string name="home">主页</string>
-    <string name="introduction_main_page">在开始步骤1之前，请参阅Rubik的多维数据集表示法。 下面的图片应该使所有内容都清楚。 带有标记的规则是：如果从正面看立方体，则顺时针旋转90度，并用字母F(标记:front)。反向运动（逆时针）标记为F\'。 同样的规则也适用于所有其他墙（例如，上墙：U / U\'-up，下墙：D / D\'-down）。</string>
+    <string name="introduction_main_page">在开始步骤1之前，请参阅3D的多维数据集表示法。 下面的图片应该使所有内容都清楚。 带有标记的规则是：如果从正面看立方体，则顺时针旋转90度，并用字母F(标记:front)。反向运动（逆时针）标记为F\'。 同样的规则也适用于所有其他墙（例如，上墙：U / U\'-up，下墙：D / D\'-down）。</string>
     <string name="language_title">选择语言：</string>
     <string name="not">不是</string>
     <string name="settings_change_language">选择语言</string>
@@ -78,5 +78,5 @@
     <string name="list_sort_cubes">魔方</string>
     <string name="list_sort_dates">日期</string>
     <string name="list_sort_scores">得分</string>
-    <string name="dwa_step1_text1">如果您不知道用于Rubik多维数据集的符号，则在开始步骤1之前，请确保查看“标记和符号”选项卡。</string>
+    <string name="dwa_step1_text1">如果您不知道用于3D多维数据集的符号，则在开始步骤1之前，请确保查看“标记和符号”选项卡。</string>
 </resources>

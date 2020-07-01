@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("org.chilon.rubics_cube", appContext.getPackageName());
+        assertEquals("org.chilon.3D_cube", appContext.getPackageName());
     }
 }

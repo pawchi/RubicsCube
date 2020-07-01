@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
@@ -22,6 +23,15 @@ import java.util.Locale;
 public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClickListener {
     InterstitialAd interstitialAd;
     String startedLanguage;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+            startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +106,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_3x3_Step1.class));
+                    finish();
                 }
                 break;
             case R.id.button2_3x3:
@@ -110,6 +121,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_3x3_Step2.class));
+                    finish();
                 }
                 break;
             case R.id.button3_3x3:
@@ -124,6 +136,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_3x3_Step3.class));
+                    finish();
                 }
                 break;
             case R.id.button4_3x3:
@@ -138,6 +151,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_3x3_Step4.class));
+                    finish();
                 }
                 break;
             case R.id.button5_3x3:
@@ -152,6 +166,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_3x3_Step5.class));
+                    finish();
                 }
                 break;
             case R.id.button6_3x3:
@@ -166,6 +181,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_3x3_Step6.class));
+                    finish();
                 }
                 break;
             case R.id.button7_3x3:
@@ -180,6 +196,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_3x3_Step7.class));
+                    finish();
                 }
                 break;
             case R.id.settings_imageview:
@@ -197,6 +214,7 @@ public class Activity_3x3_Step3 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+                    finish();
                 }
                 break;
         }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="title">КАК РЕШАТЬ РУБИКУ CUBE</string>
     <string name="exit_situation">ИСХОДНАЯ СИТУАЦИЯ</string>
     <string name="step3">Шаг 3</string>

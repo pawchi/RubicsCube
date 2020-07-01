@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubik küp</string>
+    <string name="app_name">3D küp</string>
     <string name="average_10_text">Ortalama 10:</string>
     <string name="average_20_text">Ortalama 20:</string>
     <string name="average_50_text">Ortalama 50:</string>
     <string name="average_5_text">Ortalama 5:</string>
     <string name="best_time_text">En iyi puan:</string>
-    <string name="button_2x2">RUBIK\'İN KÜPÜNÜN ÇÖZÜMÜ 2x2x2</string>
-    <string name="button_3x3">RUBIK\'İN KÜPÜNÜN ÇÖZÜMÜ 3x3x3</string>
+    <string name="button_2x2">3D\'İN KÜPÜNÜN ÇÖZÜMÜ 2x2x2</string>
+    <string name="button_3x3">3D\'İN KÜPÜNÜN ÇÖZÜMÜ 3x3x3</string>
     <string name="button_general_info">GENEL BİLGİ VE BİLDİRİM</string>
     <string name="button_timer">TIMER</string>
     <string name="case1_text">Dava 1</string>
@@ -16,7 +16,7 @@
     <string name="case3_text">Dava 3</string>
     <string name="confirm_delete_score">Seçilen sonuçları silmek istediğinizden emin misiniz?</string>
     <string name="delete_scores">PUANLARI SİL</string>
-    <string name="dwa_step1_text1">Rubik küpleri için kullanılan notasyonu bilmiyorsanız, 1. adıma başlamadan önce, İşaretler ve notasyon sekmesine bakın.</string>
+    <string name="dwa_step1_text1">3D küpleri için kullanılan notasyonu bilmiyorsanız, 1. adıma başlamadan önce, İşaretler ve notasyon sekmesine bakın.</string>
     <string name="dwa_step1_text2">2x2 küpü çözmek, yukarıdaki çizimde olduğu gibi bitişik renklerle bir duvarın (ör. Yeşil) döşenmesiyle başlar. Bu aşama basit ve herkes bununla başa çıkmalı. Bununla birlikte, sorun olması durumunda, yeşil bloğu alttan üst katmana taşıyan ve üst katmanın 3 bloğunu değiştirmeden bırakan aşağıdaki algoritma yardımcı olacaktır.</string>
     <string name="dwa_step1_text3">Aşağıda gösterildiği gibi 3 durumdan birine vurabilirsiniz.</string>
     <string name="dwa_step2_text1">Bu adımda, ilk adımda tamamlanan yeşil duvar küpün altında olacak şekilde küpü 180 derece döndürün.</string>
@@ -27,7 +27,7 @@
     <string name="dwa_step3_text2">Bu aşama köşeleri değiştirmeyi içerir. Burada sadece 2 vaka ile karşılaşabiliriz. Her durum için, algoritma aşağıda gösterilmiştir. İyi şanslar!! Ve lütfen uygulamayı derecelendirmeyi unutmayın. Teşekkürler!</string>
     <string name="exit_situation">BAŞLANGIÇ DURUMU</string>
     <string name="home">Anasayfa</string>
-    <string name="introduction_main_page">1. adıma başlamadan önce lütfen Rubik Küpü notasyonuna bakın. Aşağıdaki resimler her şeyi netleştirmelidir. İşaretli kural şudur: küpün önüne önden bakarsanız, saat yönünde 90 derece döndürün, F harfi ile işaretlenir. Ve aynı kural diğer tüm duvarlar için de geçerlidir (örn. Yukarı duvar: U / U \'- yukarı, aşağı duvar: D / D\' aşağı vb.).</string>
+    <string name="introduction_main_page">1. adıma başlamadan önce lütfen 3D Küpü notasyonuna bakın. Aşağıdaki resimler her şeyi netleştirmelidir. İşaretli kural şudur: küpün önüne önden bakarsanız, saat yönünde 90 derece döndürün, F harfi ile işaretlenir. Ve aynı kural diğer tüm duvarlar için de geçerlidir (örn. Yukarı duvar: U / U \'- yukarı, aşağı duvar: D / D\' aşağı vb.).</string>
     <string name="language_title">DİL SEÇİN:</string>
     <string name="list_sort_cubes">Küp</string>
     <string name="list_sort_dates">tarih</string>
@@ -76,7 +76,7 @@
     <string name="step7_text6">Bu adımlar sırasında, küp tamamen karışık gibi görünüyor. Endişelenme - böyle olmalı! Her şey tekrar yerine geliyor :)))</string>
     <string name="step7_text7">Ancak bu sizin için tamamen açık değilse, dört köşenin de döndürülmesi gereken bir örneği gösteren aşağıdaki resme bakın. Tamam, algoritmayı uyguladıktan sonra önceden ayarlanmış köşeleri işaretler. Bu arada küpün aslında şaşkın göründüğünü unutmayın ... ama sonunda her şey yerine geri döner!</string>
     <string name="timer_show_scores_table">sayı tahtası</string>
-    <string name="title">RUBIK\'İN KÜPÜNÜN ÇÖZÜMÜ</string>
+    <string name="title">3D\'İN KÜPÜNÜN ÇÖZÜMÜ</string>
     <string name="worst_time_text">En kötü skor:</string>
     <string name="yes">Evet</string>
 </resources>

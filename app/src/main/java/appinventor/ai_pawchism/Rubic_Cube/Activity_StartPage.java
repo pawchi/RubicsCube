@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,6 +20,15 @@ import java.util.Locale;
 public class Activity_StartPage extends AppCompatActivity {
     String startedLanguage;
     InterstitialAd interstitialAd;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+            startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +75,7 @@ public class Activity_StartPage extends AppCompatActivity {
                     });
                 } else {
                     startActivity(new Intent(Activity_StartPage.this, Activity_3x3_Step1.class));
+                    finish();
                 }
             }
         });
@@ -83,6 +94,7 @@ public class Activity_StartPage extends AppCompatActivity {
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_2x2_Step1.class));
+                    finish();
                 }
             }
         });
@@ -101,6 +113,7 @@ public class Activity_StartPage extends AppCompatActivity {
                     });
                 } else {
                     startActivity(new Intent(Activity_StartPage.this, Activity_Notation.class));
+                    finish();
                 }
             }
         });
@@ -109,6 +122,7 @@ public class Activity_StartPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Activity_timer.class));
+                finish();
             }
         });
 

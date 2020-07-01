@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Cubo de rubik</string>
+    <string name="app_name">Cubo de 3D</string>
     <string name="exit_situation">SITUACIÓN INICIAL</string>
     <string name="home">PAGINA DE INICIO</string>
-    <string name="introduction_main_page">Antes de comenzar el paso 1, vea la notación Cubo de Rubik. Las imágenes a continuación deben aclarar todo. La regla con la marca es: si mira el cubo desde el frente, gire una vez 90 grados en sentido horario, está marcado con la letra F. Contramovimiento (en sentido antihorario) marcado con F \'. Y la misma regla se aplica a todas las demás paredes (por ejemplo, la pared superior: U / U \'- arriba, pared inferior: D / D\' - abajo, etc.).</string>
+    <string name="introduction_main_page">Antes de comenzar el paso 1, vea la notación Cubo de 3D. Las imágenes a continuación deben aclarar todo. La regla con la marca es: si mira el cubo desde el frente, gire una vez 90 grados en sentido horario, está marcado con la letra F. Contramovimiento (en sentido antihorario) marcado con F \'. Y la misma regla se aplica a todas las demás paredes (por ejemplo, la pared superior: U / U \'- arriba, pared inferior: D / D\' - abajo, etc.).</string>
     <string name="settings_change_language">Seleccione el idioma</string>
     <string name="language_title">SELECCIONE EL IDIOMA</string>
     <string name="settings_rate_us">Aplicación de tarifas</string>
@@ -39,9 +39,9 @@
     <string name="step7_text5">¡ATENCIÓN!</string>
     <string name="step7_text6">Durante estos pasos, el cubo parece estar mezclado. No te preocupes, ¡debería ser así! Todo vuelve a sus posiciones :)))</string>
     <string name="step7_text7">Pero si esto no está completamente claro para usted, mire la siguiente imagen que muestra un ejemplo donde las cuatro esquinas deben rotar. \"OK\" marca las esquinas que ya se han organizado después de aplicar el algoritmo. Tenga en cuenta que, mientras tanto, el cubo se ve realmente confuso … ¡pero al final todo vuelve a su lugar!</string>
-    <string name="title">CÓMO RESOLVER EL CUBO DE RUBIK</string>
-    <string name="button_3x3">CÓMO RESOLVER EL CUBO DE RUBIK 3x3x3</string>
-    <string name="button_2x2">CÓMO RESOLVER EL CUBO DE RUBIK 2x2x2</string>
+    <string name="title">CÓMO RESOLVER EL CUBO DE 3D</string>
+    <string name="button_3x3">CÓMO RESOLVER EL CUBO DE 3D 3x3x3</string>
+    <string name="button_2x2">CÓMO RESOLVER EL CUBO DE 3D 2x2x2</string>
     <string name="button_general_info">INFORMACIÓN GENERAL Y NOTACIÓN</string>
     <string name="button_timer">TEMPORIZADOR</string>
     <string name="step1">Paso 1</string>
@@ -58,7 +58,7 @@
     <string name="case1_text">Caso 1</string>
     <string name="case2_text">Caso 2</string>
     <string name="case3_text">Caso 3</string>
-    <string name="dwa_step1_text1">Si no conoce la notación utilizada para los cubos de Rubik, antes de comenzar el paso 1, asegúrese de ver la pestaña Marcas y notación.</string>
+    <string name="dwa_step1_text1">Si no conoce la notación utilizada para los cubos de 3D, antes de comenzar el paso 1, asegúrese de ver la pestaña Marcas y notación.</string>
     <string name="dwa_step1_text2">La resolución de un cubo de 2x2 comienza con la colocación de una pared (por ejemplo, verde) con colores adyacentes, como en el dibujo de arriba. Esta etapa es simple y todos deben enfrentarla solos. Sin embargo, en caso de problemas, ayudará el siguiente algoritmo, que mueve el bloque verde de la capa inferior a la capa superior, dejando los 3 bloques de la capa superior sin cambios.</string>
     <string name="dwa_step1_text3">Puede golpear uno de los 3 casos, como se muestra a continuación.</string>
     <string name="dwa_step2_text1">En este paso, primero gire el cubo 180 grados para que la pared verde completada en el primer paso esté en la parte inferior del cubo.</string>

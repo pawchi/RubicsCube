@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,6 +24,15 @@ public class Activity_Notation extends AppCompatActivity {
     String startedLanguage;
     InterstitialAd interstitialAd;
     LayoutInflater inflater;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+            startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -72,6 +82,7 @@ public class Activity_Notation extends AppCompatActivity {
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+                    finish();
                 }
             }
         });

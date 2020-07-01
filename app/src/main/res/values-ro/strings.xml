@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">Media de 10:</string>
     <string name="average_20_text">Media de 20:</string>
     <string name="average_50_text">Media de 50:</string>
     <string name="average_5_text">Media de 5:</string>
     <string name="best_time_text">Cel mai bun:</string>
-    <string name="button_2x2">CUM SĂ SOLUȚI CUBUL RUBIK 2x2x2</string>
-    <string name="button_3x3">CUM SĂ SOLUȚI CUBUL RUBIK 3x3x3</string>
+    <string name="button_2x2">CUM SĂ SOLUȚI CUBUL 3D 2x2x2</string>
+    <string name="button_3x3">CUM SĂ SOLUȚI CUBUL 3D 3x3x3</string>
     <string name="button_general_info">INFORMAȚII GENERALE ȘI NOTARE</string>
     <string name="button_timer">TEMPORIZATOR</string>
     <string name="cancel">Anulare</string>
@@ -16,7 +16,7 @@
     <string name="case3_text">Cazul 3</string>
     <string name="confirm_delete_score">Sigur doriți să ștergeți rezultatele selectate?</string>
     <string name="delete_scores">Ștergeți scorurile</string>
-    <string name="dwa_step1_text1">Dacă nu cunoașteți notația folosită pentru cuburile Rubiks, înainte de a începe pasul 1, asigurați-vă că vedeți fila Marcaje și notare.</string>
+    <string name="dwa_step1_text1">Dacă nu cunoașteți notația folosită pentru cuburile 3Ds, înainte de a începe pasul 1, asigurați-vă că vedeți fila Marcaje și notare.</string>
     <string name="dwa_step1_text2">Rezolvarea unui cub de 2x2 începe cu așezarea unui perete (de ex. Verde) cu culori adiacente, ca în desenul de mai sus. Această etapă este simplă și toată lumea ar trebui să se ocupe singură de ea. Cu toate acestea, în caz de probleme, va ajuta următorul algoritm, care mișcă blocul verde de jos în stratul superior, lăsând neschimbate cele 3 blocuri ale stratului superior.</string>
     <string name="dwa_step1_text3">Puteți atinge unul dintre cele 3 cazuri, după cum se arată mai jos.</string>
     <string name="dwa_step2_text1">În acest pas, întoarceți mai întâi cubul cu 180 de grade, astfel încât peretele verde finalizat în primul pas să fie în partea de jos a cubului.</string>
@@ -27,7 +27,7 @@
     <string name="dwa_step3_text2">Această etapă implică schimbarea colțurilor. Putem întâlni aici doar 2 cazuri. Pentru fiecare caz, algoritmul este prezentat mai jos. Mult noroc!! Și vă rugăm să nu uitați să evaluați cererea. Mulțumiri!</string>
     <string name="exit_situation">SITUAȚIA INIȚIALĂ</string>
     <string name="home">Pagina principala</string>
-    <string name="introduction_main_page">Înainte de a începe pasul 1, vă rugăm să consultați notația Cub Rubik. Pozele de mai jos ar trebui să clarifice totul. Regula cu marcajul este: dacă priviți cubul din față, rotiți o dată cu 90 de grade în sensul acelor de ceasornic, este marcat cu litera F. Contraîncărcare (în sensul acelor de ceasornic) marcat cu F \'. Și aceeași regulă se aplică tuturor celorlalți pereți (de exemplu, peretele sus: U / U \'- sus, perete jos: D / D\' -down etc.).</string>
+    <string name="introduction_main_page">Înainte de a începe pasul 1, vă rugăm să consultați notația Cub 3D. Pozele de mai jos ar trebui să clarifice totul. Regula cu marcajul este: dacă priviți cubul din față, rotiți o dată cu 90 de grade în sensul acelor de ceasornic, este marcat cu litera F. Contraîncărcare (în sensul acelor de ceasornic) marcat cu F \'. Și aceeași regulă se aplică tuturor celorlalți pereți (de exemplu, peretele sus: U / U \'- sus, perete jos: D / D\' -down etc.).</string>
     <string name="language_title">SELECTEAZA LIMBA:</string>
     <string name="list_sort_cubes">cub</string>
     <string name="list_sort_dates">Data</string>
@@ -76,7 +76,7 @@
     <string name="step7_text6">În acești pași, cubul arată că este totul amestecat. Nu vă faceți griji - ar trebui să fie așa! Totul revine la pozițiile sale :)))</string>
     <string name="step7_text7">Dar dacă acest lucru nu este complet clar pentru tine, uită-te la imaginea de mai jos care arată un exemplu în care trebuie să se rotească toate cele patru colțuri. OK marchează colțurile care au fost deja aranjate după aplicarea algoritmului. Rețineți că, între timp, cubul pare de fapt confuz ... dar la final totul se întoarce la locurile sale!</string>
     <string name="timer_show_scores_table">Tabloul de bord</string>
-    <string name="title">CUM SĂ SOLUVEZI CUBUL RUBIKULUI</string>
+    <string name="title">CUM SĂ SOLUVEZI CUBUL 3DULUI</string>
     <string name="worst_time_text">Cel mai rău:</string>
     <string name="yes">da</string>
 </resources>

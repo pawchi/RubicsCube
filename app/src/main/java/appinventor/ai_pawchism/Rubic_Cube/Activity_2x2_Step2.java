@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsoluteLayout;
@@ -35,6 +36,15 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
             R.drawable._2x2_f_prim,R.drawable._2x2_b,R.drawable._2x2_b_prim,R.drawable._2x2_d,R.drawable._2x2_d_prim,R.drawable._2x2_u,R.drawable._2x2_u_prim};
     private static int[] restCases_2x2 = {R.drawable.dwa_step2_case2, R.drawable.dwa_step2_case3, R.drawable.dwa_step2_case4, R.drawable.dwa_step2_case5, R.drawable.dwa_step2_case6, R.drawable.dwa_step2_case7};
     LinearLayout.LayoutParams params, layoutParams;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+            startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -281,10 +291,12 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_2x2_Step1.class));
+                    finish();
                 }
                 break;
             case R.id.button2_2x2:
                 startActivity(new Intent(getApplicationContext(), Activity_2x2_Step2.class));
+                finish();
                 break;
             case R.id.button3_2x2:
                 if (interstitialAd.isLoaded()){
@@ -298,6 +310,7 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_2x2_Step3.class));
+                    finish();
                 }
                 break;
             case R.id.settings_imageview:
@@ -315,6 +328,7 @@ public class Activity_2x2_Step2 extends AppCompatActivity implements View.OnClic
                     });
                 } else {
                     startActivity(new Intent(getApplicationContext(), Activity_StartPage.class));
+                    finish();
                 }
                 break;
 

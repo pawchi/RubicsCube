@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Rubics_cube</string>
+    <string name="app_name">3D_cube</string>
     <string name="average_10_text">10 का औसत:</string>
     <string name="average_20_text">20 का औसत:</string>
     <string name="average_50_text">50 का औसत:</string>
     <string name="average_5_text">5 का औसत:</string>
     <string name="best_time_text">सर्वश्रेष्ठ अंक:</string>
-    <string name="button_2x2">RUBIK\'S CUBE 2x2x2 को हल कैसे करें</string>
-    <string name="button_3x3">RUBIK\'S CUBE 3x3x3 को हल कैसे करें</string>
+    <string name="button_2x2">3D\'S CUBE 2x2x2 को हल कैसे करें</string>
+    <string name="button_3x3">3D\'S CUBE 3x3x3 को हल कैसे करें</string>
     <string name="button_general_info">सामान्य जानकारी और अधिसूचना</string>
     <string name="button_timer">टाइमर</string>
     <string name="cancel">रद्द करना</string>
