@@ -1,7 +1,15 @@
 <resources>
-    <string name="baner_ID" translatable="false">ca-app-pub-9832953507407797/5858035763</string>
+    <!-- ads original -->
+    <string name="ad_baner_ID" translatable="false">ca-app-pub-9832953507407797/5858035763</string>
     <string name="Ad_in_app_content" translatable="false">ca-app-pub-9832953507407797/7622995452</string>
     <string name="Ad_full_screen" translatable="false">ca-app-pub-9832953507407797/7879023431</string>
+
+
+    <!-- ads tests
+    <string name="ad_baner_ID" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Ad_full_screen" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    -->
+
 
     <string name="banner_ID_test" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="Ad_full_screen_test" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
@@ -141,6 +149,10 @@
     <string name="settings_title">USTAWIENIA:</string>
     <string name="settings_rate_us">Oceń aplikację.</string>
     <string name="settings_change_language">Wybierz język.</string>
+
+    <!-- Skoczek add -->
+    <string name="skocz_text_2">Przejdź planszę i bądź pierwszy w swoim mieście, kraju lub na świecie.</string>
+    <string name="skocz_text_1">Nowa gra logiczna w Google Play.</string>
 
 
     <string name="language_title">WYBIERZ JĘZYK:</string>

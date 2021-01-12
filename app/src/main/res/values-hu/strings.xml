@@ -79,4 +79,6 @@
     <string name="title">HOGYAN MEG oldja meg a 3D KOKT?</string>
     <string name="worst_time_text">Legrosszabb:</string>
     <string name="yes">Igen</string>
+    <string name="skocz_text_2">Töltse ki a táblát, és legyen első városában, országában vagy a világon.</string>
+    <string name="skocz_text_1">Új logikai játék a Google Playen.</string>
 </resources>

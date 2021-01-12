@@ -79,4 +79,6 @@
     <string name="title">3Dのキューブを解決する方法</string>
     <string name="worst_time_text">最悪の結果：</string>
     <string name="yes">はい</string>
+    <string name="skocz_text_2">ボードに記入して、あなたの街、国、または世界で最初になりましょう。</string>
+    <string name="skocz_text_1">グーグルプレイの新しいロジックゲーム。</string>
 </resources>

@@ -79,4 +79,6 @@
     <string name="list_sort_cubes">Cubo</string>
     <string name="list_sort_dates">Fecha</string>
     <string name="list_sort_scores">Resultado</string>
+    <string name="skocz_text_2">Llena el tablero y sé el primero en tu ciudad, país o en el mundo.</string>
+    <string name="skocz_text_1">Nuevo juego de lógica en google play.</string>
 </resources>

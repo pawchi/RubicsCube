@@ -80,4 +80,6 @@
     <string name="list_sort_cubes">Würfel</string>
     <string name="list_sort_dates">Datum</string>
     <string name="list_sort_scores">Ergebnis</string>
+    <string name="skocz_text_1">Neues Logikspiel in Google Play.</string>
+    <string name="skocz_text_2">Fülle die Tafel und sei der Erste in deiner Stadt, deinem Land oder in der Welt.</string>
 </resources>

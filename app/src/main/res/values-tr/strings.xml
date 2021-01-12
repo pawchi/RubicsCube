@@ -79,4 +79,6 @@
     <string name="title">3D\'İN KÜPÜNÜN ÇÖZÜMÜ</string>
     <string name="worst_time_text">En kötü skor:</string>
     <string name="yes">Evet</string>
+    <string name="skocz_text_2">Panoyu doldurun ve şehrinizde, ülkenizde veya dünyada ilk siz olun.</string>
+    <string name="skocz_text_1">Google oyunda yeni mantık oyunu.</string>
 </resources>

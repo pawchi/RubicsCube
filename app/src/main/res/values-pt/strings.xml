@@ -79,4 +79,6 @@
     <string name="list_sort_scores">Resultar</string>
     <string name="list_sort_dates">Data</string>
     <string name="list_sort_cubes">Cubo</string>
+    <string name="skocz_text_2">Preencha o quadro e seja o primeiro na sua cidade, país ou no mundo.</string>
+    <string name="skocz_text_1">Novo jogo de lógica no Google Play.</string>
 </resources>

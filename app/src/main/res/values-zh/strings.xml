@@ -79,4 +79,6 @@
     <string name="list_sort_dates">日期</string>
     <string name="list_sort_scores">得分</string>
     <string name="dwa_step1_text1">如果您不知道用于3D多维数据集的符号，则在开始步骤1之前，请确保查看“标记和符号”选项卡。</string>
+    <string name="skocz_text_1">Google Play中的新逻辑游戏。</string>
+    <string name="skocz_text_2">填补空缺，并在您所在的城市，国家或世界范围内排名第一。</string>
 </resources>

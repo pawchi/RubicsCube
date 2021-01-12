@@ -1,10 +1,12 @@
 package appinventor.ai_pawchism.Rubic_Cube;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -48,7 +50,7 @@ public class Activity_3x3_Step1 extends AppCompatActivity implements View.OnClic
 
         //Full screen ads
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-9832953507407797/7879023431");
+        interstitialAd.setAdUnitId(getResources().getString(R.string.Ad_full_screen));
         AdRequest request = new AdRequest.Builder().build();
         interstitialAd.loadAd(request);
 
@@ -86,6 +88,18 @@ public class Activity_3x3_Step1 extends AppCompatActivity implements View.OnClic
             @Override
             public void run() {
                 hsv.scrollTo(stepButton1.getLeft(), stepButton1.getTop());
+            }
+        });
+
+        LinearLayout skoczekAdd = (LinearLayout) findViewById(R.id.skoczek_1);
+        skoczekAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.chilon.skoczeknew")));
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.chilon.skoczeknew")));
+                }
             }
         });
     }

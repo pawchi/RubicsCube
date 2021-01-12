@@ -81,4 +81,6 @@
     <string name="dwa_step1_text3">You can hit one of 3 cases, as shown below.</string>
     <string name="dwa_step1_text1">If you do not know the notation used for 3Ds cubes, before you start step 1, be sure to see the Marks and notation tab.</string>
     <string name="dwa_step1_text2">Solving a 2x2 cube begins with laying one wall (e.g. green) with adjacent colors, as in the drawing above. This stage is simple and everyone should deal with it by themselves. However, in case of problems, the following algorithm will help, which moves the green block from the bottom to the top layer, leaving the 3 blocks of the top layer unchanged.</string>
+    <string name="skocz_text_1">New logic game in google play.</string>
+    <string name="skocz_text_2">Fill the board and be first in your city, country or in the world.</string>
 </resources>

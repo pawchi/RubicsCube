@@ -79,4 +79,6 @@
     <string name="list_sort_dates">La date</string>
     <string name="list_sort_cubes">Cube</string>
     <string name="dwa_step1_text3">Vous pouvez toucher l\'un des 3 cas, comme indiqué ci-dessous.</string>
+    <string name="skocz_text_2">Remplissez le tableau et soyez le premier dans votre ville, pays ou dans le monde.</string>
+    <string name="skocz_text_1">Nouveau jeu de logique dans Google Play.</string>
 </resources>

@@ -79,4 +79,6 @@
     <string name="list_sort_scores">pезультат</string>
     <string name="list_sort_dates">дата</string>
     <string name="list_sort_cubes">куб</string>
+    <string name="skocz_text_2">Заполните доску и будьте первым в своем городе, стране или мире.</string>
+    <string name="skocz_text_1">Новая логическая игра в Google Play.</string>
 </resources>

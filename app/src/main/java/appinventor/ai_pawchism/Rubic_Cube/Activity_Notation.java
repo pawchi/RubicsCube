@@ -48,7 +48,7 @@ public class Activity_Notation extends AppCompatActivity {
 
         //Full screen ads
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-9832953507407797/7879023431");
+        interstitialAd.setAdUnitId(getResources().getString(R.string.Ad_full_screen));
         AdRequest request = new AdRequest.Builder().build();
         interstitialAd.loadAd(request);
 
